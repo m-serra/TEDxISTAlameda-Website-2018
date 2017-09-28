@@ -14,6 +14,7 @@
 .container--open .intro {
 	-webkit-transform: translate3d(0, -100%, 0) translate3d(0, 250px, 0);
 	transform: translate3d(0, -100%, 0) translate3d(0, 250px, 0);
+    z-index: 0;
 }
 
 /* Fullscreen image */
@@ -141,7 +142,7 @@
 
 .og-grid {
 	list-style: none;
-	padding: 20px 0;
+	padding: 300px 0;
 	margin: 0 auto;
 	text-align: center;
 	width: 100%;

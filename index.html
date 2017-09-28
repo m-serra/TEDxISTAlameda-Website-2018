@@ -11,6 +11,7 @@
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 		<link rel="stylesheet" type="text/css" href="css/tedxistalameda.css"/>
+      
         <script src="js/modernizr.custom.js"></script>
 		<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -18,6 +19,7 @@
 	</head>
 	<body>
 		<div id="container" class="container">
+            <!-- Landing Page -->
 			<header class="intro" id="intro" >
                 <video loop autoplay class="video-background" id="video-background" style="">
     			     <source src="videos/TEDxISTAlameda_Merry_Xmas.mp4"/>
@@ -30,6 +32,7 @@
 						<div class="intro__description">
 							A layout with a sliding header and an image grid.
 						</div>
+                        <!--Botão para entrar no conteúdo (SVG) -->
 						<button class="trigger">
 							<svg width="100%" height="100%" viewBox="0 0 60 60" preserveAspectRatio="none">
 								<g class="icon icon--grid">
@@ -45,9 +48,12 @@
 							</svg>
 							<span>View content</span>
 						</button>
+                        <!--Botão para entrar no conteúdo (SVG) -->
 					</div>
-				</div><!-- /intro__content -->
-			</header><!-- /intro -->
+				</div>
+			</header>
+            <!-- Landing Page -->
+            <!-- Conteúdo -->
 			<div class="grid-container">
 				<ul id="og-grid" class="og-grid">
 					<li>
@@ -180,19 +186,22 @@
 							<img src="images/thumbs/2.jpg" alt="img02"/>
 						</a>
 					</li>
-				</ul>
+				</ul>       
 			</div>
+            <!-- Conteúdo -->
 		</div><!-- /container -->
+        
 		<!-- Expandable grid scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="js/grid.js"></script>
+        <script src="js/grid.js"></script>
 		<script>
 			$(function() {
 				Grid.init();
 			});
 		</script>
-        <!--======-->
-		<script src="js/classie.js"></script>
+        <!-- Expandable grid scripts -->
+		
+        <script src="js/classie.js"></script>
 		<script>
 			(function() {
 				var container = document.getElementById( 'container' ),
@@ -203,11 +212,13 @@
 						classie.remove( container, 'container--open' );
 						classie.remove( trigger, 'trigger--active' );
 						window.addEventListener( 'scroll', noscroll );
+                        document.querySelector(".intro").style.zIndex = 10;
 					}
 					else {
 						classie.add( container, 'container--open' );
 						classie.add( trigger, 'trigger--active' );
 						window.removeEventListener( 'scroll', noscroll );
+                        
 					}
 				}
 
@@ -227,7 +238,8 @@
 				[].slice.call( document.querySelectorAll('.items-wrap a') ).forEach( function(el) { el.onclick = function() { return false; } } );
 			})();
 		</script>
-		<!-- video script -->
+		
+        <!-- video script -->
 		<script>
 			// video source https://www.videezy.com/random-objects/2313-electric-bulb-hd-stock-video
 			var container = document.getElementById('intro');
@@ -272,5 +284,6 @@
 	  		});
   		});
 		</script>
+        <!-- video script -->
 	</body>
 </html>
