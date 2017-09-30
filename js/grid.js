@@ -282,6 +282,17 @@ var Grid = (function() {
 			return false;
 
 		} );
+		
+		
+		// close preview hotkey
+		// ESC
+		$(document).keydown(function(e) {
+				 if (e.keyCode == 27) { // key ESC (close preview)
+					e.preventDefault(); // prevents Default function of key				 
+					hidePreview();	
+				}
+			});
+		
 	}
 
 	function getWinSize() {

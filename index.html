@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Sliding Header Grid Layout</title>
+		<title>TEDxISTAlameda (work in progress)</title>
 		<meta name="description" content="A simple grid layout with an initial fullscreen intro" />
 		<meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
 		<meta name="author" content="Codrops" />
@@ -233,6 +233,18 @@
 				window.addEventListener( 'scroll', noscroll );
 
 				trigger.addEventListener( 'click', toggleContent );
+				
+				
+				// content toggle HOTKEY
+				// SPACE
+		  		$(document).keydown(function(e) { 
+					 if (e.keyCode == 32) { // key SPACE (content)
+					 	e.preventDefault(); // prevents Default function of key
+					 	$(trigger).blur(); // unselects the trigger button if it was previous selected by clicking on it
+					 	toggleContent();				
+					}
+				});
+				
 
 				// For Demo purposes only (prevent jump on click)
 				[].slice.call( document.querySelectorAll('.items-wrap a') ).forEach( function(el) { el.onclick = function() { return false; } } );
@@ -282,7 +294,34 @@
 	      		$("#mute").css("background-image","url(http://image.flaticon.com/icons/svg/10/10776.svg)");
 	    		}
 	  		});
+	  		
+	  	
+	
+	  		// mute hotkey
+	  		// M
+	  		$(document).keydown(function(e) {
+				 if (e.keyCode == 77) { // key M (mute)
+					e.preventDefault(); // prevents Default function of key				 
+					if( $("video").prop('muted') ) {
+				  		$("video").prop('muted', false);
+				  		$("#mute").css("background-image","url(http://image.flaticon.com/icons/svg/10/10430.svg)");
+					} else {
+				  		$("video").prop('muted', true);
+				  		$("#mute").css("background-image","url(http://image.flaticon.com/icons/svg/10/10776.svg)");
+					}
+				}
+			});
+			
+			
+			
+			
+			
+	  		
   		});
+  		
+  		
+  			
+    	
 		</script>
         <!-- video script -->
 	</body>
