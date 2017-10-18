@@ -11,6 +11,7 @@
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 		<link rel="stylesheet" type="text/css" href="css/tedxistalameda.css"/>
+		<link rel="stylesheet" type="text/css" href="css/button.css"/>
 
         <script src="js/modernizr.custom.js"></script>
 		<!--[if IE]>
@@ -59,6 +60,20 @@
 					  <li><a href="#">Info</a></li>
 					</ul>
 				</div>
+				<div id="overlay">
+                    <div class="wrap">
+                          <button onclick="off()">Turn off overlay effect</button>
+
+                    </div>
+
+                </div>
+
+                <div style="padding:20px">
+                  <button class="button button--wayra button--border-thick button--text-upper button--size-s" onclick="on()">Attend</button>
+
+
+                </div>
+
 			</header>
             <!-- Landing Page -->
             <!-- Conteúdo -->
@@ -346,6 +361,16 @@
 }
 
 		</script>
+
+		    <script>
+        function on() {
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function off() {
+            document.getElementById("overlay").style.display = "none";
+        }
+        </script>
         <!-- video script -->
 	</body>
 </html>
