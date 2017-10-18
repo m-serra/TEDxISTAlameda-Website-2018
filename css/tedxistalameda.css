@@ -14,7 +14,7 @@
 .container--open .intro {
 	-webkit-transform: translate3d(0, -100%, 0) translate3d(0, 250px, 0);
 	transform: translate3d(0, -100%, 0) translate3d(0, 250px, 0);
-    z-index: 0;
+    /*z-index: 0;*/
 }
 
 /* Fullscreen image */
