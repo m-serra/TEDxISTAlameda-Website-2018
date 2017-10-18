@@ -240,6 +240,7 @@
 		  		$(document).keydown(function(e) { 
 					 if (e.keyCode == 32) { // key SPACE (content)
 					 	e.preventDefault(); // prevents Default function of key
+					 	playPause();
 					 	$(trigger).blur(); // unselects the trigger button if it was previous selected by clicking on it
 					 	toggleContent();				
 					}
