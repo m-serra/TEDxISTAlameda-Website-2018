@@ -265,7 +265,7 @@
 				// disable scrolling
 				window.addEventListener( 'scroll', noscroll );
 
-				trigger.addEventListener( 'click', toggleContent); 
+				trigger.addEventListener( 'click', toggleContent);
 
 
 				// content toggle HOTKEY
@@ -278,17 +278,43 @@
 					}
 				});
 
-
 				// navbar buttons start
 
 				var navbar = document.getElementById( 'navbar' ),
 					button1 = navbar.querySelector( 'li.button1' ), button2 = navbar.querySelector( 'li.button2' ), button3 = navbar.querySelector( 'li.button3' ), button4 = navbar.querySelector( 'li.button4' );
 
-				button1.addEventListener( 'click', toggleContent );
-				button2.addEventListener( 'click', toggleContent );
-				button3.addEventListener( 'click', toggleContent );
-				button4.addEventListener( 'click', toggleContent );
+				function navtoggle() {
+					if( !(classie.has( container, 'container--open') ) ) {
+						toggleContent();
+					};
+				};
 
+				function navbutton1() {
+					console.log(1);
+					// go to content 1
+				};
+				function navbutton2() {
+					console.log(2);
+					// go to content 2
+				};
+				function navbutton3() {
+					console.log(3);
+					// go to content 3
+				};
+				function navbutton4() {
+					console.log(4);
+					// go to content 4
+				};
+
+				button1.addEventListener( 'click', navtoggle );
+				button2.addEventListener( 'click', navtoggle );
+				button3.addEventListener( 'click', navtoggle );
+				button4.addEventListener( 'click', navtoggle );
+
+				button1.addEventListener( 'click', navbutton1 );
+				button2.addEventListener( 'click', navbutton2 );
+				button3.addEventListener( 'click', navbutton3 );
+				button4.addEventListener( 'click', navbutton4 );
 
 				// navbar buttons end
 
