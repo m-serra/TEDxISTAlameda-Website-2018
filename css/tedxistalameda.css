@@ -40,6 +40,11 @@
 	transform: translate3d(0, 20%, 0);
 }
 
+/* Section hidden */
+.container--close {
+	display: none;
+}
+
 /* Intro content */
 .intro__content {
 	position: absolute;
