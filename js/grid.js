@@ -164,7 +164,7 @@ $.fn.imagesLoaded = function( callback ) {
 var Grid = (function() {
 
 		// list of items
-	var $grid = $( '[id^="og-grid-"]' ), //seleciona o id até ao úlimo '-', ignora o que está para a frente
+	var $grid = $( '.og-grid' ), //seleciona o id até ao úlimo '-', ignora o que está para a frente
 		// the items
 		$items = $grid.children( 'li' ),
 		// current expanded item's index
@@ -202,7 +202,7 @@ var Grid = (function() {
 		settings = $.extend( true, {}, settings, config );
 
 		// preload all images
-		$grid.imagesLoaded( function() {
+		$items.imagesLoaded( function() {
 
 			// save item´s size and offset
 			saveItemInfo( true );
@@ -223,7 +223,6 @@ var Grid = (function() {
 		$items = $items.add( $newitems );
 
 		$newitems.each( function() {
-			var $item = $( this );
 			$item.data( {
 				offsetTop : $item.offset().top,
 				height : $item.height()
@@ -274,11 +273,14 @@ var Grid = (function() {
 		$items.on( 'click', 'span.og-close', function() {
 			hidePreview();
 			return false;
-		} ).children( 'a' ).on( 'click', function(e) {
-
+		} );
+        
+        $items.children( 'a' ).on( 'click', function(e) { 
 			var $item = $( this ).parent();
-			// check if item already opened
-			current === $item.index() ? hidePreview() : showPreview( $item );
+            var id = $(this).attr('id');
+            $item.data( 'ident', id );
+			// check if item already opened     
+			current === $item.data( 'ident' ) ? hidePreview() : showPreview( $item );
 			return false;
 
 		} );
@@ -300,7 +302,7 @@ var Grid = (function() {
 	}
 
 	function showPreview( $item ) {
-
+        
 		var preview = $.data( this, 'preview' ),
 			// item´s offset top
 			position = $item.data( 'offsetTop' );
@@ -337,7 +339,6 @@ var Grid = (function() {
 
 	function hidePreview() {
 		current = -1;
-        //console.log(this);
 		var preview = $.data( this, 'preview' );
 		preview.close();
 		$.removeData( this, 'preview' );
@@ -346,9 +347,9 @@ var Grid = (function() {
 	// the preview obj / overlay
 	function Preview( $item ) {
 		this.$item = $item;
-		this.expandedIdx = this.$item.index();
+		this.expandedIdx = $item.data( 'ident' );
 		this.create();
-		this.update();
+		this.update($item);
 	}
 
 	Preview.prototype = {
@@ -386,7 +387,7 @@ var Grid = (function() {
 			}
 
 			// update current value
-			current = this.$item.index();
+			current = $item.data( 'ident' );
 
 			// update preview´s content
 			var $itemEl = this.$item.children( 'a' ),
@@ -435,7 +436,6 @@ var Grid = (function() {
 
 		},
 		close : function() {
-
 			var self = this,
 				onEndFn = function() {
 					if( support ) {
@@ -450,12 +450,20 @@ var Grid = (function() {
 				if( typeof this.$largeImg !== 'undefined' ) {
 					this.$largeImg.fadeOut( 'fast' );
 				}
-				this.$previewEl.css( 'height', 0 );
+				
+                this.$previewEl.css( 'height', 0 );
+                
 				// the current expanded item (might be different from this.$item)
 				var $expandedItem = $items.eq( this.expandedIdx );
+                console.log(this.expandedIdx);
+                console.log($items.eq( 36).data('height')+' blablabla');
+                
+                console.log($expandedItem.data( 'height' ) + ' ola');
+                
 				$expandedItem.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
-
-				if( !support ) {
+                console.log($expandedItem.data( 'height' ) + ' adeus');
+				
+                if( !support ) {
 					onEndFn.call();
 				}
 
@@ -465,10 +473,10 @@ var Grid = (function() {
 
 		},
 		calcHeight : function() {
-
+            
 			var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
 				itemHeight = winsize.height;
-
+            
 			if( heightPreview < settings.minHeight ) {
 				heightPreview = settings.minHeight;
 				itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
