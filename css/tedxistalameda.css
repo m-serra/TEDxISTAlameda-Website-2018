@@ -8,7 +8,7 @@
 	-webkit-transition: -webkit-transform 0.6s;
 	transition: transform 0.6s;
 	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); 
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 
 .container--open .intro {
@@ -40,6 +40,11 @@
 	transform: translate3d(0, 20%, 0);
 }
 
+/* Section hidden */
+.container--close {
+	display: none;
+}
+
 /* Intro content */
 .intro__content {
 	position: absolute;
@@ -69,6 +74,35 @@
 .intro__description {
 	margin: 0 auto 0 1em;
 	line-height: 1.2;
+}
+
+.navbar {
+	width: 100%;
+	position: absolute;
+	z-index: 99;
+	bottom: 0;
+}
+
+.navbar li {
+  display: inline;
+	float: left;
+	width: 25%;
+}
+
+.navbar	a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.5);
 }
 
 /* Trigger button with SVG */
