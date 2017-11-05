@@ -1,4 +1,7 @@
 
+
+
+
 /*overlay*/ 
 #overlay {
 	display:none;
@@ -16,7 +19,26 @@
 	color:#e9e9e9;
 	text-align:center;
 	max-width:90%;
+	height: 90%; 
 	margin:0 auto;
+	margin-top: 7%;
+}
+
+#closebutton{
+
+	position: relative;
+
+	display:inline;
+	position:absolute;
+	right:3%;
+	top:3%;
+	z-index:100;
+}
+
+#form{
+	width: 100%;
+	min-height: 100%;
+	display: inline;
 }
 
 /* Common button styles */
@@ -38,7 +60,7 @@
 	position:absolute;
 	left:3%;
 	top:3%;
-	z-index:999;
+	z-index:90;
 	font-size:30px;
 }
 
