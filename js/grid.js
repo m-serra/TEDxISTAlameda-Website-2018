@@ -456,7 +456,7 @@ var Grid = (function() {
 				// the current expanded item (might be different from this.$item)
 				var $expandedItem = $items.eq( this.expandedIdx );
                 console.log(this.expandedIdx);
-                console.log($items.eq( 36).data('height')+' blablabla');
+                console.log($items.eq(this.expandedIdx).data('height')+' blablabla');
                 
                 console.log($expandedItem.data( 'height' ) + ' ola');
                 
