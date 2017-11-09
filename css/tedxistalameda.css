@@ -434,4 +434,11 @@
   right: 50px;
 
   background-size: cover;
+  border: none;
+  background: none;
+}
+
+#mute-btn{
+  height: 50px;
+  width: 50px;
 }
