@@ -4,11 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>TEDxISTAlameda (work in progress)</title>
-		<meta name="description" content="A simple grid layout with an initial fullscreen intro" />
-		<meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="../favicon.ico">
+		<title>TEDxISTAlameda</title>
+        <meta property="og:title" content="TEDxISTAlameda"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:site_name" content="TEDxISTAlameda"/>
+        <meta property="og:url" content="https://www.tedxistalameda.com/"/>
+        
+	       
+		<meta name="author" content="TEDxISTAlameda" />
+		<link rel="icon" type="image/x-icon" href="images/_favicon.png"/>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 		<link rel="stylesheet" type="text/css" href="css/tedxistalameda.css"/>
 		<link rel="stylesheet" type="text/css" href="css/button.css"/>
@@ -17,332 +21,223 @@
 		<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+        
+        <staticContent><mimeMap fileExtension=".svg" mimeType="image/svg+xml" /></staticContent>
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
+			<defs>
+				<g id="tedxistalameda" i:extraneous="self">
+					<g>
+						<path fill="#FF2B06" d="M60.376,189.955l-7.567-10.906h7.211l4.05,6.01l4.006-6.01h6.988l-7.567,10.771L76,202.061h-7.21
+							l-4.807-7.254l-4.807,7.254h-7.077L60.376,189.955z"/>
+						<path d="M105.952,188.441H83.475v-4.764h22.478V188.441z M105.952,197.967H83.475v-4.764h22.478V197.967z"/>
+						<path d="M123.175,175.488h-6.32v-5.207h6.32V175.488z M116.855,179.049h6.32v23.012h-6.32V179.049z"/>
+						<path d="M127.27,179.049h6.009v3.205h0.133c1.603-2.582,4.362-3.828,7.033-3.828c6.721,0,8.412,3.783,8.412,9.48v14.154h-6.32
+							v-12.996c0-3.783-1.113-5.652-4.05-5.652c-3.427,0-4.896,1.913-4.896,6.587v12.062h-6.321V179.049z"/>
+						<path d="M169.196,199.123h-0.089c-1.469,2.492-4.05,3.561-6.988,3.561c-6.943,0-10.326-5.964-10.326-12.328
+							c0-6.188,3.427-11.93,10.193-11.93c2.715,0,5.386,1.158,6.854,3.428h-0.044h0.089v-11.572h6.32v31.779h-6.009V199.123z
+							 M163.677,183.189c-4.14,0-5.564,3.561-5.564,7.344c0,3.605,1.647,7.389,5.564,7.389c4.184,0,5.43-3.65,5.43-7.434
+							C169.107,186.75,167.771,183.189,163.677,183.189z"/>
+						<path d="M184.283,192.091c0.178,4.006,2.136,5.831,5.653,5.831c2.537,0,4.584-1.559,4.985-2.982h5.564
+							c-1.781,5.43-5.564,7.744-10.771,7.744c-7.255,0-11.75-4.984-11.75-12.105c0-6.9,4.762-12.152,11.75-12.152
+							c7.833,0,11.617,6.588,11.172,13.665H184.283z M194.564,188.085c-0.579-3.204-1.958-4.896-5.03-4.896
+							c-4.006,0-5.163,3.115-5.252,4.896H194.564z"/>
+						<path d="M203.731,179.049h6.009v2.938h0.089c1.513-2.448,4.006-3.562,6.854-3.562c7.21,0,10.46,5.832,10.46,12.374
+							c0,6.143-3.383,11.884-10.104,11.884c-2.76,0-5.386-1.201-6.899-3.471h-0.089v10.949h-6.321V179.049z M220.823,190.622
+							c0-3.649-1.469-7.433-5.519-7.433c-4.139,0-5.475,3.693-5.475,7.433s1.424,7.3,5.519,7.3
+							C219.488,197.922,220.823,194.361,220.823,190.622z"/>
+						<path d="M235.243,192.091c0.178,4.006,2.136,5.831,5.653,5.831c2.537,0,4.584-1.559,4.985-2.982h5.564
+							c-1.781,5.43-5.564,7.744-10.771,7.744c-7.255,0-11.75-4.984-11.75-12.105c0-6.9,4.762-12.152,11.75-12.152
+							c7.833,0,11.617,6.588,11.172,13.665H235.243z M245.524,188.085c-0.579-3.204-1.958-4.896-5.03-4.896
+							c-4.006,0-5.163,3.115-5.252,4.896H245.524z"/>
+						<path d="M254.691,179.049h6.009v3.205h0.133c1.603-2.582,4.362-3.828,7.033-3.828c6.721,0,8.412,3.783,8.412,9.48v14.154h-6.32
+							v-12.996c0-3.783-1.113-5.652-4.05-5.652c-3.427,0-4.896,1.913-4.896,6.587v12.062h-6.321V179.049z"/>
+						<path d="M296.618,199.123h-0.089c-1.469,2.492-4.05,3.561-6.988,3.561c-6.943,0-10.326-5.964-10.326-12.328
+							c0-6.188,3.427-11.93,10.193-11.93c2.715,0,5.386,1.158,6.854,3.428h-0.044h0.089v-11.572h6.32v31.779h-6.009V199.123z
+							 M291.099,183.189c-4.14,0-5.564,3.561-5.564,7.344c0,3.605,1.647,7.389,5.564,7.389c4.184,0,5.43-3.65,5.43-7.434
+							C296.529,186.75,295.193,183.189,291.099,183.189z"/>
+						<path d="M311.705,192.091c0.178,4.006,2.136,5.831,5.653,5.831c2.537,0,4.584-1.559,4.985-2.982h5.564
+							c-1.781,5.43-5.564,7.744-10.771,7.744c-7.255,0-11.75-4.984-11.75-12.105c0-6.9,4.762-12.152,11.75-12.152
+							c7.833,0,11.617,6.588,11.172,13.665H311.705z M321.986,188.085c-0.579-3.204-1.958-4.896-5.03-4.896
+							c-4.006,0-5.163,3.115-5.252,4.896H321.986z"/>
+						<path d="M331.153,179.049h6.009v3.205h0.133c1.603-2.582,4.362-3.828,7.033-3.828c6.721,0,8.412,3.783,8.412,9.48v14.154h-6.32
+							v-12.996c0-3.783-1.113-5.652-4.05-5.652c-3.427,0-4.896,1.913-4.896,6.587v12.062h-6.321V179.049z"/>
+						<path d="M364.667,179.049h4.629v4.229h-4.629v11.395c0,2.137,0.534,2.671,2.67,2.671c0.667,0,1.291-0.044,1.958-0.178v4.94
+							c-1.068,0.178-2.448,0.223-3.694,0.223c-3.873,0-7.255-0.891-7.255-5.475v-13.576h-3.828v-4.229h3.828v-6.898h6.321V179.049z"
+							/>
+						<path d="M371.609,170.281h6.32v31.779h-6.32V170.281z"/>
+						<path d="M393.374,204.954c-1.38,3.695-3.561,5.208-7.923,5.208c-1.291,0-2.582-0.089-3.872-0.223v-5.208
+							c1.202,0.089,2.448,0.267,3.694,0.223c2.181-0.223,2.893-2.493,2.181-4.317l-8.101-21.588h6.766l5.208,15.758h0.089
+							l5.03-15.758h6.543L393.374,204.954z"/>
+						<path d="M426.888,178.426c7.255,0,11.929,4.808,11.929,12.152c0,7.299-4.674,12.105-11.929,12.105
+							c-7.211,0-11.884-4.807-11.884-12.105C415.004,183.233,419.677,178.426,426.888,178.426z M426.888,197.922
+							c4.317,0,5.608-3.695,5.608-7.344c0-3.695-1.291-7.389-5.608-7.389c-4.273,0-5.564,3.693-5.564,7.389
+							C421.324,194.227,422.615,197.922,426.888,197.922z"/>
+						<path d="M441.129,179.049h6.009v4.273h0.089c1.157-2.893,4.273-4.896,7.344-4.896c0.445,0,0.979,0.09,1.379,0.223v5.875
+							c-0.579-0.133-1.513-0.222-2.27-0.222c-4.629,0-6.231,3.338-6.231,7.389v10.37h-6.321V179.049z"/>
+						<path d="M479.673,200.592c0,3.783-1.335,10.193-11.929,10.193c-4.54,0-9.836-2.136-10.148-7.389h6.276
+							c0.579,2.359,2.492,3.161,4.718,3.161c3.517,0,5.119-2.405,5.074-5.698v-3.027h-0.089c-1.38,2.404-4.14,3.562-6.899,3.562
+							c-6.899,0-9.836-5.253-9.836-11.573c0-5.964,3.427-11.395,9.881-11.395c3.026,0,5.341,1.024,6.854,3.695h0.089v-3.072h6.009
+							V200.592z M473.665,190.266c0-3.738-1.291-7.076-5.386-7.076c-3.561,0-5.119,3.115-5.119,6.543
+							c0,3.293,1.246,6.898,5.119,6.898C471.884,196.631,473.665,193.56,473.665,190.266z"/>
+						<path d="M482.698,186.127c0.356-5.92,5.652-7.701,10.815-7.701c4.585,0,10.104,1.024,10.104,6.543v11.974
+							c0,2.092,0.223,4.185,0.801,5.118h-6.41c-0.223-0.711-0.4-1.469-0.445-2.225c-2.003,2.092-4.941,2.848-7.745,2.848
+							c-4.362,0-7.833-2.18-7.833-6.898c0-5.207,3.917-6.454,7.833-6.988c3.873-0.578,7.478-0.445,7.478-3.026
+							c0-2.716-1.87-3.116-4.095-3.116c-2.403,0-3.961,0.979-4.184,3.473H482.698z M497.297,190.8
+							c-1.068,0.935-3.294,0.979-5.252,1.335c-1.958,0.401-3.739,1.068-3.739,3.383c0,2.359,1.825,2.938,3.873,2.938
+							c4.94,0,5.119-3.916,5.119-5.296V190.8z"/>
+						<path d="M507.621,179.049h6.01v3.205h0.133c1.603-2.582,4.362-3.828,7.033-3.828c6.721,0,8.412,3.783,8.412,9.48v14.154h-6.32
+							v-12.996c0-3.783-1.113-5.652-4.051-5.652c-3.427,0-4.896,1.913-4.896,6.587v12.062h-6.321V179.049z"/>
+						<path d="M538.731,175.488h-6.32v-5.207h6.32V175.488z M532.411,179.049h6.32v23.012h-6.32V179.049z"/>
+						<path d="M541.401,197.299l11.974-13.486h-11.083v-4.764h19.406v4.764l-11.973,13.486h12.818v4.762h-21.143V197.299z"/>
+						<path d="M570.243,192.091c0.178,4.006,2.137,5.831,5.652,5.831c2.537,0,4.585-1.559,4.985-2.982h5.563
+							c-1.78,5.43-5.563,7.744-10.771,7.744c-7.255,0-11.75-4.984-11.75-12.105c0-6.9,4.763-12.152,11.75-12.152
+							c7.834,0,11.617,6.588,11.173,13.665H570.243z M580.524,188.085c-0.578-3.204-1.958-4.896-5.029-4.896
+							c-4.006,0-5.163,3.115-5.252,4.896H580.524z"/>
+						<path d="M606.117,199.123h-0.09c-1.469,2.492-4.05,3.561-6.987,3.561c-6.944,0-10.327-5.964-10.327-12.328
+							c0-6.188,3.428-11.93,10.193-11.93c2.715,0,5.386,1.158,6.854,3.428h-0.045h0.089v-11.572h6.321v31.779h-6.009V199.123z
+							 M600.598,183.189c-4.14,0-5.563,3.561-5.563,7.344c0,3.605,1.646,7.389,5.563,7.389c4.184,0,5.43-3.65,5.43-7.434
+							C606.027,186.75,604.692,183.189,600.598,183.189z"/>
+						<path d="M635.179,176.156h-9.524v-5.875h26.038v5.875h-9.525v25.904h-6.988V176.156z"/>
+						<path d="M654.449,170.281h23.769v5.875h-16.78v6.811h15.4v5.43h-15.4v7.789h17.136v5.875h-24.124V170.281z"/>
+						<path d="M681.51,170.281h13.709c8.234,0,14.421,5.163,14.421,15.712c0,9.214-4.718,16.067-14.421,16.067H681.51V170.281z
+							 M688.498,196.186h6.231c4.05,0,7.923-2.492,7.923-9.525c0-6.409-2.226-10.504-9.17-10.504h-4.984V196.186z"/>
+						<path d="M729.622,192.091c0.178,4.006,2.137,5.831,5.652,5.831c2.537,0,4.585-1.559,4.985-2.982h5.563
+							c-1.78,5.43-5.563,7.744-10.771,7.744c-7.255,0-11.75-4.984-11.75-12.105c0-6.9,4.763-12.152,11.75-12.152
+							c7.834,0,11.617,6.588,11.173,13.665H729.622z M739.903,188.085c-0.578-3.204-1.958-4.896-5.029-4.896
+							c-4.006,0-5.163,3.115-5.252,4.896H739.903z"/>
+						<path d="M760.911,202.061h-7.033L746,179.049h6.632l4.852,15.713h0.089l4.852-15.713h6.276L760.911,202.061z"/>
+						<path d="M774.752,192.091c0.178,4.006,2.137,5.831,5.652,5.831c2.537,0,4.585-1.559,4.985-2.982h5.563
+							c-1.78,5.43-5.563,7.744-10.771,7.744c-7.255,0-11.75-4.984-11.75-12.105c0-6.9,4.763-12.152,11.75-12.152
+							c7.834,0,11.617,6.588,11.172,13.665H774.752z M785.033,188.085c-0.578-3.204-1.958-4.896-5.029-4.896
+							c-4.006,0-5.163,3.115-5.252,4.896H785.033z"/>
+						<path d="M794.201,179.049h6.009v3.205h0.134c1.603-2.582,4.362-3.828,7.032-3.828c6.722,0,8.413,3.783,8.413,9.48v14.154h-6.32
+							v-12.996c0-3.783-1.113-5.652-4.051-5.652c-3.428,0-4.896,1.913-4.896,6.587v12.062h-6.32V179.049z"/>
+						<path d="M827.715,179.049h4.629v4.229h-4.629v11.395c0,2.137,0.534,2.671,2.671,2.671c0.668,0,1.291-0.044,1.958-0.178v4.94
+							c-1.067,0.178-2.447,0.223-3.694,0.223c-3.872,0-7.255-0.891-7.255-5.475v-13.576h-3.828v-4.229h3.828v-6.898h6.32V179.049z"/>
+					</g>
+					<g>
+						<g>
+							<path fill="#FF2B06" d="M79.427,65.139H49.772V38.018h91.879v27.121h-29.644v78.695H79.427V65.139z"/>
+							<path fill="#FF2B06" d="M146.715,38.018h89.192v27.121h-56.59v13.187h56.59v25.202h-56.59v13.188h56.605v27.119h-89.207V38.018
+								z"/>
+							<path fill="#FF2B06" d="M241.394,38.018h53.5c35.266,0,47.729,26.085,47.729,52.754c0,32.465-17.191,53.062-54.096,53.062
+								h-47.134V38.018z M273.994,116.715h12.75c20.309,0,23.278-16.456,23.278-26.396c0-6.656-2.086-25.18-25.652-25.18h-10.376
+								V116.715z"/>
+						</g>
+						<g>
+							<path fill="#FF2B06" d="M389.47,103.058l-9.945-16.491l-9.698,16.491h-23.887l22.677-33.347l-21.835-31.896h23.895
+									l8.849,15.768l9.103-15.768h23.888l-21.829,31.896l22.677,33.347H389.47z"/>
+						</g>
+					</g>
+					<text transform="matrix(1 0 0 1 425.5791 143.8516)" font-family="'Helvetica'" font-size="146.9047">ISTAlameda</text>
+				</g>
+				<g id="open-icon" stroke="#000" stroke-width="2" transform="translate(1.000000, 1.000000)">
+					<path d="M16,7.5 L16,24.5" class="path-animate" id="path1-open-icon" stroke-linecap="round"/>
+					<path d="M7.5,16 L24.5,16" class="path-animate" id="path2-open-icon" stroke-linecap="round"/>
+				</g>
+				<g id="facebook-icon" fill="currentColor" transform="translate(1.000000, 1.000000)">
+					<!--path d="M28,1 C29.654,1 31,2.346 31,4 L31,28 C31,29.654 29.654,31 28,31 L4,31 C2.346,31 1,29.654 1,28 L1,4 C1,2.346 2.346,1 4,1 L28,1 L28,1 Z M28,0 L4,0 C1.8,0 0,1.8 0,4 L0,28 C0,30.2 1.8,32 4,32 L28,32 C30.2,32 32,30.2 32,28 L32,4 C32,1.8 30.2,0 28,0 L28,0 Z" id="path1"></path-->
+					<rect id="Rectangle" x="0" y="0" width="32" height="32" fill="transparent" stroke="currentColor" stroke-width="2"></rect>
+					<path d="M13.597,25.261 L17.424,25.261 L17.424,15.999 L19.977,15.999 L20.315,12.808 L17.424,12.808 L17.428,11.21 C17.428,10.378 17.507,9.932 18.701,9.932 L20.297,9.932 L20.297,6.739 L17.743,6.739 C14.676,6.739 13.597,8.288 13.597,10.891 L13.597,12.807 L11.685,12.807 L11.685,15.999 L13.597,15.999 L13.597,25.261 L13.597,25.261 Z" id="path2"></path>
+				</g>	
+				<g id="twitter-icon" fill="currentColor" transform="translate(1.000000, 1.000000)">
+					<!--path d="M28,1 C29.654,1 31,2.346 31,4 L31,28 C31,29.654 29.654,31 28,31 L4,31 C2.346,31 1,29.654 1,28 L1,4 C1,2.346 2.346,1 4,1 L28,1 L28,1 Z M28,0 L4,0 C1.8,0 0,1.8 0,4 L0,28 C0,30.2 1.8,32 4,32 L28,32 C30.2,32 32,30.2 32,28 L32,4 C32,1.8 30.2,0 28,0 L28,0 Z" id="path1"></path-->
+					<rect id="Rectangle" x="0" y="0" width="32" height="32" fill="transparent" stroke="currentColor" stroke-width="2"></rect>
+					<path d="M18.328,8.56 C16.665,9.165 15.614,10.726 15.734,12.434 L15.774,13.093 L15.109,13.012 C12.688,12.703 10.572,11.654 8.776,9.891 L7.897,9.017 L7.671,9.663 C7.192,11.102 7.498,12.623 8.496,13.645 C9.028,14.21 8.908,14.291 7.991,13.954 C7.672,13.847 7.392,13.766 7.366,13.806 C7.273,13.901 7.592,15.124 7.845,15.609 C8.191,16.282 8.896,16.94 9.668,17.331 L10.32,17.64 L9.549,17.653 C8.804,17.653 8.778,17.666 8.858,17.95 C9.124,18.824 10.175,19.753 11.346,20.156 L12.171,20.438 L11.453,20.869 C10.389,21.489 9.138,21.838 7.887,21.864 C7.288,21.877 6.796,21.931 6.796,21.972 C6.796,22.106 8.42,22.859 9.364,23.156 C12.198,24.03 15.564,23.653 18.092,22.16 C19.888,21.097 21.684,18.985 22.523,16.94 C22.976,15.851 23.428,13.86 23.428,12.906 C23.428,12.287 23.468,12.206 24.213,11.467 C24.652,11.037 25.064,10.566 25.144,10.431 C25.277,10.175 25.263,10.175 24.585,10.404 C23.454,10.808 23.294,10.754 23.854,10.149 C24.266,9.719 24.759,8.938 24.759,8.71 C24.759,8.67 24.56,8.737 24.333,8.858 C24.094,8.993 23.562,9.195 23.162,9.315 L22.44,9.543 L21.788,9.099 C21.429,8.857 20.924,8.588 20.657,8.507 C19.978,8.318 18.94,8.345 18.328,8.56 Z" id="path2"></path>
+				</g>
+				<g id="instagram-icon" fill="currentColor" transform="translate(1.000000, 1.000000)">
+					<!--path d="M28,1 C29.654,1 31,2.346 31,4 L31,28 C31,29.654 29.654,31 28,31 L4,31 C2.346,31 1,29.654 1,28 L1,4 C1,2.346 2.346,1 4,1 L28,1 L28,1 Z M28,0 L4,0 C1.8,0 0,1.8 0,4 L0,28 C0,30.2 1.8,32 4,32 L28,32 C30.2,32 32,30.2 32,28 L32,4 C32,1.8 30.2,0 28,0 L28,0 Z" id="path1"></path-->
+					<rect id="Rectangle" x="0" y="0" width="32" height="32" fill="transparent" stroke="currentColor" stroke-width="2"></rect>
+					<path d="M16,8.74054054 C11.4162162,8.74054054 7.74054054,12.4594595 7.74054054,17 C7.74054054,21.5405405 11.4162162,25.2594595 16,25.2594595 C20.5837838,25.2594595 24.2594595,21.5837838 24.2594595,17 C24.2594595,12.4162162 20.5837838,8.74054054 16,8.74054054 Z M16,22.0594595 C13.1891892,22.0594595 10.9405405,19.8108108 10.9405405,17 C10.9405405,14.1891892 13.1891892,11.9405405 16,11.9405405 C18.8108108,11.9405405 21.0594595,14.1891892 21.0594595,17 C21.0594595,19.8108108 18.8108108,22.0594595 16,22.0594595 Z" id="path2"></path>
+					<ellipse id="path3" cx="25.3027027" cy="6.78378378" rx="1.98918919" ry="1.98918919"></ellipse>
+				</g>
+				<g id="flickr-icon" fill="currentColor" transform="translate(1.000000, 1.000000)">
+					<!--path d="M28,1 C29.654,1 31,2.346 31,4 L31,28 C31,29.654 29.654,31 28,31 L4,31 C2.346,31 1,29.654 1,28 L1,4 C1,2.346 2.346,1 4,1 L28,1 L28,1 Z M28,0 L4,0 C1.8,0 0,1.8 0,4 L0,28 C0,30.2 1.8,32 4,32 L28,32 C30.2,32 32,30.2 32,28 L32,4 C32,1.8 30.2,0 28,0 L28,0 Z" id="path1"></path-->
+					<rect id="Rectangle" x="0" y="0" width="32" height="32" fill="transparent" stroke="currentColor" stroke-width="2"></rect>
+					<circle id="path2" cx="10" cy="15.5" r="4.5"></circle>
+					<circle id="path3" cx="22" cy="15.5" r="4.5"></circle>
+				</g>
+				<g id="linkedin-icon" fill="currentColor" transform="translate(1.000000, 1.000000)">
+					<!--path d="M28,1 C29.654,1 31,2.346 31,4 L31,28 C31,29.654 29.654,31 28,31 L4,31 C2.346,31 1,29.654 1,28 L1,4 C1,2.346 2.346,1 4,1 L28,1 L28,1 Z M28,0 L4,0 C1.8,0 0,1.8 0,4 L0,28 C0,30.2 1.8,32 4,32 L28,32 C30.2,32 32,30.2 32,28 L32,4 C32,1.8 30.2,0 28,0 L28,0 Z" id="path1"></path-->
+					<rect id="Rectangle" x="0" y="0" width="32" height="32" fill="transparent" stroke="currentColor" stroke-width="2"></rect>
+					<path d="M24,17.7851662 L24,23.3338758 L20.7844687,23.3338758 L20.7844687,18.1583353 C20.7844687,16.857475 20.3206231,15.9716345 19.1557777,15.9716345 C18.2664497,15.9716345 17.7398279,16.5680074 17.5061614,17.1469426 C17.4224599,17.3527087 17.398047,17.6421762 17.398047,17.9316438 L17.398047,23.3338758 L14.1825157,23.3338758 C14.1825157,23.3338758 14.2243664,14.569635 14.1825157,13.6628691 L17.398047,13.6628691 L17.398047,15.0334806 C17.3910718,15.0439433 17.3840967,15.054406 17.3771216,15.0648686 L17.398047,15.0648686 L17.398047,15.0334806 C17.827017,14.3743316 18.5873053,13.4361776 20.2962102,13.4361776 C22.4131597,13.4326901 24,14.8172518 24,17.7851662 Z M10.8205069,9 C9.71843757,9 9,9.72192513 9,10.6705417 C9,11.598233 9.69751221,12.3410835 10.7786561,12.3410835 L10.7995815,12.3410835 C11.9225761,12.3410835 12.6200884,11.598233 12.6200884,10.6705417 C12.5956754,9.72192513 11.9190886,9 10.8205069,9 Z M9.19181586,23.3338758 L12.4073471,23.3338758 L12.4073471,13.6628691 L9.19181586,13.6628691 L9.19181586,23.3338758 Z" id="path2"></path>
+				</g>
+				<g id="mail-icon" fill="currentColor" transform="translate(1.000000, 1.000000)">
+					<!--path d="M28,1 C29.654,1 31,2.346 31,4 L31,28 C31,29.654 29.654,31 28,31 L4,31 C2.346,31 1,29.654 1,28 L1,4 C1,2.346 2.346,1 4,1 L28,1 L28,1 Z M28,0 L4,0 C1.8,0 0,1.8 0,4 L0,28 C0,30.2 1.8,32 4,32 L28,32 C30.2,32 32,30.2 32,28 L32,4 C32,1.8 30.2,0 28,0 L28,0 Z" id="path1"></path-->
+					<rect id="Rectangle" x="0" y="0" width="32" height="32" fill="transparent" stroke="currentColor" stroke-width="2"></rect>
+					<path d="M7.00999451,11.2761038 C7.00999451,10.1736854 7.90162548,9.27999878 9.00286698,9.27999878 L22.9971216,9.27999878 C24.0977546,9.27999878 24.989994,10.1820328 24.989994,11.2761038 L24.989994,20.7138941 C24.989994,21.8163124 24.0983631,22.7099991 22.9971216,22.7099991 L9.00286698,22.7099991 C7.90223391,22.7099991 7.00999451,21.8079651 7.00999451,20.7138941 L7.00999451,11.2761038 Z M22.759956,9.37999725 L9.30999756,9.37999725 C11.4902241,11.4228319 13.7619244,13.0074776 16.0284188,15.1299973 C18.3262835,13.0799185 22.7756411,9.40897363 22.759956,9.37999725 Z M22.639993,22.5899973 C22.6424351,22.5860438 16.14582,17.7334148 16.0135379,17.6299973 C15.6317857,17.943272 9.94685068,22.1409914 9.3999939,22.5899973 L22.639993,22.5899973 Z M16.0099878,17.5420437 C13.7670909,15.7501519 11.5802664,14.002179 9.29998779,12.1839358 L9.29998779,22.5839354 C11.5615755,20.8798814 13.7577455,19.2373139 16.0099878,17.5420437 Z M16.0099945,17.5420437 C18.275663,19.2373139 20.4849249,20.8798814 22.7599945,22.5839354 L22.7599945,12.1839358 C20.4661226,14.002179 18.2662619,15.7501519 16.0099945,17.5420437 Z" id="path2"></path>
+				</g>
+				<g id="website-icon" fill="currentColor" transform="translate(1.000000, 1.000000)">
+					<!--path d="M28,1 C29.654,1 31,2.346 31,4 L31,28 C31,29.654 29.654,31 28,31 L4,31 C2.346,31 1,29.654 1,28 L1,4 C1,2.346 2.346,1 4,1 L28,1 L28,1 Z M28,0 L4,0 C1.8,0 0,1.8 0,4 L0,28 C0,30.2 1.8,32 4,32 L28,32 C30.2,32 32,30.2 32,28 L32,4 C32,1.8 30.2,0 28,0 L28,0 Z" id="path1"></path-->
+					<rect id="Rectangle" x="0" y="0" width="32" height="32" fill="transparent" stroke="currentColor" stroke-width="2"></rect>
+            		<path d="M11.899199,13.5454545 L13.3874,19.5 L14.5878466,19.5 L15.9464917,14.1470588 L15.9651033,14.1470588 L17.295831,19.5 L18.4776661,19.5 L20.0632999,13.4454545 L21.5764936,19.5 L22.7769403,19.5 L24.1355853,14.1470588 L24.1541969,14.1470588 L25.4849246,19.5 L26.6667597,19.5 L28.5,12.5 L27.3181649,12.5 L26.0804951,17.8529412 L26.0618835,17.8529412 L24.7590731,12.5 L23.5679323,12.5 L22.2278988,17.8529412 L22.2092872,17.8529412 L21.0088405,12.5 L20.0689559,12.5 L19.1290713,12.5 L17.8914015,17.8529412 L17.8727899,17.8529412 L16.5699795,12.5 L15.3788386,12.5 L14.0388051,17.8529412 L14.0201936,17.8529412 L12.8197469,12.5 L11.9054532,12.5 L10.9911595,12.5 L9.75348967,17.8529412 L9.73487809,17.8529412 L8.43206775,12.5 L7.24092686,12.5 L5.90089336,17.8529412 L5.88228178,17.8529412 L4.6818351,12.5 L3.5,12.5 L5.24948818,19.5 L6.44993486,19.5 L7.80857994,14.1470588 L7.82719151,14.1470588 L9.15791923,19.5 L10.3397543,19.5 L11.899199,13.5454545 Z" id="Combined-Shape"></path>
+				</g>
+				<g id="leftarrow" fill="#000">
+					<path d="M13.92,27a1,1,0,0,1-.71-.29L0,13.5,13.21.29a1,1,0,0,1,1.41,1.41L2.83,13.5,14.62,25.3A1,1,0,0,1,13.92,27Z"/>
+				</g>
+				<g id="rightarrow" fill="#000">
+					<path d="M1,27A1,1,0,0,1,.29,25.3L12.09,13.5.29,1.71A1,1,0,0,1,1.71.29L14.92,13.5,1.71,26.71A1,1,0,0,1,1,27Z"/>
+				</g>
+			</defs>
+		</svg>
 	</head>
 	<body>
 		<div id="container" class="container">
             <!-- Landing Page -->
 			<header class="intro" id="intro" >
+                
+                <!-- Background Video -->
                 <video loop autoplay muted class="video-background" id="video-background" style="">
     			     <source src="videos/TEDxISTAlameda_Merry_Xmas.mp4"/>
     			     <img src="placeholder.jpg" alt="placeholder" />
   			    </video>
+                
+                <!-- Logo -->
+                <svg class="nav_logo-svg" viewBox="0 0 1270 247">
+                    <use xlink:href="#tedxistalameda"></use>
+                </svg>
+                
+                <!-- Mute Button -->
 				<button id="mute"><img id="mute-btn" src="glyphicons/png/glyphicons-185-volume-up.png" /></button>
-				<div class="intro__content">
 				
-					<div class="intro__subtitle">
-                        <!--Botão para entrar no conteúdo (SVG) -->
-						<button class="trigger">
-							<svg width="100%" height="100%" viewBox="0 0 60 60" preserveAspectRatio="none">
-								<g class="icon icon--grid">
-									<rect x="32.5" y="5.5" width="22" height="22"/>
-									<rect x="4.5" y="5.5" width="22" height="22"/>
-									<rect x="32.5" y="33.5" width="22" height="22"/>
-									<rect x="4.5" y="33.5" width="22" height="22"/>
-								</g>
-								<g class="icon icon--cross">
-									<line x1="4.5" y1="55.5" x2="54.953" y2="5.046"/>
-									<line x1="54.953" y1="55.5" x2="4.5" y2="5.047"/>
-								</g>
-							</svg>
-							<span>View content</span>
-						</button>
-                        <!--Botão para entrar no conteúdo (SVG) -->
-					</div>
-				</div>
-				<div class="navbar" id="navbar">
-					<ul>
-					  <li class="button1"><a href="#">About</a></li>
-					  <li class="button2"><a href="#">Speakers</a></li>
-					  <li class="button3"><a href="#">Partners</a></li>
-					  <li class="button4"><a href="#">Info</a></li>
+                <!-- Navigation Bar -->
+                <div class="navbar" id="navbar">
+					<ul class="nav_button">
+					  <li class="button1"><a>About</a></li>
+					  <li class="button2"><a>Speakers</a></li>
+					  <li class="button3"><a>Partners</a></li>
+					  <li class="button4"><a>Info</a></li>
+                    </ul>
+                    <ul class="nav_icon">
+                      <li id="nav_border">
+                           <a href="https://www.facebook.com/tedxistalameda" target="_blank">
+				                <svg class="instagram" height='20' width='20' viewBox="0 0 35 35">
+								    <use xlink:href="#facebook-icon"></use>
+								</svg>
+				           </a>
+                      </li>
+                      <li style="content:none">
+                           <a href="https://www.instagram.com/tedxistalameda/" target="_blank">
+				                <svg class="instagram" height='20' width='20' viewBox="0 0 35 35">
+								    <use xlink:href="#instagram-icon"></use>
+								</svg>
+				           </a>
+                      </li>
 					</ul>
 				</div>
+                
+                <!-- Attend Form -->
 				<div id="overlay">
 					<button id="closebutton" onclick="off()"><img src="glyphicons/png/glyphicons-208-remove.png" /></button>
-
                         <div class="typeform-widget" id="typeform" data-url="https://beatriz209.typeform.com/to/ROAiJk"  > </div> 
-
-                   
-
                 </div>
 
+                <!-- Attend Button -->
                 <div style="padding:20px">
                   <button class="button button--wayra button--border-thick button--text-upper button--size-s" onclick="on()">Attend</button>
                 </div>
 
-			</header><!-- Landing Page -->
-                <!-- About -->
-                <div class="about">
-                     <div class="grid-container" id="about">
-                    <ul id="og-grid-1" class="og-grid">
-                        <li>
-                            <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="0">
-                                <img src="images/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="1">
-                                <img src="images/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="2">
-                                <img src="images/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="3">
-                                <img src="images/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="4">
-                                <img src="images/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="5">
-                                <img src="images/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="6">
-                                <img src="images/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="7">
-                                <img src="images/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="8">
-                                <img src="images/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="9">
-                                <img src="images/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="10">
-                                <img src="images/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="11">
-                                <img src="images/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                </div><!-- About -->
-
-                <!-- Speakers -->
-                <div class="speakers_container">
-                     <div class="grid-container" id="speakers">
-                        <ul id="og-grid-2" class="og-grid">
-                        <li>
-                            <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="12">
-                                <img src="images/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="13">
-                                <img src="images/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="14">
-                                <img src="images/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="15">
-                                <img src="images/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="16">
-                                <img src="images/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="17">
-                                <img src="images/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="18">
-                                <img src="images/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="19">
-                                <img src="images/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="20">
-                                <img src="images/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="21">
-                                <img src="images/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="22">
-                                <img src="images/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="23">
-                                <img src="images/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                </div><!-- Speakers -->
-
-                <!-- Partners -->
-                <div class="partners_container">
-                     <div class="grid-container" id="partners">
-                    <ul id="og-grid-3" class="og-grid">
-                        <li>
-                            <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="24">
-                                <img src="images/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="25">
-                                <img src="images/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="26">
-                                <img src="images/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="27">
-                                <img src="images/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="28">
-                                <img src="images/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="29">
-                                <img src="images/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="30">
-                                <img src="images/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="31">
-                                <img src="images/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="32">
-                                <img src="images/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="33">
-                                <img src="images/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="34">
-                                <img src="images/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="35">
-                                <img src="images/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                </div> <!-- Partners -->
-                
-                <!-- Info --> 
-                <div class="info_container">
-			     <div class="grid-container" id="info">
-				    <ul id="og-grid-4" class="og-grid">
-					<li>
-						<a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="37">
-							<img src="images/thumbs/1.jpg" alt="img01"/>
-						</a>
-					</li>
-					<li>
-						<a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="38">
-							<img src="images/thumbs/2.jpg" alt="img02"/>
-						</a>
-					</li>
-					<li>
-						<a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="39">
-							<img src="images/thumbs/1.jpg" alt="img01"/>
-						</a>
-					</li>
-					<li>
-						<a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="40">
-							<img src="images/thumbs/1.jpg" alt="img01"/>
-						</a>
-					</li>
-					<li>
-						<a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="41">
-							<img src="images/thumbs/2.jpg" alt="img02"/>
-						</a>
-					</li>
-					<li>
-						<a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="42">
-							<img src="images/thumbs/1.jpg" alt="img01"/>
-						</a>
-					</li>
-					<li>
-						<a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="43">
-							<img src="images/thumbs/1.jpg" alt="img01"/>
-						</a>
-					</li>
-					<li>
-						<a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="44">
-							<img src="images/thumbs/2.jpg" alt="img02"/>
-						</a>
-					</li>
-					<li>
-						<a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="45">
-							<img src="images/thumbs/1.jpg" alt="img01"/>
-						</a>
-					</li>
-					<li>
-						<a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="46">
-							<img src="images/thumbs/1.jpg" alt="img01"/>
-						</a>
-					</li>
-					<li>
-						<a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="47">
-							<img src="images/thumbs/2.jpg" alt="img02"/>
-						</a>
-					</li>
-					<li>
-						<a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="48">
-							<img src="images/thumbs/1.jpg" alt="img01"/>
-						</a>
-					</li>
-				</ul>
-			</div>
-		    </div><!-- Info -->
-            </div>
+			</header><!-- Landing Page -->   
         </div>
 
 		<!-- Expandable grid scripts -->

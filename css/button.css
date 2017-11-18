@@ -62,8 +62,8 @@
 	-moz-osx-font-smoothing: grayscale;
 	display:inline;
 	position:absolute;
-	left:3%;
-	top:3%;
+	right: 15vw;
+	top:4vh;
 	z-index:90;
 	font-size:30px;
 }

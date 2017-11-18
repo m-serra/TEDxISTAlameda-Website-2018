@@ -4,7 +4,7 @@
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	background: #2a2e39;
+	background: white;
 	
    /* -webkit-transition: -webkit-transform 0.6s;
 	transition: transform 0.6s;
@@ -78,32 +78,94 @@
 }
 
 .navbar {
-	width: 100%;
-	position: absolute;
+    display: flex;
+    height: 4rem;
+    line-height: 4rem;
+    margin: -4rem 4rem 0 4rem;
+    padding: 0 2rem 0 0;
+    overflow: hidden;
+	position: relative;
+    width: calc(100% - 4rem);
+    bottom: 4rem;
 	z-index: 99;
-	bottom: 0;
+    max-width: 72rem;
 }
 
-.navbar li {
-  display: inline;
-	float: left;
-	width: 25%;
+.navbar ul{
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    
+    -moz-flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-grow: 1;
+    flex-grow: 1;
+    
+    -moz-flex-shrink: 1;
+    -webkit-flex-shrink: 1;
+    -ms-flex-shrink: 1;
+    flex-shrink: 1;
+    
+    list-style: none;
+    margin: 0 0 0 0;
+}
+
+.navbar .nav_button li {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.navbar .nav_button li{
+    background-color: rgba(241, 232, 217, 0.5);
+    -moz-transition: background-color .15s ease-in;
+    -o-transition: background-color .15s ease-in;
+    -webkit-transition: background-color .15s ease-in;
+}
+
+.navbar .nav_button li:hover{
+    background-color:rgba(241, 232, 217, 0.9);
+}
+
+.nav_icon{
+    position: relative;
+    background-color: rgba(241, 232, 217, 0.5);
+    
+    -moz-flex-grow: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-grow: 0;
+    flex-grow: 0;
+    -moz-flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-shrink: 0;
+    flex-shrink: 0;
+    margin-bottom: 0;
+}
+
+.nav_icon li {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .navbar	a {
-  display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
+  font-weight: 900;
+  letter-spacing: 0.075em;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  vertical-align: baseline;
 }
 
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: rgba(0,0,0,0.5);
+#nav_border:after {
+  content : "";
+  position: absolute;
+  left:0;
+  top: 10%;
+  width: 1px;
+  height: 80%;
+  background: #555;
 }
 
 /* Trigger button with SVG */
@@ -430,8 +492,8 @@
   height: 50px;
   width: 50px;
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: 6vh;
+  right: 4vw;
 
   background-size: cover;
   border: none;
@@ -441,4 +503,21 @@
 #mute-btn{
   height: 50px;
   width: 50px;
+}
+
+.nav_logo-svg {  
+    margin-top: 8px;
+	margin-bottom: 8px;
+    position: absolute;
+    top: 4vh; left: 3vw;
+    width: 20vw;
+}
+
+.instagram {
+    color: #292929;
+}
+
+.instagram:hover{
+    color: #ff2200;
+    
 }
