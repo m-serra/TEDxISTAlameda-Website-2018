@@ -78,6 +78,7 @@
 }
 
 .navbar {
+	color: white;
 	width: 84vw;
 	position: absolute;
 	bottom: 0;
@@ -85,30 +86,67 @@
 	z-index: 99;
 }
 
-.navbar--follow {
-	bottom: 64vh;
-}
-
 .navbar li {
   display: inline;
 	float: left;
 	width: 25%;
+	text-align: center;
+}
+
+.navbar .nav_button li {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.navbar .nav_button li{
+    background-color: rgba(241, 232, 217, 0.5);
+    -moz-transition: background-color .15s ease-in;
+    -o-transition: background-color .15s ease-in;
+    -webkit-transition: background-color .15s ease-in;
+}
+
+.navbar .nav_button li:hover{
+    background-color:rgba(241, 232, 217, 0.9);
+}
+
+.nav_icon{
+    position: relative;
+    background-color: rgba(241, 232, 217, 0.5);
+
+    -moz-flex-grow: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-grow: 0;
+    flex-grow: 0;
+    -moz-flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-shrink: 0;
+    flex-shrink: 0;
+    margin-bottom: 0;
+}
+
+.nav_icon li {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .navbar	a {
-  display: block;
-  color: white;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
+  font-weight: 900;
+  letter-spacing: 0.075em;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  vertical-align: baseline;
 }
 
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: rgba(0,0,0,0.5);
+#nav_border:after {
+  content : "";
+  position: absolute;
+  left:0;
+  top: 10%;
+  width: 1px;
+  height: 80%;
+  background: #555;
 }
 
 /* Trigger button with SVG */
@@ -435,8 +473,8 @@
   height: 50px;
   width: 50px;
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: 6vh;
+  right: 4vw;
 
   background-size: cover;
   border: none;
