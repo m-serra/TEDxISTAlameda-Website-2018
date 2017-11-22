@@ -77,59 +77,54 @@
 	line-height: 1.2;
 }
 
-.navbar {
-    display: flex;
-    height: 4rem;
-    line-height: 4rem;
-    margin: -4rem 4rem 0 4rem;
-    padding: 0 2rem 0 0;
-    overflow: hidden;
-	position: relative;
-    width: calc(100% - 4rem);
-    bottom: 4rem;
-	z-index: 99;
-    max-width: 72rem;
-}
 
-.navbar ul{
+.navbar {
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     
+    height: 4rem;
+    line-height: 4rem;
+    margin: 0 auto 0 auto;
+    padding: 0;
+    padding-left: 3vw;
+    padding-right: 3vw;  
+    overflow: hidden;
+	position: absolute; /*relative*/
+    width: calc(100% - 60rem);
+    bottom: 4rem;
+    max-width: 72rem;
+    left: 30rem;
+    bottom: 0vh;
+	z-index: 99;
+}
+
+/*.navbar ul.nav_button{
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
     -moz-flex-grow: 1;
     -webkit-flex-grow: 1;
     -ms-flex-grow: 1;
     flex-grow: 1;
-    
     -moz-flex-shrink: 1;
     -webkit-flex-shrink: 1;
     -ms-flex-shrink: 1;
     flex-shrink: 1;
     
     list-style: none;
-    margin: 0 0 0 0;
-}
+    margin: 0;
+    padding-left: 0;
+} */
 
-.navbar .nav_button li {
-    padding-left: 6rem;
-    padding-right: 6rem;
-}
-
-.navbar .nav_button li{
+.navbar ul{
+    /*width: 100%; */
     background-color: rgba(241, 232, 217, 0.5);
-    -moz-transition: background-color .15s ease-in;
-    -o-transition: background-color .15s ease-in;
-    -webkit-transition: background-color .15s ease-in;
-}
-
-.navbar .nav_button li:hover{
-    background-color:rgba(241, 232, 217, 0.9);
-}
-
-.nav_icon{
     position: relative;
-    background-color: rgba(241, 232, 217, 0.5);
+    list-style: none; 
+    text-align: center;
     
     -moz-flex-grow: 0;
     -webkit-flex-grow: 0;
@@ -139,26 +134,60 @@
     -webkit-flex-shrink: 0;
     -ms-flex-shrink: 0;
     flex-shrink: 0;
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
 }
 
-.nav_icon li {
-    padding-left: 1rem;
-    padding-right: 1rem;
+/*
+.navbar ul.nav_button li {
+    display: block;
+    padding-left: 0; 
+
+    -moz-transition: background-color .15s ease-in;
+    -o-transition: background-color .15s ease-in;
+    -webkit-transition: background-color .15s ease-in;
 }
 
-.navbar	a {
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 900;
-  letter-spacing: 0.075em;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  vertical-align: baseline;
+.navbar ul.nav_button li:hover{
+    background-color:rgba(241, 232, 217, 0.9);
 }
 
-#nav_border:after {
+.navbar ul.nav_button li a{
+    display: inline-block;
+    outline: none;
+    padding: 0 2rem;
+    
+    font-size: 0.8rem;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+    vertical-align: baseline;
+}
+*/
+
+
+.navbar ul.nav_icon{
+    width: 70%; 
+    /*text-align: center;*/
+}
+
+.navbar ul.nav_icon li {
+    display: inline-block;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.navbar ul.mute_btn{
+    width: 30%;
+}
+
+.navbar ul.mute_btn li {
+    display: inline-block;
+}
+
+.navbar ul.mute_btn:after {
   content : "";
   position: absolute;
   left:0;
@@ -461,16 +490,45 @@
 }
 
 /*======= Fullscreen video */
-
-	* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.video-background{ 
+    position: fixed; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0; 
+    overflow: hidden;
+    z-index: -1;
 }
 
+.video-background > video { 
+    position: absolute; 
+    top: 0; left: 0; 
+    width: 100%; 
+    height: 100%; 
+}
 
-.video-background{
-    
+@media(min-aspect-ratio: 16/9) { 
+    .video-background > video{ 
+        height: 300%; 
+        top: -100%; 
+    }
+}
+
+@media(max-aspect-ratio: 16/9){
+    .video-background > video{
+        width: 300%; 
+        left: -100%;
+    }
+}
+
+@supports(object-fit: cover){
+    .video-background > video{
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+    }
 }
 
 .overlay {
@@ -491,9 +549,9 @@
   cursor: pointer;
   height: 50px;
   width: 50px;
-  position: absolute;
+  /*position: absolute;
   top: 6vh;
-  right: 4vw;
+  right: 4vw; */        /*Comentado para a versão só com landing page*/
 
   background-size: cover;
   border: none;
@@ -513,11 +571,14 @@
     width: 20vw;
 }
 
-.instagram {
+.instagram, 
+.facebook {
     color: #292929;
 }
 
 .instagram:hover{
     color: #ff2200;
-    
+}
+.facebook:hover{
+   color: #ff2200;   
 }

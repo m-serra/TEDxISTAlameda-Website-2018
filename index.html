@@ -17,7 +17,7 @@
 		<link rel="stylesheet" type="text/css" href="css/tedxistalameda.css"/>
 		<link rel="stylesheet" type="text/css" href="css/button.css"/>
 
-        <script src="js/modernizr.custom.js"></script>
+        
 		<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -184,47 +184,40 @@
 	<body>
 		<div id="container" class="container">
             <!-- Landing Page -->
-			<header class="intro" id="intro" >
+			<header class="intro" id="intro" >    
                 
-                <!-- Background Video -->
-                <video loop autoplay muted class="video-background" id="video-background" style="">
-    			     <source src="videos/TEDxISTAlameda_Merry_Xmas.mp4"/>
-    			     <img src="placeholder.jpg" alt="placeholder" />
-  			    </video>
-                
-                <!-- Logo -->
-                <svg class="nav_logo-svg" viewBox="0 0 1270 247">
-                    <use xlink:href="#tedxistalameda"></use>
-                </svg>
-                
-                <!-- Mute Button -->
-				<button id="mute"><img id="mute-btn" src="glyphicons/png/glyphicons-185-volume-up.png" /></button>
 				
                 <!-- Navigation Bar -->
-                <div class="navbar" id="navbar">
-					<ul class="nav_button">
-					  <li class="button1"><a>About</a></li>
-					  <li class="button2"><a>Speakers</a></li>
-					  <li class="button3"><a>Partners</a></li>
-					  <li class="button4"><a>Info</a></li>
-                    </ul>
+                <nav class="navbar">
+					<!--<ul class="nav_button">
+				        <li class="button1"><a>About</a></li>
+				        <li class="button2"><a>Speakers</a></li>
+				        <li class="button3"><a>Partners</a></li>
+				        <li class="button4"><a>Info</a></li>
+                    </ul> -->
                     <ul class="nav_icon">
-                      <li id="nav_border">
-                           <a href="https://www.facebook.com/tedxistalameda" target="_blank">
+                        <li>
+                            <a href="https://www.instagram.com/tedxistalameda/" target="_blank">
 				                <svg class="instagram" height='20' width='20' viewBox="0 0 35 35">
-								    <use xlink:href="#facebook-icon"></use>
-								</svg>
-				           </a>
-                      </li>
-                      <li style="content:none">
-                           <a href="https://www.instagram.com/tedxistalameda/" target="_blank">
-				                <svg class="instagram" height='20' width='20' viewBox="0 0 35 35">
-								    <use xlink:href="#instagram-icon"></use>
-								</svg>
-				           </a>
-                      </li>
+                                    <use xlink:href="#instagram-icon"></use>
+				                </svg>
+				            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/tedxistalameda" target="_blank">
+				                <svg class="facebook" height='20' width='20' viewBox="0 0 35 35">
+                                    <use xlink:href="#facebook-icon"></use>
+                                </svg>
+				            </a>
+                        </li>
 					</ul>
-				</div>
+                    <ul class="mute_btn" id="nav_border">
+                        <li> 
+                            <!-- Mute Button -->
+				            <button id="mute"><img id="mute-btn" src="glyphicons/png/glyphicons-185-volume-up.png" /></button>
+                        </li>
+                    </ul>
+				</nav>
                 
                 <!-- Attend Form -->
 				<div id="overlay">
@@ -236,167 +229,28 @@
                 <div style="padding:20px">
                   <button class="button button--wayra button--border-thick button--text-upper button--size-s" onclick="on()">Attend</button>
                 </div>
+                
+                <!-- Logo -->
+                <svg class="nav_logo-svg" viewBox="0 0 1270 247">
+                    <use xlink:href="#tedxistalameda"></use>
+                </svg>
+                
+                <!-- Background Video -->
+                <div class="video-background">
+                    <video loop autoplay muted class="video-background" id="video-background">
+                         <source src="videos/TEDxISTAlameda_Merry_Xmas.mp4"/>
+                         <img src="placeholder.jpg" alt="placeholder"/>
+                    </video>
+                </div>
 
 			</header><!-- Landing Page -->   
         </div>
 
 		<!-- Expandable grid scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="js/grid.js"></script>
-		<script>
-			$(function(){
-				Grid.init();
-			});
-		</script>
-        <!-- Expandable grid scripts -->
-
-        <script src="js/classie.js"></script>
-		<script>
-			(function() {
-				var container = document.getElementById( 'container' ),
-					trigger = container.querySelector( 'button.trigger' );
-
-				function playPause() {
-					var myVideo = document.getElementById("video-background");
-          if (myVideo.paused)
-              myVideo.play();
-          else
-              myVideo.pause();
-				}
-
-				function toggleContent() {
-					if( classie.has( container, 'container--open' ) ) {
-						classie.remove( container, 'container--open' );
-						classie.remove( trigger, 'trigger--active' );
-						window.addEventListener( 'scroll', noscroll );
-                        //document.querySelector(".intro").style.zIndex = 10;
-					}
-					else {
-						classie.add( container, 'container--open' );
-						classie.add( trigger, 'trigger--active' );
-						window.removeEventListener( 'scroll', noscroll );
-					};
-
-					playPause();
-
-				}
-
-				function noscroll() {
-					window.scrollTo( 0, 0 );
-				}
-
-				// reset scrolling position
-				document.body.scrollTop = document.documentElement.scrollTop = 0;
-
-				// disable scrolling
-				window.addEventListener( 'scroll', noscroll );
-
-				trigger.addEventListener( 'click', toggleContent);
-
-
-				// content toggle HOTKEY
-				// SPACE
-	  		    $(document).keydown(function(e) {
-				 if (e.keyCode == 32) { // key SPACE (content)
-				 	e.preventDefault(); // prevents Default function of key
-				 	$(trigger).blur(); // unselects the trigger button if it was previous selected by clicking on it
-				 	toggleContent();
-					}
-				});
-
-				// navbar buttons start
-
-				var navbar = document.getElementById( 'navbar' ),
-					button1 = navbar.querySelector( 'li.button1' ), 
-                    button2 = navbar.querySelector( 'li.button2' ), 
-                    button3 = navbar.querySelector( 'li.button3' ), 
-                    button4 = navbar.querySelector( 'li.button4' );
-
-				function navtoggle() {
-					if( !(classie.has( container, 'container--open') ) ) {
-						toggleContent();
-					};
-				};
-
-				var section1 = document.getElementById("about"),
-                    section2 = document.getElementById("speakers"),
-				    section3 = document.getElementById("partners"),
-				    section4 = document.getElementById("info"),
-				    sections = [section1,section2,section3,section4];
-
-				function hide_sections(n){
-					for(i=0;i<4;i++){
-						if((i+1)==n){
-							if(classie.has(sections[n-1],'container--close')){
-								classie.remove(sections[n-1],'container--close');
-							}
-						}else{
-							if(!(classie.has(sections[i],'container--close'))){
-								classie.add(sections[i],'container--close');
-							}
-						}
-					}
-				}
-
-				function navbutton1() {
-					// go to content 1
-					hide_sections(1);
-				}
-
-				function navbutton2() {
-					// go to content 2
-					hide_sections(2);
-				};
-				function navbutton3() {
-					// go to content 3
-					hide_sections(3);
-				};
-				function navbutton4() {
-					// go to content 4
-					hide_sections(4);
-				};
-
-				button1.addEventListener( 'click', navtoggle );
-				button2.addEventListener( 'click', navtoggle );
-				button3.addEventListener( 'click', navtoggle );
-				button4.addEventListener( 'click', navtoggle );
-
-				button1.addEventListener( 'click', navbutton1 );
-				button2.addEventListener( 'click', navbutton2 );
-				button3.addEventListener( 'click', navbutton3 );
-				button4.addEventListener( 'click', navbutton4 );
-
-				// navbar buttons end
-
-				// For Demo purposes only (prevent jump on click)
-				[].slice.call( document.querySelectorAll('.items-wrap a') ).forEach( function(el) { el.onclick = function() { return false; } } );
-			})();
-		</script>
-
+				
         <!-- video script -->
 		<script>
-			// video source https://www.videezy.com/random-objects/2313-electric-bulb-hd-stock-video
-			/*var container = document.getElementById('intro');
-			var video = document.getElementById('video-background'); */
-
-			// Resize
-			/*function adapt() {
-				var container_width = container.offsetWidth;
-				var container_height = container.offsetHeight;
-
-				video.style.height = "100vh";
-				video.style.width = "100vw";
-
-				if(video.offsetHeight < container_height) {
-					video.style.height = "100vh";
-					video.style.width = "100vw";
-				}
-				
-			}*/
-
-			// events
-			/*window.addEventListener('load', adapt);
-			window.addEventListener('resize', adapt);*/
                 
 			//mute button
 			$(document).ready(function() {
@@ -441,6 +295,6 @@
             }
         </script>
 
-           <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> 
+        <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> 
 	</body>
 </html>
