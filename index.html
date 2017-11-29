@@ -9,19 +9,22 @@
         <meta property="og:type" content="website"/>
         <meta property="og:site_name" content="TEDxISTAlameda"/>
         <meta property="og:url" content="https://www.tedxistalameda.com/"/>
-        
-	       
+
+
 		<meta name="author" content="TEDxISTAlameda" />
 		<link rel="icon" type="image/x-icon" href="images/_favicon.png"/>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 		<link rel="stylesheet" type="text/css" href="css/tedxistalameda.css"/>
 		<link rel="stylesheet" type="text/css" href="css/button.css"/>
 
-        
+		<!-- Import bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+
+
 		<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-        
+
         <staticContent><mimeMap fileExtension=".svg" mimeType="image/svg+xml" /></staticContent>
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
 			<defs>
@@ -139,11 +142,16 @@
 					<!--path d="M28,1 C29.654,1 31,2.346 31,4 L31,28 C31,29.654 29.654,31 28,31 L4,31 C2.346,31 1,29.654 1,28 L1,4 C1,2.346 2.346,1 4,1 L28,1 L28,1 Z M28,0 L4,0 C1.8,0 0,1.8 0,4 L0,28 C0,30.2 1.8,32 4,32 L28,32 C30.2,32 32,30.2 32,28 L32,4 C32,1.8 30.2,0 28,0 L28,0 Z" id="path1"></path-->
 					<rect id="Rectangle" x="0" y="0" width="32" height="32" fill="transparent" stroke="currentColor" stroke-width="2"></rect>
 					<path d="M13.597,25.261 L17.424,25.261 L17.424,15.999 L19.977,15.999 L20.315,12.808 L17.424,12.808 L17.428,11.21 C17.428,10.378 17.507,9.932 18.701,9.932 L20.297,9.932 L20.297,6.739 L17.743,6.739 C14.676,6.739 13.597,8.288 13.597,10.891 L13.597,12.807 L11.685,12.807 L11.685,15.999 L13.597,15.999 L13.597,25.261 L13.597,25.261 Z" id="path2"></path>
-				</g>	
+				</g>
 				<g id="twitter-icon" fill="currentColor" transform="translate(1.000000, 1.000000)">
 					<!--path d="M28,1 C29.654,1 31,2.346 31,4 L31,28 C31,29.654 29.654,31 28,31 L4,31 C2.346,31 1,29.654 1,28 L1,4 C1,2.346 2.346,1 4,1 L28,1 L28,1 Z M28,0 L4,0 C1.8,0 0,1.8 0,4 L0,28 C0,30.2 1.8,32 4,32 L28,32 C30.2,32 32,30.2 32,28 L32,4 C32,1.8 30.2,0 28,0 L28,0 Z" id="path1"></path-->
 					<rect id="Rectangle" x="0" y="0" width="32" height="32" fill="transparent" stroke="currentColor" stroke-width="2"></rect>
 					<path d="M18.328,8.56 C16.665,9.165 15.614,10.726 15.734,12.434 L15.774,13.093 L15.109,13.012 C12.688,12.703 10.572,11.654 8.776,9.891 L7.897,9.017 L7.671,9.663 C7.192,11.102 7.498,12.623 8.496,13.645 C9.028,14.21 8.908,14.291 7.991,13.954 C7.672,13.847 7.392,13.766 7.366,13.806 C7.273,13.901 7.592,15.124 7.845,15.609 C8.191,16.282 8.896,16.94 9.668,17.331 L10.32,17.64 L9.549,17.653 C8.804,17.653 8.778,17.666 8.858,17.95 C9.124,18.824 10.175,19.753 11.346,20.156 L12.171,20.438 L11.453,20.869 C10.389,21.489 9.138,21.838 7.887,21.864 C7.288,21.877 6.796,21.931 6.796,21.972 C6.796,22.106 8.42,22.859 9.364,23.156 C12.198,24.03 15.564,23.653 18.092,22.16 C19.888,21.097 21.684,18.985 22.523,16.94 C22.976,15.851 23.428,13.86 23.428,12.906 C23.428,12.287 23.468,12.206 24.213,11.467 C24.652,11.037 25.064,10.566 25.144,10.431 C25.277,10.175 25.263,10.175 24.585,10.404 C23.454,10.808 23.294,10.754 23.854,10.149 C24.266,9.719 24.759,8.938 24.759,8.71 C24.759,8.67 24.56,8.737 24.333,8.858 C24.094,8.993 23.562,9.195 23.162,9.315 L22.44,9.543 L21.788,9.099 C21.429,8.857 20.924,8.588 20.657,8.507 C19.978,8.318 18.94,8.345 18.328,8.56 Z" id="path2"></path>
+				</g>
+				<g id="sound_button" fill="currentColor" transform="translate(1.000000, 1.000000)">
+					<!--path d="M28,1 C29.654,1 31,2.346 31,4 L31,28 C31,29.654 29.654,31 28,31 L4,31 C2.346,31 1,29.654 1,28 L1,4 C1,2.346 2.346,1 4,1 L28,1 L28,1 Z M28,0 L4,0 C1.8,0 0,1.8 0,4 L0,28 C0,30.2 1.8,32 4,32 L28,32 C30.2,32 32,30.2 32,28 L32,4 C32,1.8 30.2,0 28,0 L28,0 Z" id="path1"></path-->
+					<path d="M12.945.38l-.652.762c1.577 1.462 2.57 3.544 2.57 5.858 0 2.314-.994 4.396-2.57 5.858l.65.763c1.79-1.644 2.92-3.997 2.92-6.62S14.735 2.024 12.945.38zm-2.272 2.66l-.65.762c.826.815 1.34 1.947 1.34 3.198 0 1.25-.515 2.382-1.342 3.2l.652.762c1.04-1 1.69-2.404 1.69-3.96 0-1.558-.65-2.963-1.69-3.963zM0 4v6h2.804L8 13V1L2.804 4H0zm7-1.268v8.536L3.072 9H1V5h2.072L7 2.732z">
+					</path>
 				</g>
 				<g id="instagram-icon" fill="currentColor" transform="translate(1.000000, 1.000000)">
 					<!--path d="M28,1 C29.654,1 31,2.346 31,4 L31,28 C31,29.654 29.654,31 28,31 L4,31 C2.346,31 1,29.654 1,28 L1,4 C1,2.346 2.346,1 4,1 L28,1 L28,1 Z M28,0 L4,0 C1.8,0 0,1.8 0,4 L0,28 C0,30.2 1.8,32 4,32 L28,32 C30.2,32 32,30.2 32,28 L32,4 C32,1.8 30.2,0 28,0 L28,0 Z" id="path1"></path-->
@@ -151,6 +159,14 @@
 					<path d="M16,8.74054054 C11.4162162,8.74054054 7.74054054,12.4594595 7.74054054,17 C7.74054054,21.5405405 11.4162162,25.2594595 16,25.2594595 C20.5837838,25.2594595 24.2594595,21.5837838 24.2594595,17 C24.2594595,12.4162162 20.5837838,8.74054054 16,8.74054054 Z M16,22.0594595 C13.1891892,22.0594595 10.9405405,19.8108108 10.9405405,17 C10.9405405,14.1891892 13.1891892,11.9405405 16,11.9405405 C18.8108108,11.9405405 21.0594595,14.1891892 21.0594595,17 C21.0594595,19.8108108 18.8108108,22.0594595 16,22.0594595 Z" id="path2"></path>
 					<ellipse id="path3" cx="25.3027027" cy="6.78378378" rx="1.98918919" ry="1.98918919"></ellipse>
 				</g>
+
+				<g id="sound_button" fill="currentColor" transform="translate(1.000000, 1.000000)">
+					<!--path d="M28,1 C29.654,1 31,2.346 31,4 L31,28 C31,29.654 29.654,31 28,31 L4,31 C2.346,31 1,29.654 1,28 L1,4 C1,2.346 2.346,1 4,1 L28,1 L28,1 Z M28,0 L4,0 C1.8,0 0,1.8 0,4 L0,28 C0,30.2 1.8,32 4,32 L28,32 C30.2,32 32,30.2 32,28 L32,4 C32,1.8 30.2,0 28,0 L28,0 Z" id="path1"></path-->
+					<rect id="Rectangle" x="0" y="0" width="32" height="32" fill="transparent" stroke="currentColor" stroke-width="2"></rect>
+					<path d="M12.945.38l-.652.762c1.577 1.462 2.57 3.544 2.57 5.858 0 2.314-.994 4.396-2.57 5.858l.65.763c1.79-1.644 2.92-3.997 2.92-6.62S14.735 2.024 12.945.38zm-2.272 2.66l-.65.762c.826.815 1.34 1.947 1.34 3.198 0 1.25-.515 2.382-1.342 3.2l.652.762c1.04-1 1.69-2.404 1.69-3.96 0-1.558-.65-2.963-1.69-3.963zM0 4v6h2.804L8 13V1L2.804 4H0zm7-1.268v8.536L3.072 9H1V5h2.072L7 2.732z" id="path2"></path>
+					<ellipse id="path3" cx="25.3027027" cy="6.78378378" rx="1.98918919" ry="1.98918919"></ellipse>
+				</g>
+
 				<g id="flickr-icon" fill="currentColor" transform="translate(1.000000, 1.000000)">
 					<!--path d="M28,1 C29.654,1 31,2.346 31,4 L31,28 C31,29.654 29.654,31 28,31 L4,31 C2.346,31 1,29.654 1,28 L1,4 C1,2.346 2.346,1 4,1 L28,1 L28,1 Z M28,0 L4,0 C1.8,0 0,1.8 0,4 L0,28 C0,30.2 1.8,32 4,32 L28,32 C30.2,32 32,30.2 32,28 L32,4 C32,1.8 30.2,0 28,0 L28,0 Z" id="path1"></path-->
 					<rect id="Rectangle" x="0" y="0" width="32" height="32" fill="transparent" stroke="currentColor" stroke-width="2"></rect>
@@ -183,18 +199,39 @@
 	</head>
 	<body>
 		<div id="container" class="container">
+
+			<navbar class="navbar centered navbar-expand{-sm|-md|-lg|-xl} navbar-fixed-bottom">
+				<a class="navbar-brand" href="https://www.instagram.com/tedxistalameda/" target="_blank">
+					<svg class="instagram" height='30' width='30' viewBox="0 0 35 35">
+											<use xlink:href="#instagram-icon"></use>
+					</svg>
+				</a>
+				<a class="navbar-brand" href="https://www.facebook.com/tedxistalameda" target="_blank">
+					<svg class="facebook" height='30' width='30' viewBox="0 0 35 35">
+						<use xlink:href="#facebook-icon"></use>
+					</svg>
+				</a>
+
+				<a class="navbar-brand" target="_blank" id="mute">
+					<svg class="sound_button" height='65' width='65' viewBox="0 0 35 35" display="block" margin="auto">
+						<use xlink:href="#sound_button"></use>
+					</svg>
+				</a>
+
+
+	  	</navbar>
             <!-- Landing Page -->
-			<header class="intro" id="intro" >    
-                
-				
+			<header class="intro" id="intro" >
+
+
                 <!-- Navigation Bar -->
-                <nav class="navbar">
-					<!--<ul class="nav_button">
+          <!--      <nav class="navbar">
+							<ul class="nav_button">
 				        <li class="button1"><a>About</a></li>
 				        <li class="button2"><a>Speakers</a></li>
 				        <li class="button3"><a>Partners</a></li>
 				        <li class="button4"><a>Info</a></li>
-                    </ul> -->
+                    </ul>
                     <ul class="nav_icon">
                         <li>
                             <a href="https://www.instagram.com/tedxistalameda/" target="_blank">
@@ -212,29 +249,29 @@
                         </li>
 					</ul>
                     <ul class="mute_btn" id="nav_border">
-                        <li> 
-                            <!-- Mute Button -->
+                        <li>
+                             Mute Button
 				            <button id="mute"><img id="mute-btn" src="glyphicons/png/glyphicons-185-volume-up.png" /></button>
                         </li>
                     </ul>
-				</nav>
-                
+				</nav> -->
+
                 <!-- Attend Form -->
 				<div id="overlay">
 					<button id="closebutton" onclick="off()"><img src="glyphicons/png/glyphicons-208-remove.png" /></button>
-                        <div class="typeform-widget" id="typeform" data-url="https://beatriz209.typeform.com/to/ROAiJk"  > </div> 
+                        <div class="typeform-widget" id="typeform" data-url="https://beatriz209.typeform.com/to/ROAiJk"  > </div>
                 </div>
 
                 <!-- Attend Button -->
                 <div style="padding:20px">
                   <button class="button button--wayra button--border-thick button--text-upper button--size-s" onclick="on()">Attend</button>
                 </div>
-                
+
                 <!-- Logo -->
                 <svg class="nav_logo-svg" viewBox="0 0 1270 247">
                     <use xlink:href="#tedxistalameda"></use>
                 </svg>
-                
+
                 <!-- Background Video -->
                 <div class="video-background">
                     <video loop autoplay muted class="video-background" id="video-background">
@@ -243,22 +280,22 @@
                     </video>
                 </div>
 
-			</header><!-- Landing Page -->   
+			</header><!-- Landing Page -->
         </div>
 
 		<!-- Expandable grid scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-				
+
         <!-- video script -->
 		<script>
-                
+
 			//mute button
 			$(document).ready(function() {
-  			        
+
                 $("#mute").click( function (){
                     if( $("video").prop('muted') ) {
                        $("video").prop('muted', false);
-                    } 
+                    }
                     else {
                        $("video").prop('muted', true);
                     }
@@ -271,8 +308,8 @@
                         e.preventDefault(); // prevents Default function of key
                         if( $("video").prop('muted') ) {
                             $("video").prop('muted', false);
-                           
-                        } 
+
+                        }
                         else {
                             $("video").prop('muted', true);
                         }
@@ -295,6 +332,6 @@
             }
         </script>
 
-        <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> 
+        <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
 	</body>
 </html>
