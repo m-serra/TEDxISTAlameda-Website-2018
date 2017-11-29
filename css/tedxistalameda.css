@@ -80,7 +80,7 @@
 .navbar {
 	align-items: center;
 	display: flex;
-	width:50vh;
+	width:300px;
 	float: none;
   margin: 0 auto;
 	background-color: rgba(0, 0, 0, 0.5);
@@ -601,4 +601,15 @@
 
 .sound_button:hover{
    color: #ff2200;
+}
+
+
+@media (max-width: 480px) {
+  .video-background {
+    background: url('https://files.slack.com/files-pri/T5FH390KY-F858181LZ/tedx.jpg') center center / cover no-repeat;
+  }
+
+  .video-background video {
+    display: none;
+  }
 }
