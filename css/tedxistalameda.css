@@ -179,6 +179,11 @@
     padding-right: 1vw;
 }
 
+.navbar ul.nav_icon li a{
+    height: 20px;
+    width: 20px;
+}
+
 .navbar ul.mute_btn{
     width: 30%;
 }
@@ -188,13 +193,13 @@
 }
 
 .navbar ul.mute_btn:after {
-  content : "";
-  position: absolute;
-  left:0;
-  top: 10%;
-  width: 1px;
-  height: 80%;
-  background: #555;
+    content : "";
+    position: absolute;
+    left:0;
+    top: 10%;
+    width: 1px;
+    height: 80%;
+    background: #555;
 }
 
 /* Trigger button with SVG */
@@ -580,5 +585,112 @@
     color: #ff2200;
 }
 .facebook:hover{
-   color: #ff2200;   
+    color: #ff2200;   
 }
+
+/* ======================= */
+/* =    MEDIA QUERIES    = */
+/* ======================= */
+
+/* ====== SMARTPHONES ====== */
+
+/* ------ iPhone 4 and 4S ------ */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) {
+
+}
+
+/* ------ iPhone 5, 5S, 5C and 5SE ------ */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px) {
+
+}
+
+/* ------ iPhone 6, 6S, 7 and 8 ------ */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) { 
+
+}
+
+/* ------ iPhone 6+, 7+ and 8+ ------ */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) { 
+
+}
+
+/* ------ iPhone X ------ */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) { 
+
+}
+
+/* ----------- Galaxy S3, S4, S5 and Note 3 ----------- */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) {
+
+}
+
+/* ----------- Galaxy S6 ----------- */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) {
+
+}
+
+/* ====== TABLETS ====== */
+
+/* ------ iPad 1, 2, 4, Mini, Air, Pro 9.7 ------ */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) {
+      
+      /*ADD STYLE HERE*/
+
+}
+
+/* ------ iPad Pro 10.5" ------ */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+      
+      /*ADD STYLE HERE*/
+
+}
+
+/* ------ iPad Pro 12.9" ------ */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) {
+      
+      /*ADD STYLE HERE*/
+
+}
+
+
+/* ----------- Galaxy Tab 2 and Tab S ----------- */
+@media 
+  (min-device-width: 800px) 
+  and (max-device-width: 1280px) {
+      
+      /*ADD STYLE HERE*/
+
+}
+
+
+/* ====== LAPTOPS ====== */
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) { 
+      
+      /*ADD STYLE HERE*/
+      
+}
+
