@@ -5,7 +5,7 @@
 	width: 100%;
 	height: 100%;
 	background: white;
-	
+
    /* -webkit-transition: -webkit-transform 0.6s;
 	transition: transform 0.6s;
 	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
@@ -15,7 +15,7 @@
 /*.container--open .intro {
 	-webkit-transform: translate3d(0, -100%, 0) translate3d(0, 250px, 0);
 	transform: translate3d(0, -100%, 0) translate3d(0, 250px, 0);
-    
+
 }*/
 
 /* Fullscreen image */
@@ -77,28 +77,43 @@
 	line-height: 1.2;
 }
 
-
 .navbar {
+	align-items: center;
+	display: flex;
+	width:300px;
+	float: none;
+  margin: 0 auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+}
+
+.navbar a {
+	margin: 0 auto;
+}
+
+
+/*.navbar {
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
-    
+
     height: 4rem;
     line-height: 4rem;
     margin: 0 auto 0 auto;
     padding: 0;
     padding-left: 3vw;
-    padding-right: 3vw;  
+    padding-right: 3vw;
     overflow: hidden;
-	position: absolute; /*relative*/
+	position: absolute;
     width: calc(100% - 60rem);
     bottom: 4rem;
     max-width: 72rem;
     left: 30rem;
     bottom: 0vh;
 	z-index: 99;
-}
+} */
+
 
 /*.navbar ul.nav_button{
     display: -moz-flex;
@@ -113,19 +128,19 @@
     -webkit-flex-shrink: 1;
     -ms-flex-shrink: 1;
     flex-shrink: 1;
-    
+
     list-style: none;
     margin: 0;
     padding-left: 0;
 } */
 
-.navbar ul{
-    /*width: 100%; */
+/* .navbar ul{
+
     background-color: rgba(241, 232, 217, 0.5);
     position: relative;
-    list-style: none; 
+    list-style: none;
     text-align: center;
-    
+
     -moz-flex-grow: 0;
     -webkit-flex-grow: 0;
     -ms-flex-grow: 0;
@@ -137,11 +152,12 @@
     margin: 0;
     padding: 0;
 }
+*/
 
 /*
 .navbar ul.nav_button li {
     display: block;
-    padding-left: 0; 
+    padding-left: 0;
 
     -moz-transition: background-color .15s ease-in;
     -o-transition: background-color .15s ease-in;
@@ -156,7 +172,7 @@
     display: inline-block;
     outline: none;
     padding: 0 2rem;
-    
+
     font-size: 0.8rem;
     color: white;
     text-align: center;
@@ -169,7 +185,7 @@
 
 
 .navbar ul.nav_icon{
-    width: 70%; 
+    width: 70%;
     /*text-align: center;*/
 }
 
@@ -272,7 +288,7 @@
 /* ============== previously in component.css */
 
 .og-grid {
-   
+
     position: absolute;
 	list-style: none;
 	padding: 40px 0;
@@ -283,12 +299,12 @@
     right: 8vw;
 	width: 84vw;
     background-color: snow;
-    
+
     -webkit-transition: -webkit-transform 1.0s;
 	transition: transform 1.0s;
 	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-    
+
     -webkit-transform: translate3d(0, 60vh, 0) translate3d(0, 10px, 0);
 	transform: translate3d(0, 60vh, 0) translate3d(0, 10px, 0);
 }
@@ -495,44 +511,44 @@
 }
 
 /*======= Fullscreen video */
-.video-background{ 
-    position: fixed; 
-    top: 0; 
-    right: 0; 
-    bottom: 0; 
-    left: 0; 
+.video-background{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     overflow: hidden;
     z-index: -1;
 }
 
-.video-background > video { 
-    position: absolute; 
-    top: 0; left: 0; 
-    width: 100%; 
-    height: 100%; 
+.video-background > video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-@media(min-aspect-ratio: 16/9) { 
-    .video-background > video{ 
-        height: 300%; 
-        top: -100%; 
+@media(min-aspect-ratio: 16/9) {
+    .video-background > video{
+        height: 300%;
+        top: -100%;
     }
 }
 
 @media(max-aspect-ratio: 16/9){
     .video-background > video{
-        width: 300%; 
+        width: 300%;
         left: -100%;
     }
 }
 
 @supports(object-fit: cover){
     .video-background > video{
-        top: 0; 
-        left: 0; 
-        width: 100%; 
-        height: 100%; 
-        object-fit: cover; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
@@ -564,11 +580,11 @@
 }
 
 #mute-btn{
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
 }
 
-.nav_logo-svg {  
+.nav_logo-svg {
     margin-top: 8px;
 	margin-bottom: 8px;
     position: absolute;
@@ -576,121 +592,29 @@
     width: 20vw;
 }
 
-.instagram, 
-.facebook {
-    color: #292929;
+.instagram,
+.facebook, .sound_button {
+    color: white;
 }
 
 .instagram:hover{
     color: #ff2200;
 }
 .facebook:hover{
-    color: #ff2200;   
+   color: #ff2200;
 }
 
-/* ======================= */
-/* =    MEDIA QUERIES    = */
-/* ======================= */
-
-/* ====== SMARTPHONES ====== */
-
-/* ------ iPhone 4 and 4S ------ */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px) {
-
-}
-
-/* ------ iPhone 5, 5S, 5C and 5SE ------ */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px) {
-
-}
-
-/* ------ iPhone 6, 6S, 7 and 8 ------ */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) { 
-
-}
-
-/* ------ iPhone 6+, 7+ and 8+ ------ */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) { 
-
-}
-
-/* ------ iPhone X ------ */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) { 
-
-}
-
-/* ----------- Galaxy S3, S4, S5 and Note 3 ----------- */
-@media screen 
-  and (device-width: 320px) 
-  and (device-height: 640px) {
-
-}
-
-/* ----------- Galaxy S6 ----------- */
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) {
-
-}
-
-/* ====== TABLETS ====== */
-
-/* ------ iPad 1, 2, 4, Mini, Air, Pro 9.7 ------ */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) {
-      
-      /*ADD STYLE HERE*/
-
-}
-
-/* ------ iPad Pro 10.5" ------ */
-@media only screen 
-  and (min-device-width: 834px) 
-  and (max-device-width: 1112px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-      
-      /*ADD STYLE HERE*/
-
-}
-
-/* ------ iPad Pro 12.9" ------ */
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1366px) {
-      
-      /*ADD STYLE HERE*/
-
+.sound_button:hover{
+   color: #ff2200;
 }
 
 
-/* ----------- Galaxy Tab 2 and Tab S ----------- */
-@media 
-  (min-device-width: 800px) 
-  and (max-device-width: 1280px) {
-      
-      /*ADD STYLE HERE*/
+@media (max-width: 480px) {
+  .video-background {
+    background: url('https://files.slack.com/files-pri/T5FH390KY-F858181LZ/tedx.jpg') center center / cover no-repeat;
+  }
 
+  .video-background video {
+    display: none;
+  }
 }
-
-
-/* ====== LAPTOPS ====== */
-
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) { 
-      
-      /*ADD STYLE HERE*/
-      
-}
-
