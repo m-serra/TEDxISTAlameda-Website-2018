@@ -26,7 +26,7 @@
 		<![endif]-->
 
         <staticContent><mimeMap fileExtension=".svg" mimeType="image/svg+xml" /></staticContent>
-            
+
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
 			<defs>
 				<g id="tedxistalameda" i:extraneous="self">
@@ -163,7 +163,7 @@
 		<div id="container" class="container">
 
 			<navbar class="navbar centered navbar-expand{-sm|-md|-lg|-xl} navbar-fixed-bottom">
-				
+
                 <a class="navbar-brand" href="https://www.instagram.com/tedxistalameda/" target="_blank">
 					<svg class="instagram" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 169.063 169.063" >
                         <path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752
@@ -181,10 +181,10 @@
 				<a class="navbar-brand" href="https://www.facebook.com/tedxistalameda" target="_blank">
 					<svg class="facebook" id="facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height='20' width='20' viewBox="0 0 430.113 430.114">
                             <path d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805 c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354 c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878 0.004,158.081,72.48,158.081,83.3z"></path>
-                       
+
                     </svg>
 				</a>
-                
+
                 <a class="navbar-brand" href="https://www.facebook.com/tedxistalameda" target="_blank">
 					<svg class="twitter" id="twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="20px" width="20px" viewBox="0 0 612 612">
                         <g>
@@ -283,14 +283,14 @@
                 <div style="padding:20px">
                     <button class="button button--antiman button--inverted button--border-thin button--text-thick button--size-s" onclick="on()"><span>Attend</span></button>
                 </div>
-                
+
                 <!-- Logo -->
                 <svg class="nav_logo-svg" viewBox="0 0 1270 247">
                     <use xlink:href="#tedxistalameda"></use>
                 </svg>
 
-                
-                
+
+
                 <!-- Background Video -->
                 <div class="video-background">
                     <video loop autoplay muted class="video-background" id="video-background">
@@ -320,6 +320,15 @@
                     }
                 });
 
+								// mute media query
+								$( window ).resize(function() {
+								  if($(window).width() <=480){
+										$("video").prop('muted', true)
+									}else{
+										$("video").prop('muted', false);
+							 		}
+								});
+
                 // mute hotkey
                 // M
                 $(document).keydown(function(e) {
@@ -327,24 +336,26 @@
                         e.preventDefault(); // prevents Default function of key
                         if( $("video").prop('muted') ) {
                             $("video").prop('muted', false);
+														unmute();
 
                         }
                         else {
                             $("video").prop('muted', true);
+														mute();
                         }
                     }
                 });
 
   		    });
-            
+
             // change icon
             function mute() {
-                
+
                 document.getElementById("sound").style.display = "none";
                 document.getElementById("sound_mute").style.display = "block";
             }
             function unmute() {
-                
+
                 document.getElementById("sound_mute").style.display = "none";
                 document.getElementById("sound").style.display = "block";
             }
@@ -362,7 +373,7 @@
                 document.getElementById("overlay").style.display = "none";
             }
         </script>
-    
+
         <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
 	</body>
 </html>

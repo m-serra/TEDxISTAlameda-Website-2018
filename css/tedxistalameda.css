@@ -600,8 +600,8 @@
 }
 
 .instagram,
-.facebook, 
-.twitter, 
+.facebook,
+.twitter,
 .sound,
 .sound_mute {
     fill: white;
@@ -635,6 +635,11 @@
   .video-background video {
     display: none;
   }
+
+	#mute {
+		display: none;
+	}
+
 }
 
 .sound-button-red {
