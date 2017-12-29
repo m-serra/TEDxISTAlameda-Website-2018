@@ -292,7 +292,7 @@
 
 
                 <!-- Background Video -->
-                <div class="video-background">
+                <div class="video-background" id="bg">
                     <video loop autoplay muted class="video-background" id="video-background">
                          <source src="videos/TEDxISTAlameda_Merry_Xmas.mp4"/>
                          <img src="placeholder.jpg" alt="placeholder"/>
@@ -323,10 +323,14 @@
 								// mute media query
 								$( window ).resize(function() {
 								  if($(window).width() <=480){
-										$("video").prop('muted', true)
+										$("video").prop('muted', true);
+										slideshow();
 									}else{
-										$("video").prop('muted', false);
-							 		}
+										if(document.getElementById("sound_mute").style.display == "none"){
+											$("video").prop('muted', false);
+											unmute();
+										}else{mute()};
+							 		};
 								});
 
                 // mute hotkey
