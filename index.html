@@ -304,6 +304,7 @@
 
 		<!-- Expandable grid scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+				<script src="js/bg_slideshow.js"></script>
 
         <!-- video script -->
 		<script>
@@ -324,7 +325,6 @@
 								$( window ).resize(function() {
 								  if($(window).width() <=480){
 										$("video").prop('muted', true);
-										slideshow();
 									}else{
 										if(document.getElementById("sound_mute").style.display == "none"){
 											$("video").prop('muted', false);
@@ -336,7 +336,7 @@
                 // mute hotkey
                 // M
                 $(document).keydown(function(e) {
-                    if (e.keyCode == 77) { // key M (mute)
+                    if ((e.keyCode == 77) &&  ($(window).width() >480)) { // key M (mute)
                         e.preventDefault(); // prevents Default function of key
                         if( $("video").prop('muted') ) {
                             $("video").prop('muted', false);
