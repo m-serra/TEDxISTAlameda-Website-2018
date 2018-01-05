@@ -10,23 +10,26 @@
         <meta property="og:site_name" content="TEDxISTAlameda"/>
         <meta property="og:url" content="https://www.tedxistalameda.com/"/>
 
-
 		<meta name="author" content="TEDxISTAlameda" />
 		<link rel="icon" type="image/x-icon" href="images/_favicon.png"/>
+        
+        <!-- Import Style Sheets -->
 		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 		<link rel="stylesheet" type="text/css" href="css/tedxistalameda.css"/>
 		<link rel="stylesheet" type="text/css" href="css/button.css"/>
 
 		<!-- Import bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-
+        
+        <!-- modernizr.js -->
+        <script src="js/modernizr.custom.js"></script>
 
 		<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-
+        
+        <!-- some SVG icons -->
         <staticContent><mimeMap fileExtension=".svg" mimeType="image/svg+xml" /></staticContent>
-
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
 			<defs>
 				<g id="tedxistalameda" i:extraneous="self">
@@ -161,9 +164,18 @@
 	</head>
 	<body>
 		<div id="container" class="container">
-
-			<navbar class="navbar centered navbar-expand{-sm|-md|-lg|-xl} navbar-fixed-bottom">
-
+            
+            <!-- Navigation Bar -->
+			<navbar class="navbar centered navbar-expand{-sm|-md|-lg|-xl} navbar-fixed-bottom" id="navbar">
+                
+                <a class="navbar-brand button1">About</a>
+                
+                <a class="navbar-brand button2">Speakers</a>
+                
+                <a class="navbar-brand button3">Partners</a>
+                
+                <a class="navbar-brand button4">Info</a>
+            
                 <a class="navbar-brand" href="https://www.instagram.com/tedxistalameda/" target="_blank">
 					<svg class="instagram" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 169.063 169.063" >
                         <path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752
@@ -235,43 +247,10 @@
                         </g>
                     </svg>
 				</a>
-	  	</navbar>
+	  	    </navbar> <!-- Navigation Bar -->
 
             <!-- Landing Page -->
 			<header class="intro" id="intro">
-
-
-                <!-- Navigation Bar -->
-          <!--      <nav class="navbar">
-							<ul class="nav_button">
-				        <li class="button1"><a>About</a></li>
-				        <li class="button2"><a>Speakers</a></li>
-				        <li class="button3"><a>Partners</a></li>
-				        <li class="button4"><a>Info</a></li>
-                    </ul>
-                    <ul class="nav_icon">
-                        <li>
-                            <a href="https://www.instagram.com/tedxistalameda/" target="_blank">
-				                <svg class="instagram" height='20' width='20' viewBox="0 0 35 35">
-                                    <use xlink:href="#instagram-icon"></use>
-				                </svg>
-				            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/tedxistalameda" target="_blank">
-				                <svg class="facebook" height='20' width='20' viewBox="0 0 35 35">
-                                    <use xlink:href="#facebook-icon"></use>
-                                </svg>
-				            </a>
-                        </li>
-					</ul>
-                    <ul class="mute_btn" id="nav_border">
-                        <li>
-                             Mute Button
-				            <button id="mute"><img id="mute-btn" src="glyphicons/png/glyphicons-185-volume-up.png" /></button>
-                        </li>
-                    </ul>
-				</nav> -->
 
                 <!-- Attend Form -->
 				<div id="overlay">
@@ -289,8 +268,6 @@
                     <use xlink:href="#tedxistalameda"></use>
                 </svg>
 
-
-
                 <!-- Background Video -->
                 <div class="video-background" id="bg">
                     <video loop autoplay muted class="video-background" id="video-background">
@@ -298,13 +275,388 @@
                          <img src="placeholder.jpg" alt="placeholder"/>
                     </video>
                 </div>
+                
+                <div class="intro__subtitle">
+                    <!--Botão para entrar no conteúdo (SVG) -->
+				    <button class="trigger">
+				        <svg width="100%" height="100%" viewBox="0 0 60 60" preserveAspectRatio="none">
+				            <g class="icon icon--grid">
+				                <rect x="32.5" y="5.5" width="22" height="22"/>
+                                <rect x="4.5" y="5.5" width="22" height="22"/>
+                                <rect x="32.5" y="33.5" width="22" height="22"/>
+                                <rect x="4.5" y="33.5" width="22" height="22"/>
+                            </g>
+				            <g class="icon icon--cross">
+                                <line x1="4.5" y1="55.5" x2="54.953" y2="5.046"/>
+                                <line x1="54.953" y1="55.5" x2="4.5" y2="5.047"/>
+                            </g>
+				        </svg>
+				        <span>View content</span>
+				    </button>
+                    <!--Botão para entrar no conteúdo (SVG) -->
+				</div>
+                
+			</header> <!-- Landing Page -->
+            
+            <!-- About -->
+            <div class="about">
+                <div class="grid-container" id="about">
+                    <ul id="og-grid-1" class="og-grid">
+                        <li>
+                            <a data-largesrc="images/3.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="0">
+                                <img src="images/thumbs/1.jpg" alt="img01"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-largesrc="images/3.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="1">
+                                <img src="images/thumbs/1.jpg" alt="img01"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-largesrc="images/2.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="2">
+                                <img src="images/thumbs/3.jpg" alt="img01"/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- About -->
 
-			</header><!-- Landing Page -->
+            <!-- Speakers -->
+            <div class="speakers_container">
+                <div class="grid-container" id="speakers">
+                    <ul id="og-grid-2" class="og-grid">
+                        <li>
+                            <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="12">
+                                <img src="images/thumbs/2.jpg" alt="img02"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="13">
+                                <img src="images/thumbs/2.jpg" alt="img02"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="14">
+                                <img src="images/thumbs/2.jpg" alt="img02"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="15">
+                                <img src="images/thumbs/2.jpg" alt="img02"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="16">
+                                <img src="images/thumbs/2.jpg" alt="img02"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="17">
+                                <img src="images/thumbs/2.jpg" alt="img02"/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                </div><!-- Speakers -->
+
+            <!-- Partners -->
+            <div class="partners_container">
+                     <div class="grid-container" id="partners">
+                    <ul id="og-grid-3" class="og-grid">
+                        <li>
+                            <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="24">
+                                <img src="images/thumbs/3.jpg" alt="img03"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="25">
+                                <img src="images/thumbs/3.jpg" alt="img03"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="26">
+                                <img src="images/thumbs/3.jpg" alt="img03"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="27">
+                                <img src="images/thumbs/3.jpg" alt="img03"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="28">
+                                <img src="images/thumbs/3.jpg" alt="img03"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="29">
+                                <img src="images/thumbs/3.jpg" alt="img03"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="30">
+                                <img src="images/thumbs/3.jpg" alt="img03"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="31">
+                                <img src="images/thumbs/3.jpg" alt="img03"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="32">
+                                <img src="images/thumbs/3.jpg" alt="img03"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="33">
+                                <img src="images/thumbs/3.jpg" alt="img03"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="34">
+                                <img src="images/thumbs/3.jpg" alt="img03"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="35">
+                                <img src="images/thumbs/3.jpg" alt="img03"/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                </div> <!-- Partners -->
+
+            <!-- Info -->
+            <div class="info_container">
+						     <div class="grid-container" id="info">
+							    	<ul id="og-grid-4" class="og-grid">
+											<li>
+												<a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="37">
+													<img src="images/thumbs/1.jpg" alt="img01"/>
+												</a>
+											</li>
+											<li>
+												<a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="38">
+													<img src="images/thumbs/2.jpg" alt="img02"/>
+												</a>
+											</li>
+											<li>
+												<a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="39">
+													<img src="images/thumbs/1.jpg" alt="img01"/>
+												</a>
+											</li>
+											<li>
+												<a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="40">
+													<img src="images/thumbs/1.jpg" alt="img01"/>
+												</a>
+											</li>
+											<li>
+												<a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="41">
+													<img src="images/thumbs/2.jpg" alt="img02"/>
+												</a>
+											</li>
+											<li>
+												<a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="42">
+													<img src="images/thumbs/1.jpg" alt="img01"/>
+												</a>
+											</li>
+											<li>
+												<a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="43">
+													<img src="images/thumbs/1.jpg" alt="img01"/>
+												</a>
+											</li>
+											<li>
+												<a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="44">
+													<img src="images/thumbs/2.jpg" alt="img02"/>
+												</a>
+											</li>
+											<li>
+												<a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="45">
+													<img src="images/thumbs/1.jpg" alt="img01"/>
+												</a>
+											</li>
+											<li>
+												<a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="46">
+													<img src="images/thumbs/1.jpg" alt="img01"/>
+												</a>
+											</li>
+											<li>
+												<a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="47">
+													<img src="images/thumbs/2.jpg" alt="img02"/>
+												</a>
+											</li>
+											<li>
+												<a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="48">
+													<img src="images/thumbs/1.jpg" alt="img01"/>
+												</a>
+											</li>
+										</ul>
+									</div>
+						    </div><!-- Info -->
+            
         </div>
 
 		<!-- Expandable grid scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-				<script src="js/bg_slideshow.js"></script>
+        <script src="js/grid.js"></script>
+        <script>
+			$(function(){
+				Grid.init();
+			});
+		</script>
+        <script src="js/classie.js"></script>
+		<script>
+			(function() {
+				var container = document.getElementById( 'container' ),
+					trigger = container.querySelector( 'button.trigger' ), navbar = document.getElementById( 'navbar' )
+
+			
+                function playPause() {
+				    var myVideo = document.getElementById("video-background");
+                    if (myVideo.paused)
+                        myVideo.play();
+                    else
+                        myVideo.pause();
+				}
+
+				function toggleContent(n) {
+                    
+					if( classie.has( container, 'container--open' ) ) {
+						classie.remove( container, 'container--open' );
+						classie.remove( trigger, 'trigger--active' );
+						window.addEventListener( 'scroll', noscroll );
+						navbar.style.position = "fixed";
+						$('#navbar').animate({bottom: "0"}, 100);
+						setTimeout(function(){
+						    navbar.style.color = "white";
+						}, 100);
+                        
+                        /*remove the active class from the navbar tabs when content is closed*/
+                        for(i=1;i<5;i++){
+                            var active_btn = navbar.querySelector( '.button' + i ).classList;
+                            active_btn.remove('active');
+                        }
+                    
+					}
+					else {
+						classie.add( container, 'container--open' );
+						classie.add( trigger, 'trigger--active' );
+						window.removeEventListener( 'scroll', noscroll );
+						$('#navbar').animate({bottom: "60vh"}, 500);
+						navbar.style.position = "absolute";
+						setTimeout(function(){
+						    navbar.style.color = "black";
+						}, 500);
+					};
+                                
+					playPause();
+
+				}
+
+				function noscroll() {
+					window.scrollTo( 0, 0 );
+				}
+
+				// reset scrolling position
+				document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+				// disable scrolling
+				window.addEventListener( 'scroll', noscroll );
+
+
+				// navbar buttons start
+				var navbar = document.getElementById( 'navbar' ),
+					button1 = navbar.querySelector( '.button1' ),
+                    button2 = navbar.querySelector( '.button2' ),
+                    button3 = navbar.querySelector( '.button3' ),
+                    button4 = navbar.querySelector( '.button4' );
+
+				function navtoggle(n) {
+					if( !(classie.has( container, 'container--open') ) ) {
+                        toggleContent(n);
+					};
+				};
+
+				var section1 = document.getElementById("about"),
+                    section2 = document.getElementById("speakers"),
+				    section3 = document.getElementById("partners"),
+				    section4 = document.getElementById("info"),
+				    sections = [section1,section2,section3,section4];
+
+				function hide_sections(n){
+					for(i=0;i<4;i++){
+						if((i+1)==n){
+							if(classie.has(sections[n-1],'container--close')){
+								classie.remove(sections[n-1],'container--close');
+							}
+                            /*add the active class to the pressed button*/
+                            var active_btn = navbar.querySelector( '.button' + n ).classList;       
+                            active_btn.add('active');
+						}else if((i+1)!=n){
+							if(!(classie.has(sections[i],'container--close'))){
+								classie.add(sections[i],'container--close');          
+							}
+                            
+                            /*remove active class*/
+                            var active_btn = navbar.querySelector( '.button' + (i+1) ).classList;
+                            active_btn.remove('active');
+						}
+                        
+					}
+				}
+
+				function navbutton1() {
+					// go to content 1 
+					hide_sections(1);
+				}
+
+				function navbutton2() {
+					// go to content 2
+					hide_sections(2);
+				};
+				function navbutton3() {
+					// go to content 3
+					hide_sections(3);
+				};
+				function navbutton4() {
+					// go to content 4
+					hide_sections(4);
+				};
+                
+                
+                trigger.addEventListener( 'click', function() { toggleContent('0'); });
+    
+				button1.addEventListener( 'click', function() { navtoggle('1'); } );
+				button2.addEventListener( 'click', function() { navtoggle('2'); } );
+				button3.addEventListener( 'click', function() { navtoggle('3'); } );
+				button4.addEventListener( 'click', function() { navtoggle('4'); } );
+
+				button1.addEventListener( 'click', navbutton1 );
+				button2.addEventListener( 'click', navbutton2 );
+				button3.addEventListener( 'click', navbutton3 );
+				button4.addEventListener( 'click', navbutton4 );
+
+				// navbar buttons end
+                
+                // content toggle HOTKEY
+				// SPACE
+	  		    $(document).keydown(function(e) {
+				 if (e.keyCode == 32) { // key SPACE (content)
+				 	e.preventDefault(); // prevents Default function of key
+				 	$(trigger).blur(); // unselects the trigger button if it was previous selected by clicking on it
+				 	toggleContent('0');
+
+					}
+				});
+
+				// For Demo purposes only (prevent jump on click)
+				[].slice.call( document.querySelectorAll('.items-wrap a') ).forEach( function(el) { el.onclick = function() { return false; } } );
+			})();
+		</script>
+        
+        <!-- Picture slideshow script -->
+        <script src="js/bg_slideshow.js"></script>
 
         <!-- video script -->
 		<script>
@@ -367,7 +719,7 @@
 
 		</script>
 
-        <!-- Attend Overlay -->
+        <!-- Attend Overlay script -->
         <script>
             function on() {
                 document.getElementById("overlay").style.display = "block";
