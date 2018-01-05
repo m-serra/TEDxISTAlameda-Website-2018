@@ -570,7 +570,8 @@
 					button1 = navbar.querySelector( '.button1' ),
                     button2 = navbar.querySelector( '.button2' ),
                     button3 = navbar.querySelector( '.button3' ),
-                    button4 = navbar.querySelector( '.button4' );
+                    button4 = navbar.querySelector( '.button4' ),
+                    video_bg = document.getElementById( 'video-background' );
 
 				function navtoggle(n) {
 					if( !(classie.has( container, 'container--open') ) ) {
@@ -623,7 +624,14 @@
 					// go to content 4
 					hide_sections(4);
 				};
+                function exit_content() {
+					if(classie.has(container, 'container--open')){
+				        toggleContent('0');
+				    }
+				};
                 
+        
+                video_bg.addEventListener( 'click', exit_content);
                 
                 trigger.addEventListener( 'click', function() { toggleContent('0'); });
     
