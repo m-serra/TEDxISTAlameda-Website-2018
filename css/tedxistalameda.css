@@ -66,6 +66,7 @@ html,body
 	line-height: 1.2;
 }
 
+/* Main Navigation */
 .navbar{
 	align-items: center;
     display: -moz-flex;
@@ -80,6 +81,8 @@ html,body
 	background-color: #636363;
 	color: white;
     border: 0px !important;
+    text-transform: uppercase;
+    cursor: pointer;
     
     -webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0); 
@@ -93,7 +96,7 @@ html,body
 .container--open .navbar{
     -webkit-transform: translate3d(0, -60vh, 0);
 	transform: translate3d(0, -60vh, 0);
-} 
+}
 
 .navbar a{
     margin: 0;
@@ -101,6 +104,7 @@ html,body
     color: white;
     flex-grow: 1;
     flex-basis: auto;
+    cursor: pointer;
 } 
 
 
@@ -136,6 +140,69 @@ html,body
 .nav_sections {
     width: 80%;
     display: flex;
+}
+
+/* Secondary Navigation */
+.sub_section a {
+	position: relative;
+	display: inline-block;
+	margin: 15px 25px;
+    padding: 10px 0;
+	outline: none;
+	color: #636363;
+	text-decoration: none !important;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1.35em;
+	text-shadow: none;
+    cursor: pointer;
+}
+
+.sub_section a::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	padding: 10px 0;
+	max-width: 0;
+	border-bottom: 2px solid #ff2200;
+	color: #ff2200;
+	content: attr(data-hover);
+    white-space: nowrap;
+	-webkit-transition: max-width 0.5s;
+	-moz-transition: max-width 0.5s;
+	transition: max-width 0.5s;
+}
+
+.sub_section a:hover,
+.sub_section a:focus {
+	outline: none !important;
+}
+
+.sub_section a.sub_section_selected::before,
+.sub_section a:hover::before,
+.sub_section a:focus::before {
+	max-width: 100%;
+}
+
+.content {
+	bottom: 0!important;
+	text-align: center;
+    top: 50px;
+	margin: 2px auto 0 auto;
+	opacity: 0;
+	transition: opacity 0.8s ease-in-out 0.1s;
+	-moz-transition: opacity 0.8s ease-in-out 0.1s;
+	-webkit-transition: opacity 0.8s ease-in-out 0.1s;
+	z-index: -1;
+}
+
+.content_selected {
+	opacity: 1;
+	z-index: 1;
+	overflow-y: hidden;
 }
 
 /* Trigger button with SVG */
@@ -557,5 +624,3 @@ html,body
 }
 
 
-.about_table_cell {
-}

@@ -307,49 +307,13 @@
             <div class="about">
                 <div class="intro-container" id="about">
                     <ul id="og-grid-1" class="og-grid">
-                     <!--   <div class="container" style="text-align: left; width: 90%">
-                            <div class="row">
-                                <div class="col-1" style="text-align: center">
-                                    <div class="row" style="margin-bottom: 50px">
-                                        <h2 class="about-title">TED</h2>
-                                    </div>
-                                    <div class="row">
-                                        <h2 class="about-title">TEDx</h2>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="row" style="margin-bottom: 50px">
-                                        TED é uma organização sem fins lucrativos com mais de três décadas, dedicada a ideias que merecem ser espalhadas.
-                                        Originalmente uma conferência de 4 dias sobre tecnologia, entretenimento e design, é agora um palco global de promoção de um ambiente de partilha de ideias e estimulação da curiosidade, onde participam os principais thinkers e makers do mundo.
-                                    </div>
-                                    <div class="row">
-                                        TED is a non-profit organisation that has been around for over 30 years, with the purpose of sharing "ideas worth spreading".
-                                        Originally as a 4 day conference about technology, entertainment ad design, TED is now a global stage which promotes an environment for sharing ideas and stimulates curiosity where lead thinkers and makers of today take part.
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="row" style="margin-bottom: 50px">
-                                        Os eventos TEDx são conferências licenciadas do mesmo estilo, mas organizadas por um grupo independente e direcionadas para a sua comunidade. Os eventos locais são um fenómeno verdadeiramente internacional, a ter lugar em mais de 130 países.
-                                    </div>
-                                    <div class="row">
-                                        TEDx events are licensed conferences of the same style, but organized by and independent group and directed to its local community. These local events are an international phenomenon, taking place in over 130 countries.
-                                    </div>
-                                </div>
-                                <div class="col-1">
-                                    <h2 class="about-title">TEDxISTAlameda</h2>
-                                </div>
-                                <div class="col">
-                                    <div class="row" style="margin-bottom: 50px">
-                                        Fundado em 2013, o TEDxISTAlameda é a experiência TED oficial do Instituto Superior Técnico, a maior e mais reputada faculdade de engenharia, ciência e tecnologia e arquitetura em Portugal. O seu objetivo é providenciar às comunidades estudantil e cientifica do IST o acesso a práticas, ideias e opiniões que estão a mudar o mundo, promovendo a inovação tencológica através da investigação e educação.
-                                    </div>
-                                    <div class="row">
-                                        Founded in 2013, TEDxISTAlameda is the official TEDx experience of Instituto Superior Técnico, the biggest and well-known faculty of engineering, science, technology and architecture in Portugal. Its main goal is to provide student and scientific communities if IST the access to practices, ideas and opinions that are changing the world, promoting technological and innovation through investigation and education.
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        
-                        <table class="about_table">              
+                        <div id="team_about" class="sub_section">
+                            <a class=" sub_section_selected" data-section="about" data-hover="TED">TED</a>
+                            <a data-section="team" data-hover="Our Team">Our Team</a>
+				        </div>
+                        <div class="content-list">
+                            <div class="content content_selected" data-section="about">
+                                <table class="about_table">              
                             <tbody>
                                 <tr>
                                     <td><h2 class="table-title">TED</h2></td>
@@ -382,7 +346,11 @@
                               </tr>
                             </tbody>
                           </table>
-                        
+                            </div>
+                            <div class="content" data-section="team">
+                             
+                            </div>
+                        </div>
                     </ul>
                 </div>
             <!-- Speakers -->
@@ -570,6 +538,29 @@
 			});
 		</script>
         <script src="js/classie.js"></script>
+        <script>
+            jQuery(document).ready(function() {
+                // Team-about selection
+                jQuery("#team_about a").bind("click", function(e) {
+                    e.preventDefault();
+
+                    // Removes selection from current button
+                    document.querySelector(".sub_section_selected").classList.remove("sub_section_selected");
+
+                    // Adds selection to clicked button
+                    var current = $(this)[0];
+                    var id = current.getAttribute('data-section');
+                    current.classList.add("sub_section_selected");
+
+                    // Substitutes content, based on data-section attribute
+                    document.querySelector(".content_selected").classList.remove("content_selected");
+                    document.querySelector('div[data-section="' + id + '"]').classList.add("content_selected");
+
+                    // Hides description-text from team
+                    $(".description-text").css('opacity', 0);
+                });
+            });
+        </script>
 		<script>
 			(function() {
 				var container = document.getElementById( 'container' ),
