@@ -586,11 +586,12 @@
 }
 
 .nav_logo-svg {
+    width: 256px;
     margin-top: 8px;
 	margin-bottom: 8px;
     position: fixed;
-    top: 4vh; left: 5vw;
-    width: 256px;
+    top: 4vh; 
+    left: 5vw;
 }
 
 @media screen and (max-width: 615px) {
