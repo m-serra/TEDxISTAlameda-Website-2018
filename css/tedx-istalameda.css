@@ -67,6 +67,11 @@ html,body
 }
 
 /* Main Navigation */
+
+/*ao fazermos a translação com uma medida em vh, o efeito funciona se após o conteúdo ser aberto não se fizer scroll,
+caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um salto do ponto até onde foi feito scroll para x=60vh */
+/* tentei resolver o problema animando margin bottom com valor dafault 0, em vez da translação, foi igual */
+
 .navbar{
 	align-items: center;
     display: -moz-flex;
@@ -84,18 +89,22 @@ html,body
     text-transform: uppercase;
     cursor: pointer;
     
+    /*margin-bottom: 0; */
     -webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0); 
+	transform: translate3d(0, 0, 0);
     
-    -webkit-transition: -webkit-transform 0.8s;
+    /*-webkit-transition:  margin-bottom 0.8s;
+	transition:  margin-bottom 0.8s;*/
+    -webkit-transition: -webkit-transform  0.8s;
 	transition: transform 0.8s;
 	-webkit-transition-timing-function: ease-in-out;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out; 
 }
 
 .container--open .navbar{
     -webkit-transform: translate3d(0, -60vh, 0);
 	transform: translate3d(0, -60vh, 0);
+   /* margin-bottom: 60vh; */
 }
 
 .navbar a{
@@ -193,9 +202,9 @@ html,body
     top: 50px;
 	margin: 2px auto 0 auto;
 	opacity: 0;
-	transition: opacity 0.8s ease-in-out 0.1s;
-	-moz-transition: opacity 0.8s ease-in-out 0.1s;
-	-webkit-transition: opacity 0.8s ease-in-out 0.1s;
+	transition: opacity 0.5s ease-in-out 0.1s;
+	-moz-transition: opacity 0.5s ease-in-out 0.1s;
+	-webkit-transition: opacity 0.5s ease-in-out 0.1s;
 	z-index: -1;
 }
 
@@ -273,6 +282,13 @@ html,body
 	}
 }
 
+/*a transição entre conteúdo aberto e fechado funciona apenas quando não se faz scroll depois abrir. 
+Se se fizer scroll, a translação deveria ser de 60vh + 'distância do scroll'. */
+/*não tenho a certeza que o bug seja isto porque depois basta tocar no rato para ir ao sítio */
+
+/* tentei resolver o problema animando a propriedade top, e definindo o seu valor default como 100vh
+mas o efeito foi o mesmo */
+
 .og-grid {
     position: absolute;
 	list-style: none;
@@ -286,19 +302,24 @@ html,body
 	width: 84vw;
     background-color: snow;
     z-index: 12;
+  
+  /*-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);*/
     
-    -webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
+    -webkit-transition: top 0.8s;   
+	transition: top 0.8s;*/ 
+   /* -webkit-transition: -webkit-transform 0.8s;   
+	transition: transform 0.8s; */
     
-    -webkit-transition: -webkit-transform 0.8s;
-	transition: transform 0.8s;
 	-webkit-transition-timing-function: ease-in-out;
 	transition-timing-function: ease-in-out;
+
 }
 
 .container--open .og-grid{
-    -webkit-transform: translate3d(0, -60vh, 0);
-	transform: translate3d(0, -60vh, 0);
+   /* -webkit-transform: translate3d(0, -60vh, 0);
+	transform: translate3d(0, -60vh, 0); */
+    top: 40vh;
 }
 
 .og-grid li {
@@ -507,6 +528,10 @@ html,body
     z-index: -1;
 }
 
+.container--open .video-background:hover{
+    cursor: pointer;
+}
+
 .video-background > video {
     position: absolute;
     top: 0; left: 0;
@@ -566,13 +591,17 @@ html,body
   width: 30px;
 }
 
-.nav_logo-svg {
+.logo-svg {
     margin-top: 8px;
 	margin-bottom: 8px;
     position: fixed;
     top: 4vh; 
     left: 7vw;
     width: 256px;
+}
+
+.container--open .logo-svg:hover{
+    cursor: pointer;
 }
 
 @media screen and (max-width: 615px) {
