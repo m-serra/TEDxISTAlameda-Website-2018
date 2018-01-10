@@ -60,8 +60,8 @@
 	display:inline;
 	position:fixed;
 	right: 5vw;
-	top:4vh;
-	z-index:90;
+	top: 4vh;
+	z-index: 2;
 	font-size:30px;
 }
 

@@ -256,8 +256,6 @@
                     <use xlink:href="#tedxistalameda"></use>
                 </svg>
 
-
-
                 <!-- Background Video -->
                 <div class="video-background" id="bg">
                     <video loop autoplay muted class="video-background" id="video-background">
@@ -271,7 +269,7 @@
 
 		<!-- Expandable grid scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-				<script src="js/bg_slideshow.js"></script>
+        <script src="js/bg_slideshow.js"></script>
 
         <!-- video script -->
 		<script>
@@ -288,17 +286,17 @@
                     }
                 });
 
-								// mute media query
-								$( window ).resize(function() {
-								  if($(window).width() <=480){
-										$("video").prop('muted', true);
-									}else{
-										if(document.getElementById("sound_mute").style.display == "none"){
-											$("video").prop('muted', false);
-											unmute();
-										}else{mute()};
-							 		};
-								});
+                // mute media query
+                $( window ).resize(function() {
+                  if($(window).width() <=480){
+                        $("video").prop('muted', true);
+                    }else{
+                        if(document.getElementById("sound_mute").style.display == "none"){
+                            $("video").prop('muted', false);
+                            unmute();
+                        }else{mute()};
+                    };
+                });
 
                 // mute hotkey
                 // M
