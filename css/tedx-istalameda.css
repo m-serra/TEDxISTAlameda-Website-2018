@@ -90,20 +90,20 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
     cursor: pointer;
     
     /*margin-bottom: 0; */
-    -webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
+    /*-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0); */
     
     /*-webkit-transition:  margin-bottom 0.8s;
 	transition:  margin-bottom 0.8s;*/
-    -webkit-transition: -webkit-transform  0.8s;
+    /*-webkit-transition: -webkit-transform  0.8s;
 	transition: transform 0.8s;
 	-webkit-transition-timing-function: ease-in-out;
-	transition-timing-function: ease-in-out; 
+	transition-timing-function: ease-in-out; */
 }
 
 .container--open .navbar{
-    -webkit-transform: translate3d(0, -60vh, 0);
-	transform: translate3d(0, -60vh, 0);
+    /*-webkit-transform: translate3d(0, -60vh, 0);
+	transform: translate3d(0, -60vh, 0);*/
    /* margin-bottom: 60vh; */
 }
 
@@ -303,23 +303,22 @@ mas o efeito foi o mesmo */
     background-color: snow;
     z-index: 12;
   
-  /*-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);*/
+   /*-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0); */
     
-    -webkit-transition: top 0.8s;   
-	transition: top 0.8s;*/ 
-   /* -webkit-transition: -webkit-transform 0.8s;   
-	transition: transform 0.8s; */
+   /* -webkit-transition: top 0.8s;   
+	transition: top 0.8s;*/
+   /*-webkit-transition: -webkit-transform 0.8s;   
+	transition: transform 0.8s;
     
 	-webkit-transition-timing-function: ease-in-out;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out; */
 
 }
-
 .container--open .og-grid{
    /* -webkit-transform: translate3d(0, -60vh, 0);
 	transform: translate3d(0, -60vh, 0); */
-    top: 40vh;
+    /*top: 40vh; */
 }
 
 .og-grid li {

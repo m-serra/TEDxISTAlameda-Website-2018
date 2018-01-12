@@ -13,7 +13,6 @@
 }
 
 #closebutton{
-
 	position: relative;
 	display:inline;
 	position:absolute;
@@ -36,7 +35,6 @@
 	top:3%;
 	border: none;
 	z-index:101;
-
 }
 
 
@@ -63,6 +61,7 @@
 	top:4vh;
 	z-index:90;
 	font-size:30px;
+    outline: none;
 }
 
 /* Sizes */

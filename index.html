@@ -576,31 +576,78 @@
 
 				function toggleContent(n) {
                     
+                    var scrollTop     = $(window).scrollTop(),
+                        elementOffset = $('#og-grid-1').offset().top,
+                        nav_height = $('#navbar').height(),
+                        grid_height = $('#og-grid-1').height(),
+                        distance = (elementOffset - scrollTop),
+                        window_height = $(window).height(),
+                        nav_distance = distance - nav_height;
+                    
 					if( classie.has( container, 'container--open' ) ) {
 						classie.remove( container, 'container--open' );
 						//classie.remove( trigger, 'trigger--active' );
 						window.addEventListener( 'scroll', noscroll );
-                        //$('#navbar').animate({bottom:'0'}, 800, "swing");
-                        setTimeout( function(){$('#navbar').css('position','fixed');},800);  
-						setTimeout(function(){
-						    navbar.style.color = "white";
-						}, 100); 
-                                                   
+                        $('#navbar').animate({bottom:'0'}, 800, "swing");
+                        $('#og-grid-1').animate({top:'100vh'}, 800, "swing");
+                        $('#og-grid-1').animate({bottom:-grid_height}, 800, "swing");
+                       /* $('#og-grid-1').animate({
+                            tabSize: 0},{
+                            step: function (now, fx) {
+                                $(this).css({"transform": "translate3d(0px, " + now + "vh, 0px)"});
+                            },
+                            duration: 800,
+                            easing: 'swing',
+                            queue: false
+                        }, 'swing');
+                        $('#navbar').animate({
+                            tabSize: 0},{
+                            step: function (now, fx) {
+                                $(this).css({"transform": "translate3d(0px, " + now + "vh, 0px)"});
+                            },
+                            duration: 800,
+                            easing: 'swing',
+                            queue: false
+                        }, 'swing');
+                        setTimeout( function(){$('#navbar').css('position','fixed');},801);
+						setTimeout(function(){ navbar.style.color = "white"; }, 100); */
+                        
+                        
                         for(i=1;i<5;i++){
                             /*remove the 'active' class from the navbar tabs when content is closed*/
                             var active_btn = navbar.querySelector( '.button' + i ).classList;
                             active_btn.remove('active');     
                         }
 					}
-					else {
+					else{
 						classie.add( container, 'container--open' );
 						//classie.add( trigger, 'trigger--active' ); 
 						window.removeEventListener( 'scroll', noscroll );
 						navbar.style.position = "absolute";
-                        //$('#navbar').animate({bottom: "60vh"}, 800, "swing");
-						setTimeout(function(){ /* ------------------------------> Isto era para quê? */
-						    navbar.style.color = "black";
-						}, 500);
+                        $('#navbar').animate({bottom: "60vh"}, 800, "swing");
+                        $('#og-grid-1').animate({top:'40vh'}, 800, "swing");
+                        $('#og-grid-1').animate({bottom: window_height-grid_height}, 800, "swing");
+                        /*$('#og-grid-1').animate({
+                            tabSize:'-60'},{
+                            step: function (now, fx) {
+                                $(this).css({"transform": "translate3d(0px, " + now + "vh, 0px)"});
+                            },
+                            duration: 800,
+                            easing: 'swing',
+                            queue: false
+                        }, 'swing');
+                        
+                        $('#navbar').animate({
+                            tabSize:'-60'},{
+                            step: function (now, fx) {
+                                $(this).css({"transform": "translate3d(0px, " + now + "vh, 0px)"});
+                            },
+                            duration: 800,
+                            easing: 'swing',
+                            queue: false
+                        }, 'swing'); */
+                        
+                        setTimeout(function(){navbar.style.color = "black";}, 500);
 					};
                                 
 					playPause();
