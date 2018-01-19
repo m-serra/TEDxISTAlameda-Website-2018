@@ -5,8 +5,7 @@
 	z-index: 10;
 	overflow: hidden;
 	width: 100%;
-	height: 100%;
-	background: white;
+	height: 100%;    
 }
 
 /* Fullscreen image */
@@ -69,19 +68,24 @@
 }
 
 .navbar {
+    position: absolute;
 	align-items: center;
 	display: flex;
 	width:300px;
-    height: ;
 	float: none;
     margin: 0 auto;
-	background-color: #636363;
+	background-color: rgba(0,0,0,0.54);
+    -webkit-backdrop-filter:blur(10px);
 	color: white;
     z-index: 2;
 }
 
 .navbar a {
 	margin: 0 auto;
+}
+
+.navbar-brand{
+    outline: none;   
 }
 
 /* Trigger button with SVG */
@@ -458,6 +462,7 @@
     top: 4vh; 
     left: 5vw;
     z-index: 2;
+    cursor: default;
 }
 
 @media screen and (max-width: 615px) {
@@ -469,6 +474,7 @@
 .instagram,
 .facebook,
 .twitter,
+.medium,
 .sound,
 .sound_mute {
     fill: white;
@@ -476,12 +482,17 @@
 
 .instagram:hover{
     fill: #ff2200;
+    anima
 }
 .facebook:hover{
    fill: #ff2200;
 }
 
 .twitter:hover{
+   fill: #ff2200;
+}
+
+.medium:hover{
    fill: #ff2200;
 }
 
