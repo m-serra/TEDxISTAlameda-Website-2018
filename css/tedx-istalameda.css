@@ -220,6 +220,7 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
 /* End of secondary Navigation */
 
 /* Partners Styles */
+
 #partner_h{
 	text-align:left;
 	margin-top:80px; 
@@ -235,10 +236,11 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
 }
 
 #bronze_sponsor{
-	color:  rgba(140,58,13,1);
+	color: rgba(140,58,13,1);
 }
 
-header.major:after {
+
+#partner_h1:after{
     background: rgba(244,218,74,1);
     content: '';
     display: inline-block;
@@ -246,7 +248,8 @@ header.major:after {
     width: 100%;
 }
 
-header.major:nth-child(2):after {
+
+#partner_h2:after{
     background: rgba(194,194,194,1);
     content: '';
     display: inline-block;
@@ -254,7 +257,7 @@ header.major:nth-child(2):after {
     width: 100%;
 }
 
-header.major:nth-child(3):after {
+#partner_h3:after{
     background: rgba(140,58,13,1);
     content: '';
     display: inline-block;
@@ -267,10 +270,36 @@ header.major{
 	text-align: left;
 }
 
+
 #bookmark{
 	height: 70%;
-    margin-top:30%;
-    margin-left: 10%
+margin-top:30%;
+margin-left: 10%}
+
+.bootCols{
+	height:100px;
+	padding: 0 !important;
+	margin: 0 !important;
+	box-sizing:border-box;
+	height:250px;
+}
+  
+#og-grid-3{
+    padding: 45px;
+}
+
+.row{
+    width:100%;
+    padding-left:30px;
+}
+
+#speaker_cont{
+    margin-right:60%;
+    padding:10px;
+}
+
+#cont{
+    width:100%;
 }
 /* End of Partners styles */
 
