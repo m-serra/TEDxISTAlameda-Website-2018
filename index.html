@@ -184,6 +184,8 @@
                 <svg class="logo-svg" id="logo" viewBox="0 0 1270 247">
                     <use xlink:href="#tedxistalameda"></use>
                 </svg>
+                
+                <div id="demo" style="position: absolute; left:0 ; top:50%; color:white; heigth:50px; width:60px; background-color:aqua; z-index: 9999;"></div>
 
                 <!-- Background Video -->
                 <div class="video-background" id="bg">
@@ -192,6 +194,7 @@
                          <img src="placeholder.jpg" alt="placeholder"/>
                     </video>
                 </div>
+                
                
               <!--  <div class="intro__subtitle"> -->
                     <!--Botão para entrar no conteúdo (SVG) -->
@@ -544,12 +547,11 @@
             jQuery(document).ready(function() {
                 
                 var nav_height = $('#navbar').height(),
-                    window_height = $(window).height();
+                    window_height = $(window).height(),
+                    scrollTop     = $(window).scrollTop();
                 
-                console.log('ola!');
-                content_top = window_height - nav_height;
-                console.log(content_top);
-                $(".animated_content").css('top', content_top + 'px');
+                closed_top = window_height - nav_height;    
+                $(".animated_content").css('top', closed_top + 'px');
                 
                 // Team-about selection
                 jQuery("#team_about a").bind("click", function(e) {
@@ -589,42 +591,22 @@
 				function toggleContent(n) {
                     
                     var scrollTop     = $(window).scrollTop(),
-                        elementOffset = $('#og-grid-1').offset().top,
+                        elementOffset = $('.animated_content').offset().top,
                         nav_height = $('#navbar').height(),
                         grid_height = $('#og-grid-1').height(),
-                        distance = (elementOffset - scrollTop),
-                        window_height = $(window).height(),
-                        nav_distance = distance - nav_height;
+                        distance = (elementOffset - scrollTop), 
+                        window_height = $(window).height(), 
+                        close_distance = window_height - nav_height + scrollTop;
+                    
+                    document.getElementById("demo").innerHTML = scrollTop;
                     
 					if( classie.has( container, 'container--open' ) ) {
 						classie.remove( container, 'container--open' );
 						//classie.remove( trigger, 'trigger--active' );
+                        $('.animated_content').animate({top: close_distance }, 800, "swing");
+                        $('.animated_content').scrollTop(0);
 						window.addEventListener( 'scroll', noscroll );
-                       /* $('#navbar').animate({bottom:'0'}, 800, "swing");
-                        $('#og-grid-1').animate({top:'100vh'}, 800, "swing");
-                        $('#og-grid-1').animate({bottom:-grid_height}, 800, "swing"); */
-                       /* $('#og-grid-1').animate({
-                            tabSize: 0},{
-                            step: function (now, fx) {
-                                $(this).css({"transform": "translate3d(0px, " + now + "vh, 0px)"});
-                            },
-                            duration: 800,
-                            easing: 'swing',
-                            queue: false
-                        }, 'swing');
-                        $('#navbar').animate({
-                            tabSize: 0},{
-                            step: function (now, fx) {
-                                $(this).css({"transform": "translate3d(0px, " + now + "vh, 0px)"});
-                            },
-                            duration: 800,
-                            easing: 'swing',
-                            queue: false
-                        }, 'swing');
-                        setTimeout( function(){$('#navbar').css('position','fixed');},801);
-						setTimeout(function(){ navbar.style.color = "white"; }, 100); */
-                        
-                        
+                               
                         for(i=1;i<5;i++){
                             /*remove the 'active' class from the navbar tabs when content is closed*/
                             var active_btn = navbar.querySelector( '.button' + i ).classList;
@@ -635,31 +617,7 @@
 						classie.add( container, 'container--open' );
 						//classie.add( trigger, 'trigger--active' ); 
 						window.removeEventListener( 'scroll', noscroll );
-						navbar.style.position = "absolute";
-                        /*$('#navbar').animate({bottom: "60vh"}, 800, "swing");
-                        $('#og-grid-1').animate({top:'40vh'}, 800, "swing");
-                        $('#og-grid-1').animate({bottom: window_height-grid_height}, 800, "swing");*/
-                        /*$('#og-grid-1').animate({
-                            tabSize:'-60'},{
-                            step: function (now, fx) {
-                                $(this).css({"transform": "translate3d(0px, " + now + "vh, 0px)"});
-                            },
-                            duration: 800,
-                            easing: 'swing',
-                            queue: false
-                        }, 'swing');
-                        
-                        $('#navbar').animate({
-                            tabSize:'-60'},{
-                            step: function (now, fx) {
-                                $(this).css({"transform": "translate3d(0px, " + now + "vh, 0px)"});
-                            },
-                            duration: 800,
-                            easing: 'swing',
-                            queue: false
-                        }, 'swing'); */
-                        
-                        setTimeout(function(){navbar.style.color = "black";}, 500);
+                        $('.animated_content').animate({top:'40vh'}, 800, "swing");                        
 					};
                                 
 					playPause();

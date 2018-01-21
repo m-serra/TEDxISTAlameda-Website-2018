@@ -81,16 +81,16 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
     z-index: 10;
     -webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0); 
-
+/*
     -webkit-transition: -webkit-transform  0.8s;
 	transition: transform 0.8s;
 	-webkit-transition-timing-function: ease-in-out;
-	transition-timing-function: ease-in-out; 
+	transition-timing-function: ease-in-out; */
 }
 
 .container--open .animated_content{
-    -webkit-transform: translate3d(0, -60vh, 0);
-	transform: translate3d(0, -60vh, 0);
+   /* -webkit-transform: translate3d(0, -60vh, 0);
+	transform: translate3d(0, -60vh, 0); */
 }
 
 .navbar{
