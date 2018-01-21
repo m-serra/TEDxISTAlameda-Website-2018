@@ -10,7 +10,6 @@ html,body
 
 .intro {
 	position: fixed;
-    left: 0;
 	z-index: 10;
 	overflow: hidden;
 	width: 100%;
@@ -67,6 +66,8 @@ html,body
 	line-height: 1.2;
 }
 
+/* Main Navigation */
+
 /*ao fazermos a translação com uma medida em vh, o efeito funciona se após o conteúdo ser aberto não se fizer scroll,
 caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um salto do ponto até onde foi feito scroll para x=60vh */
 /* tentei resolver o problema animando margin bottom com valor dafault 0, em vez da translação, foi igual */
@@ -80,19 +81,18 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
     z-index: 10;
     -webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0); 
-/*
+
     -webkit-transition: -webkit-transform  0.8s;
 	transition: transform 0.8s;
 	-webkit-transition-timing-function: ease-in-out;
-	transition-timing-function: ease-in-out; */
+	transition-timing-function: ease-in-out; 
 }
 
 .container--open .animated_content{
-   /* -webkit-transform: translate3d(0, -60vh, 0);
-	transform: translate3d(0, -60vh, 0); */
+    -webkit-transform: translate3d(0, -60vh, 0);
+	transform: translate3d(0, -60vh, 0);
 }
 
-/* Main navigation styles */
 .navbar{
 	align-items: center;
     display: -moz-flex;
@@ -102,8 +102,7 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
     justify-content:space-between;
     width: 100%;
 	float: none;
-	background-color: rgba(0,0,0,0.54);
-    /*-webkit-backdrop-filter: blur(10px);*/
+	background-color: #636363;
 	color: white;
     border: 0px !important;
     text-transform: uppercase;
@@ -145,15 +144,14 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
 }
 
 .nav_icons {
-    width: 25%;
+    width: 20%;
     display: flex;
-    padding-left: %;
+
 }
 .nav_sections {
-    width: 75%;
+    width: 80%;
     display: flex;
 }
-/* end of main navigation styles */
 
 /* Secondary Navigation */
 .sub_section a {
@@ -217,7 +215,6 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
 	z-index: 1;
 	overflow-y: hidden;
 }
-/* End of secondary Navigation */
 
 /* Partners Styles */
 
@@ -389,6 +386,7 @@ mas o efeito foi o mesmo */
     background-color: snow;
     z-index: 12;
 }
+
 
 .og-grid li {
 	display: inline-block;
@@ -720,4 +718,85 @@ mas o efeito foi o mesmo */
     width: 5% !important; 
 }
 
+#partner_h{
+	text-align:left;
+	margin-top:80px; 
+	margin-bottom:60px
+}
 
+#gold_sponsor{
+	color: yellow;
+}
+
+#silver_sponsor{
+	color: silver;
+}
+
+#bronze_sponsor{
+	color: #B1560F;
+}
+
+
+#partner_h1:after{
+    background: yellow;
+    content: '';
+    display: inline-block;
+    height: 0.2em;
+    width: 100%;
+}
+
+
+#partner_h2:after{
+    background: silver;
+    content: '';
+    display: inline-block;
+    height: 0.2em;
+    width: 100%;
+}
+
+#partner_h3:after{
+    background: #B1560F;
+    content: '';
+    display: inline-block;
+    height: 0.2em;
+    width: 100%;
+}
+
+header.major{
+	margin-top: 5%;
+	text-align: left;
+}
+
+
+#bookmark{
+	height: 70%;
+margin-top:30%;
+margin-left: 10%}
+
+.bootCols{
+	height:100px;
+	padding: 0 !important;
+	margin: 0 !important;
+	box-sizing:border-box;
+	height:250px;
+  }
+  
+
+
+	#og-grid-3{
+		padding: 45px;
+	}
+	
+	.row{
+		width:100%;
+		padding-left:30px;
+	}
+
+	#speaker_cont{
+		margin-right:60%;
+		padding:10px;
+	}
+
+	#cont{
+		width:100%;
+	}
