@@ -192,7 +192,7 @@
 			<!-- Background Video -->
 			<div class="video-background" id="bg">
 				<video loop autoplay muted class="video-background" id="video-background">
-					<source src="videos/TEDxISTAlameda_Merry_Xmas.mp4" />
+					<source src="videos/recap.mp4" />
 				</video>
 			</div>
 
@@ -221,8 +221,8 @@
 
 		<div class="animated_content">
 
-			<!-- Navigation Bar -->
-			<navbar class="navbar centered navbar-expand{-sm|-md|-lg|-xl} navbar-fixed-top" id="navbar">
+			 <!-- Navigation Bar -->
+			 <navbar class="navbar centered navbar-expand{-sm|-md|-lg|-xl} navbar-fixed-top" id="navbar">
 				<div class="nav_sections">
 					<a class="navbar-brand button1">About</a>
 
@@ -323,9 +323,9 @@
                         </a>
                     </div>
                 </navbar> 
-            
-            <!-- About -->
-            <div class="intro-container" id="about">
+             <div class="sections">
+                <!-- About -->
+                <div class="intro-container" id="about">
             <ul id="og-grid-1" class="og-grid">
                 <div id="team_about" class="sub_section">
                     <a class=" sub_section_selected" data-section="about" data-hover="TED">TED</a>
@@ -374,8 +374,8 @@
             </ul>
 </div>
 
-            <!-- Speakers -->
-            <div class="speakers_container">
+                <!-- Speakers -->
+                <div class="speakers_container">
             <div class="grid-container" id="speakers">
                 <ul id="og-grid-2" class="og-grid">
                     <li>
@@ -412,8 +412,8 @@
             </div>
 </div>
 
-            <!-- Partners -->
-            <div class="partners_container">
+                <!-- Partners -->
+                <div class="partners_container">
             <div class="grid-container" id="partners">
                 <ul id="og-grid-3" class="og-grid">
 
@@ -2000,8 +2000,8 @@
             </div>
 </div>
 
-            <!-- Info -->
-            <div class="info_container">
+                <!-- Info -->
+                <div class="info_container">
                 <div class="grid-container" id="info">
                     <ul id="og-grid-4" class="og-grid">
                         <li>
@@ -2079,7 +2079,7 @@
                     </ul>
                 </div>
             </div>
-
+            </div>
 		</div>
 	</div>
 
@@ -2098,8 +2098,10 @@
                 var nav_height = $('#navbar').height(),
                     window_height = $(window).height(),
                     closed_top = window_height - nav_height;
-                  
+                
+                /*position the navbar and content in the bottom of the screen, and hidden under the screen, respecitvely*/
                 $(".animated_content").css('top', closed_top + 'px');
+                $(".sections").css('margin-top', nav_height + 'px');
         });
     </script>
 	<script>
