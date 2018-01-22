@@ -2092,14 +2092,18 @@
 		});
 	</script>
 	<script src="js/classie.js"></script>
-	<script>
-		 jQuery(document).ready(function() {
+    <script>
+        jQuery(document).ready(function() {
                 
                 var nav_height = $('#navbar').height(),
                     window_height = $(window).height(),
-                
-                closed_top = window_height - nav_height;    
+                    closed_top = window_height - nav_height;
+                  
                 $(".animated_content").css('top', closed_top + 'px');
+        });
+    </script>
+	<script>
+		 jQuery(document).ready(function() {
                 
                 // Team-about selection
                 jQuery("#team_about a").bind("click", function(e) {
@@ -2139,22 +2143,27 @@
             function toggleContent(n) {
                     
                 var scrollTop     = $(window).scrollTop(),
-                    elementOffset = $('.animated_content').offset().top,
                     nav_height = $('#navbar').height(),
-                    grid_height = $('#og-grid-1').height(),
-                    distance = (elementOffset - scrollTop), 
-                    window_height = $(window).height(), 
-                    close_distance = window_height - nav_height + scrollTop;
+                    window_height = $(window).height();
+                    
+                
+                close_distance = window_height - nav_height + scrollTop;
                     
                 //document.getElementById("demo").innerHTML = scrollTop;
                     
                 if( classie.has( container, 'container--open' ) ) {
                     classie.remove( container, 'container--open' );
                     //classie.remove( trigger, 'trigger--active' );
+                    
+                    //translate content down by closing distance
                     $('.animated_content').animate({top: close_distance }, 800, "swing");
+                    //reset scrolling position
                     $('.animated_content').scrollTop(0);
                     window.addEventListener( 'scroll', noscroll );
-
+                    
+                    //turn scrolling off
+                    document.documentElement.style.overflowY = "hidden";
+                    
                     for(i=1;i<5;i++){
                         /*remove the 'active' class from the navbar tabs when content is closed*/
                         var active_btn = navbar.querySelector( '.button' + i ).classList;
@@ -2165,7 +2174,10 @@
                     classie.add( container, 'container--open' );
                     //classie.add( trigger, 'trigger--active' ); 
                     window.removeEventListener( 'scroll', noscroll );
-                    $('.animated_content').animate({top:'40vh'}, 800, "swing");                        
+                    $('.animated_content').animate({top:'25vh'}, 800, "swing");    
+                    
+                    //turn scrolling on
+                    document.documentElement.style.overflowY = "visible";
                 };
                                 
                 playPause();

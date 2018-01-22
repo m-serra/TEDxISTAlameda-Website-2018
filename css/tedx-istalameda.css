@@ -6,6 +6,8 @@ html,body
     margin: 0px;
     padding: 0px;
     font-family: 'Helvetica', 'Arial', sans-serif;
+    overflow-x:hidden;
+    overflow-y: hidden;
 }
 
 .intro {
@@ -64,6 +66,85 @@ html,body
 	margin: 0 auto 0 1em;
 	line-height: 1.2;
 }
+
+/* Landing Page */
+.logo-svg {
+    margin-top: 8px;
+	margin-bottom: 8px;
+    position: fixed;
+    top: 4vh; 
+    left: 7vw;
+    width: 256px;
+    cursor: default;
+}
+
+.container--open .logo-svg:hover{
+    cursor: pointer;
+}
+
+.video-background{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.container--open .video-background:hover{
+    cursor: pointer;
+}
+
+.video-background > video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-aspect-ratio: 16/9) {
+    .video-background > video{
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media(max-aspect-ratio: 16/9){
+    .video-background > video{
+        width: 300%;
+        left: -100%;
+    }
+}
+
+@supports(object-fit: cover){
+    .video-background > video{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .nav_logo-svg{
+        width: 156px;
+    }
+}
+
+@media (max-width: 480px) {
+  .video-background {
+    background: url('https://scontent.flis2-1.fna.fbcdn.net/v/t31.0-8/18278263_656796467840718_2337298823345642103_o.jpg?oh=80bf60907a15c1f1c23fcf2354e62578&oe=5ABB96C8') center center / cover no-repeat;
+		transition: background-image 1s ease-in-out;
+	}
+
+  .video-background video {
+    display: none;
+  }
+}
+
+/* Landing Page */
 
 /* Main Navigation */
 
@@ -582,52 +663,6 @@ mas o efeito foi o mesmo */
 
 }
 
-/*======= Fullscreen video */
-.video-background{
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -1;
-}
-
-.container--open .video-background:hover{
-    cursor: pointer;
-}
-
-.video-background > video {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-@media(min-aspect-ratio: 16/9) {
-    .video-background > video{
-        height: 300%;
-        top: -100%;
-    }
-}
-
-@media(max-aspect-ratio: 16/9){
-    .video-background > video{
-        width: 300%;
-        left: -100%;
-    }
-}
-
-@supports(object-fit: cover){
-    .video-background > video{
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
 .overlay {
   position: absolute;
   top: 0;
@@ -639,56 +674,6 @@ mas o efeito foi o mesmo */
 .overlay {
   background: repeating-linear-gradient(0deg, rgba(0, 0, 255, 0.3), transparent);
   background-size: 100% 5px;
-}
-
-/*==== mute button */
-#mute{
-  cursor: pointer;
-  height: 50px;
-  width: 50px;
-  background-size: cover;
-  border: none;
-  background: none;
-}
-
-#mute-btn{
-  height: 30px;
-  width: 30px;
-}
-
-.logo-svg {
-    margin-top: 8px;
-	margin-bottom: 8px;
-    position: fixed;
-    top: 4vh; 
-    left: 7vw;
-    width: 256px;
-}
-
-.container--open .logo-svg:hover{
-    cursor: pointer;
-}
-
-@media screen and (max-width: 615px) {
-    .nav_logo-svg{
-        width: 156px;
-    }
-}
-
-@media (max-width: 480px) {
-  .video-background {
-    background: url('https://scontent.flis2-1.fna.fbcdn.net/v/t31.0-8/18278263_656796467840718_2337298823345642103_o.jpg?oh=80bf60907a15c1f1c23fcf2354e62578&oe=5ABB96C8') center center / cover no-repeat;
-		transition: background-image 1s ease-in-out;
-	}
-
-  .video-background video {
-    display: none;
-  }
-
-	#mute {
-		display: none;
-	}
-
 }
 
 .about_table {   
