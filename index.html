@@ -325,6 +325,14 @@
                     </div>
                 </div>
                 <div class="mobile-nav">
+                    <a class="navbar-brand">
+                        <div id="hamb-icon">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </div>
+                    </a>
                     <a class="navbar-brand" href="https://www.instagram.com/tedxistalameda/" target="_blank">
                             <svg class="instagram" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20"
                              height="20" viewBox="0 0 169.063 169.063">
@@ -2182,7 +2190,6 @@
             /*position the navbar and content in the bottom of the screen, and hidden under the screen, respecitvely*/
             $(".animated_content").css('top', closed_top + 'px');
             $(".sections").css('margin-top', nav_height + 'px');
-            console.log(nav_height);
         });
     </script>   
     <script>
@@ -2209,6 +2216,14 @@
                 }
             });
         });
+        
+        /*hamburguer menu toggle*/
+        $(document).ready(function(){
+            $('#hamb-icon').click(function(){
+                $(this).toggleClass('open');
+	        });
+        });
+        
     </script>
 	<script>
 		 jQuery(document).ready(function() {
