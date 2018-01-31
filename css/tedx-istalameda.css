@@ -93,7 +93,8 @@ html,body
 }
 
 .container--open .video-background:hover{
-    cursor: pointer;
+    cursor:pointer;
+ 
 }
 
 .video-background > video {
@@ -177,10 +178,6 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
 .navbar{
     position: absolute !important;
 	align-items: center;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-	display: flex;
     justify-content:space-between;
     width: 100%;
 	float: none;
@@ -190,6 +187,17 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
     border: 0px !important;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.horizontal-nav{
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+	display: flex;
+}
+
+.nav-mobile {
+    display: none;
 }
 
 .navbar a{
@@ -292,12 +300,14 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
 	-moz-transition: opacity 0.5s ease-in-out 0.1s;
 	-webkit-transition: opacity 0.5s ease-in-out 0.1s;
 	z-index: -1;
+    display:none;
 }
 
 .content_selected {
 	opacity: 1;
 	z-index: 1;
-	overflow-y: hidden;
+	/*overflow-y: hidden;*/
+    display: block;
 }
 /* End of Secondary Navigation */
 
@@ -702,4 +712,3 @@ mas o efeito foi o mesmo */
     white-space: nowrap;
     width: 5% !important; 
 }
-
