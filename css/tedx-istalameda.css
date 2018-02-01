@@ -160,25 +160,28 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
     left: 8vw;
     right: 8vw;
     z-index: 10;
-    -webkit-transform: translate3d(0, 0, 0);
+    
+   /* -webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
-
-
-   /* -webkit-transition: -webkit-transform  0.8s;
+    -webkit-transition: -webkit-transform  0.8s;
 	transition: transform 0.8s;
 	-webkit-transition-timing-function: ease-in-out;
-	transition-timing-function: ease-in-out; */
+	transition-timing-function: ease-in-out;*/
 }
 
-.container--open .animated_content{
-   /* -webkit-transform: translate3d(0, -60vh, 0);
-	transform: translate3d(0, -60vh, 0); */
+.animated_content .mobile_menu_open{
+    -webkit-transform: translate3d(0, -60vh, 0);
+	transform: translate3d(0, -60vh, 0);
 }
 
 .navbar{
     position: absolute !important;
 	align-items: center;
-    justify-content:space-between;
+   /* display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+	display: flex;
+    justify-content:space-between;*/
     width: 100%;
 	float: none;
 	background-color: rgba(0,0,0,0.54);
@@ -194,10 +197,22 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
     display: -webkit-flex;
     display: -ms-flex;
 	display: flex;
+    justify-content:space-between;
 }
 
 .nav-mobile {
     display: none;
+    justify-content:space-between;
+}
+
+.nav_icons {
+    width: 30%;
+   /* display: flex; */
+
+}
+.nav_sections {
+    width: 70%;
+   /* display: flex; */
 }
 
 .navbar a{
@@ -232,16 +247,6 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
 
 .navbar a.navbar-brand:hover > svg {
     fill: #ff2200;
-}
-
-.nav_icons {
-    width: 30%;
-    display: flex;
-
-}
-.nav_sections {
-    width: 70%;
-    display: flex;
 }
 /* End of Main Navigation */
 
@@ -758,6 +763,7 @@ mas o efeito foi o mesmo */
     background: #ff2200;
 }
 
+/* Hamburguer Icon */
 #hamb-icon span:nth-child(1) {
   top: 0px;
 }
@@ -795,3 +801,8 @@ mas o efeito foi o mesmo */
   width: 0%;
   left: 50%;
 }
+/* Hamburguer Icon */
+
+/* Mobile Menu */
+
+/* Mobile Menu */

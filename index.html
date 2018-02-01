@@ -223,8 +223,8 @@
 
 			 <!-- Navigation Bar -->
 			 <navbar class="navbar centered navbar-expand{-sm|-md|-lg|-xl} navbar-fixed-bottom" id="navbar">
-                <div class="nav-horizontal">    
-                    <div class="nav_sections">
+               <div class="nav-horizontal">
+                   <!-- <div class="nav_sections"> -->
                         <a class="navbar-brand button1">About</a>
 
                         <a class="navbar-brand button2">Speakers</a>
@@ -232,8 +232,8 @@
                         <a class="navbar-brand button3">Partners</a>
 
                         <a class="navbar-brand button4">Info</a>
-                    </div>
-                    <div class="nav_icons">
+                  <!-- </div> -->
+                   <!-- <div class="nav_icons"> -->
                         <a class="navbar-brand" href="https://www.instagram.com/tedxistalameda/" target="_blank">
                             <svg class="instagram" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20"
                              height="20" viewBox="0 0 169.063 169.063">
@@ -322,10 +322,10 @@
                                     </g>
                                 </svg>
                             </a>
-                    </div>
+                   <!-- </div> -->
                 </div>
                 <div class="mobile-nav">
-                    <a class="navbar-brand">
+                    <a class="navbar-brand" id="showBottom">
                         <div id="hamb-icon">
                           <span></span>
                           <span></span>
@@ -431,7 +431,6 @@
                         </div>
                     </ul>
                  </div>
-
                 <!-- Speakers -->
                 <div class="speakers_container">
             <div class="grid-container" id="speakers">
@@ -661,7 +660,7 @@
 
 
                                         <svg version="1.1" id="menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                            width="267x" height="250px" viewBox="-40 0 512 99" style="enable-background:new 0 0 410 76.3;"
+                                            width="267px" height="250px" viewBox="-40 0 512 99" style="enable-background:new 0 0 410 76.3;"
                                             xml:space="preserve">
 
                                             <polygon class="st0" points="233.9,65 238.9,70 258.7,50.1 253.6,45.1 " />
@@ -996,7 +995,9 @@
             </div>
             </div>
 		</div>
+        
 	</div>
+           
 
 	<!-- Expandable grid scripts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -1018,8 +1019,28 @@
             $(".animated_content").css('top', closed_top + 'px');
             $(".sections").css('margin-top', nav_height + 'px');
         });
-    </script>   
+        
+        $( window ).resize(function() {
+            var nav_height = $('#navbar').height(),
+                window_height = $(window).height(),
+                closed_top = window_height - nav_height;
+
+            /*position the navbar and content in the bottom of the screen, and hidden under the screen, respecitvely*/
+            $(".animated_content").css('top', closed_top + 'px');
+            $(".sections").css('margin-top', nav_height + 'px');
+        });
+    </script> 
+    <!-- MENU MOBILE -->
     <script>
+        
+       hamburguer = document.getElementById("hamb-icon");
+        var scrollTop = $(window).scrollTop(),
+            nav_height = $('#navbar').height(),
+            window_height = $(window).height();
+        
+        close_distance = window_height - nav_height + scrollTop;
+        
+        /* Toggle da navigation bar para hamburguer*/ 
         jQuery(document).ready(function() {
             
             $('.mobile-nav').css( "display", "none" );
@@ -1043,15 +1064,29 @@
                 }
             });
         });
-        
-        /*hamburguer menu toggle*/
+         
+        /*hamburguer menu toggle (3 traços vs. 'X') */
         $(document).ready(function(){
             $('#hamb-icon').click(function(){
                 $(this).toggleClass('open');
+                $('.animated_content').toggleClass('mobile_menu_open');
 	        });
         });
         
+       /* hamburguer.addEventListener('click', toggle_mobile_menu);
+        
+        function toggle_mobile_menu() {
+            if (!(classie.has(hamburguer, 'open'))) {
+                $('.animated_content').animate({top: close_distance }, 800, "swing");
+            }
+            else{
+                $('.animated_content').animate({top:'75vh'}, 800, "swing"); 
+            }
+        }; */
+        
     </script>
+   
+    <!-- SUB MENU -->
 	<script>
 		 jQuery(document).ready(function() {
                 
@@ -1076,7 +1111,8 @@
                 });
             });
 	</script>
-	<script>
+	
+    <script>
 		(function () {
 			var container = document.getElementById('container');
 			//var trigger = container.querySelector( 'button.trigger' ), navbar = document.getElementById( 'navbar' )
@@ -1092,14 +1128,11 @@
 
             function toggleContent(n) {
                     
-                var scrollTop     = $(window).scrollTop(),
+                var scrollTop = $(window).scrollTop(),
                     nav_height = $('#navbar').height(),
                     window_height = $(window).height();
-                    
                 
                 close_distance = window_height - nav_height + scrollTop;
-                    
-                //document.getElementById("demo").innerHTML = scrollTop;
                     
                 if( classie.has( container, 'container--open' ) ) {
                     classie.remove( container, 'container--open' );
@@ -1320,7 +1353,9 @@
 		}
 	</script>
 
-	<script> (function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })() </script>
+	<script> 
+        (function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })() 
+    </script>
 </body>
 
 </html>
