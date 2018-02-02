@@ -347,6 +347,9 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
 /* End of Footer */
 
 
+
+
+
 /* Partners Styles */
 
 #partner_h{
@@ -747,6 +750,23 @@ mas o efeito foi o mesmo */
     color: #ff2200;
     white-space: nowrap;
     width: 5% !important;
+}
+
+.about_table td {
+	text-align: justify;
+}
+
+#row-title {
+	color: red;
+	text-align: center;
+}
+
+#column1 {
+	padding: 0 2% 2% 20%;
+}
+
+#column2 {
+	padding: 0 20% 2% 2%;
 }
 
 /*hamburguer icon */
