@@ -72,7 +72,7 @@ html,body
     margin-top: 8px;
 	margin-bottom: 8px;
     position: fixed;
-    top: 4vh; 
+    top: 4vh;
     left: 7vw;
     width: 256px;
     cursor: default;
@@ -94,7 +94,7 @@ html,body
 
 .container--open .video-background:hover{
     cursor:pointer;
- 
+
 }
 
 .video-background > video {
@@ -160,7 +160,7 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
     left: 8vw;
     right: 8vw;
     z-index: 10;
-    
+
    /* -webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
     -webkit-transition: -webkit-transform  0.8s;
@@ -222,7 +222,7 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
     flex-grow: 1;
     flex-basis: auto;
     cursor: pointer;
-} 
+}
 
 
 .navbar a.active {
@@ -316,11 +316,42 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
 }
 /* End of Secondary Navigation */
 
+
+/* Footer */
+
+.page_footer {
+	margin-top: 50px;
+}
+
+.footer_logos {
+	text-align: center;
+	height:30px;
+}
+
+.footer_logos a {
+	display: inline;
+	float: none;
+	width:50px;
+	margin: auto;
+	padding: 15 0 15 15;
+}
+
+.footer_logos a.navbar-brand {
+	display: inline;
+	float: none;
+	width:50px;
+	margin: auto;
+	padding: 15px 15px 0 15px;
+}
+
+/* End of Footer */
+
+
 /* Partners Styles */
 
 #partner_h{
 	text-align:left;
-	margin-top:80px; 
+	margin-top:80px;
 	margin-bottom:60px
 }
 
@@ -380,7 +411,7 @@ margin-left: 10%}
 	box-sizing:border-box;
 	height:250px;
 }
-  
+
 #og-grid-3{
     padding: 45px;
 }
@@ -468,7 +499,7 @@ margin-left: 10%}
 	}
 }
 
-/*a transição entre conteúdo aberto e fechado funciona apenas quando não se faz scroll depois abrir. 
+/*a transição entre conteúdo aberto e fechado funciona apenas quando não se faz scroll depois abrir.
 Se se fizer scroll, a translação deveria ser de 60vh + 'distância do scroll'. */
 /*não tenho a certeza que o bug seja isto porque depois basta tocar no rato para ir ao sítio */
 
@@ -696,7 +727,7 @@ mas o efeito foi o mesmo */
   background-size: 100% 5px;
 }
 
-.about_table {   
+.about_table {
     /*width:90%;*/
     max-width: 100%;
     margin-bottom: 1rem;
@@ -715,7 +746,7 @@ mas o efeito foi o mesmo */
    /* -webkit-transform-origin:left, top;*/
     color: #ff2200;
     white-space: nowrap;
-    width: 5% !important; 
+    width: 5% !important;
 }
 
 /*hamburguer icon */
@@ -752,7 +783,7 @@ mas o efeito foi o mesmo */
   -moz-transition: .25s ease-in-out;
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
-  
+
  /* -webkit-transition: background .0s;
   -moz-transition: background .0s;
   -o-transition: background .0s;
