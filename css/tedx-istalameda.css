@@ -156,18 +156,6 @@ html,body
     left: 8vw;
     right: 8vw;
     z-index: 10;
-    
-    -webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-    -webkit-transition: -webkit-transform  0.8s;
-	transition: transform 0.8s;
-	-webkit-transition-timing-function: ease-in-out;
-	transition-timing-function: ease-in-out;
-}
-
-.animated_content.mobile_menu_open{
-   /* -webkit-transform: translate3d(0, -15vh, 0);
-	transform: translate3d(0, -15vh, 0);*/
 }
 
 .navbar{
@@ -183,7 +171,7 @@ html,body
     cursor: pointer;
 }
 
-.horizontal-nav{
+.long-nav{
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
@@ -191,7 +179,7 @@ html,body
     justify-content:space-between;
 }
 
-.nav-mobile {
+.short-nav {
     display: none;
     justify-content:space-between;
 }
@@ -243,19 +231,44 @@ html,body
 
 /* Mobile Navigation */
 .mobile_nav{
-    position:relative;
-    display: none;     
+    position: fixed;
+    /*display: none;*/
+    z-index: -1;
+    width: 100vw;
+    left: 0;
+    right: 0;
+
+    background-color: rgba(0,0,0,0.54);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    border: 0px !important;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+    opacity: 0;
+	-webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
 .mobile_nav.visible{
-    display:block;
+    /*display:block;*/
+    opacity: 1;
+    z-index: 14;
 }
 
 .mobile_nav a{
-    width: 50%;
+    width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
     text-decoration: none;
     float: left;
+    
+    margin: 0;
+    text-align: center;
+    color: white;
+    cursor: pointer;
 } 
 
 .mobile_nav a:hover {
@@ -263,7 +276,7 @@ html,body
     color: #ff2200;
     text-decoration: none;
 }
-/* Mobile Navigation */
+/* End of Mobile Navigation */
 
 
 /* Secondary Navigation */
@@ -361,10 +374,6 @@ html,body
 }
 
 /* End of Footer */
-
-
-
-
 
 /* Partners Styles */
 
