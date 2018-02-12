@@ -223,7 +223,7 @@
 
 			 <!-- Navigation Bar -->
 			 <navbar class="navbar centered navbar-expand{-sm|-md|-lg|-xl} navbar-fixed-bottom" id="navbar">
-               <div class="nav-horizontal">
+               <div class="long-nav">
                    <!-- <div class="nav_sections"> -->
                         <a class="navbar-brand button1">About</a>
 
@@ -324,8 +324,8 @@
                             </a>
                    <!-- </div> -->
                 </div>
-                <div class="mobile-nav">
-                    <a class="navbar-brand" id="showBottom">
+                <div class="short-nav">
+                    <a class="navbar-brand" id="showBottom" style="margin-right: 30px;">
                         <div id="hamb-icon">
                           <span></span>
                           <span></span>
@@ -380,7 +380,20 @@
                         </svg>
                     </a>
                 </div>
-             </navbar> 
+                 
+                <navbar class="mobile_nav">
+                    <div class="row">
+                        <a class="button1">About</a>
+                        <a class="button2">Speakers</a>
+                    </div>
+                    <div class="row">
+                        <a class="button3">Partners</a>
+                        <a class="button4">Info</a>
+                    </div>
+             </navbar>
+             
+            
+             </navbar>
              <div class="sections">
                 <!-- About -->
                 <div class="intro-container" id="about">
@@ -1033,34 +1046,27 @@
     <!-- MENU MOBILE -->
     <script>
         
-       hamburguer = document.getElementById("hamb-icon");
-        var scrollTop = $(window).scrollTop(),
-            nav_height = $('#navbar').height(),
-            window_height = $(window).height();
-        
-        close_distance = window_height - nav_height + scrollTop;
-        
         /* Toggle da navigation bar para hamburguer*/ 
         jQuery(document).ready(function() {
             
-            $('.mobile-nav').css( "display", "none" );
-            $('.nav-horizontal').css( "display", "flex" );
-            $('.nav-horizontal').css( "display", "-webkit-flex" );
-            $('.nav-horizontal').css( "display", "-moz-flex" );
-            $('.mobile-nav').css( "display", "-ms-flex" );
+            $('.short-nav').css( "display", "none" );
+            $('.long-nav').css( "display", "flex" );
+            $('.long-nav').css( "display", "-webkit-flex" );
+            $('.long-nav').css( "display", "-moz-flex" );
+            $('.long-nav').css( "display", "-ms-flex" );
             
             //Screen resize testing
             $(window).resize(function() {
                 if ($(window).width() < 480) {
-                    $('.nav-horizontal').css( "display", "none" );
-                    $('.mobile-nav').css( "display", "flex" );
-                    $('.mobile-nav').css( "display", "-webkit-flex" );
-                    $('.mobile-nav').css( "display", "-moz-flex" );
-                    $('.mobile-nav').css( "display", "-ms-flex" );
+                    $('.long-nav').css( "display", "none" );
+                    $('.short-nav').css( "display", "flex" );
+                    $('.short-nav').css( "display", "-webkit-flex" );
+                    $('.short-nav').css( "display", "-moz-flex" );
+                    $('.short-nav').css( "display", "-ms-flex" );
                 } 
                 else {
-                    $('.mobile-nav').css( "display", "none" );
-                    $('.nav-horizontal').css( "display", "flex" );
+                    $('.short-nav').css( "display", "none" );
+                    $('.long-nav').css( "display", "flex" );
                 }
             });
         });
@@ -1070,20 +1076,10 @@
             $('#hamb-icon').click(function(){
                 $(this).toggleClass('open');
                 $('.animated_content').toggleClass('mobile_menu_open');
+                $('.mobile_nav').toggleClass('visible');      
 	        });
         });
-        
-       /* hamburguer.addEventListener('click', toggle_mobile_menu);
-        
-        function toggle_mobile_menu() {
-            if (!(classie.has(hamburguer, 'open'))) {
-                $('.animated_content').animate({top: close_distance }, 800, "swing");
-            }
-            else{
-                $('.animated_content').animate({top:'75vh'}, 800, "swing"); 
-            }
-        }; */
-        
+                
     </script>
    
     <!-- SUB MENU -->

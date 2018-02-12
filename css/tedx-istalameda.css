@@ -149,10 +149,6 @@ html,body
 
 /* Main Navigation */
 
-/*ao fazermos a translação com uma medida em vh, o efeito funciona se após o conteúdo ser aberto não se fizer scroll,
-caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um salto do ponto até onde foi feito scroll para x=60vh */
-/* tentei resolver o problema animando margin bottom com valor dafault 0, em vez da translação, foi igual */
-
 .animated_content{
     position: absolute;
     /*top: 100vh;*/
@@ -161,27 +157,22 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
     right: 8vw;
     z-index: 10;
     
-   /* -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
     -webkit-transition: -webkit-transform  0.8s;
 	transition: transform 0.8s;
 	-webkit-transition-timing-function: ease-in-out;
-	transition-timing-function: ease-in-out;*/
+	transition-timing-function: ease-in-out;
 }
 
-.animated_content .mobile_menu_open{
-    -webkit-transform: translate3d(0, -60vh, 0);
-	transform: translate3d(0, -60vh, 0);
+.animated_content.mobile_menu_open{
+   /* -webkit-transform: translate3d(0, -15vh, 0);
+	transform: translate3d(0, -15vh, 0);*/
 }
 
 .navbar{
     position: absolute !important;
 	align-items: center;
-   /* display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-	display: flex;
-    justify-content:space-between;*/
     width: 100%;
 	float: none;
 	background-color: rgba(0,0,0,0.54);
@@ -207,12 +198,12 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
 
 .nav_icons {
     width: 30%;
-   /* display: flex; */
+    display: flex;
 
 }
 .nav_sections {
     width: 70%;
-   /* display: flex; */
+    display: flex;
 }
 
 .navbar a{
@@ -249,6 +240,31 @@ caso se faça scroll, para a navbar voltar a estar fixed bottom a navbar dá um 
     fill: #ff2200;
 }
 /* End of Main Navigation */
+
+/* Mobile Navigation */
+.mobile_nav{
+    position:relative;
+    display: none;     
+}
+.mobile_nav.visible{
+    display:block;
+}
+
+.mobile_nav a{
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    float: left;
+} 
+
+.mobile_nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ff2200;
+    text-decoration: none;
+}
+/* Mobile Navigation */
+
 
 /* Secondary Navigation */
 .sub_section a {
