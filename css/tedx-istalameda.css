@@ -10,6 +10,8 @@ html,body
     overflow-y: hidden;
 }
 
+
+
 .intro {
 	position: fixed;
 	z-index: 10;
@@ -165,10 +167,6 @@ html,body
     fill: white;
 }
 
-.navbar a.navbar-brand:hover > svg {
-    fill: #ff2200;
-}
-
 /*desktop nav bar configuration*/
 .long-nav{
     display: -moz-flex;
@@ -197,6 +195,9 @@ html,body
     color: #ff2200;
 }
 
+.navbar .long-nav a.navbar-brand:hover > svg {
+    fill: #ff2200;
+}
 
 /*mobile navbar configuration*/
 .short-nav {
@@ -266,7 +267,7 @@ html,body
     transition: .25s ease-in-out;
 }
 
-.navbar a.navbar-brand:hover > #hamb-icon span {
+hamb-icon span:active{
     background: #ff2200;
 }
 
@@ -856,4 +857,7 @@ margin-left: 10%}
 
 #column2 {
 	padding: 0 20% 2% 2%;
+}
+#bg {
+    height: 100vh;
 }
