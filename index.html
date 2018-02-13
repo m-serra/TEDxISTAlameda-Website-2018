@@ -225,7 +225,7 @@
              <div>
                  <navbar class="navbar centered navbar-expand{-sm|-md|-lg|-xl} navbar-fixed-bottom" id="navbar">
                    <div class="long-nav">
-                       <!-- <div class="nav_sections"> -->
+                       <div class="nav_sections">
                             <a class="navbar-brand button1">About</a>
 
                             <a class="navbar-brand button2">Speakers</a>
@@ -233,8 +233,8 @@
                             <a class="navbar-brand button3">Partners</a>
 
                             <a class="navbar-brand button4">Info</a>
-                      <!-- </div> -->
-                       <!-- <div class="nav_icons"> -->
+                       </div>
+                       <div class="nav_icons">
                             <a class="navbar-brand" href="https://www.instagram.com/tedxistalameda/" target="_blank">
                                 <svg class="instagram" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20"
                                  height="20" viewBox="0 0 169.063 169.063">
@@ -285,7 +285,7 @@
                             </a>
 
 
-                            <a class="navbar-brand" id="mute" target="_blank">
+                            <a class="navbar-brand mute" id="mute" target="_blank">
                                 <svg class="sound" id="sound" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 508.52 508.52" style="display: none" onclick="mute()">
                                     <g>
                                         <path d="M271.327,0.095L268.975,0c-5.244,0-11.251,1.621-18.148,5.784
@@ -305,7 +305,106 @@
                                             c93.218-18.116,160.851-100.115,160.851-194.922C500.574,159.484,432.941,77.486,339.723,59.306z"/>
                                     </g>
                                 </svg>
-                                <svg class="sound" id="sound_mute" class="sound_mute" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                <svg id="sound_mute" class="sound_mute" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 width="20px" height="20px" viewBox="0 0 508.551 508.551" onclick="unmute()">
+                                    <g>
+                                        <path d="M263.381,0.079l-2.352-0.064c-5.244,0-11.251,1.621-18.116,5.784
+                                                c0,0-132.533,115.625-138.317,121.346H31.782C14.239,127.146,0,141.384,0,158.928V353.66c0,17.576,14.239,31.782,31.782,31.782
+                                                h72.814c5.784,5.721,138.317,117.246,138.317,117.246c6.865,4.227,12.872,5.848,18.116,5.848l2.352-0.095
+                                                c11.76-1.112,20.15-10.965,22.661-21.358V21.501C283.563,11.044,275.141,1.192,263.381,0.079z M254.26,470.778
+                                                c-49.581-41.762-121.377-102.499-127.257-107.902c-5.943-5.975-13.984-9.249-22.438-9.249H31.782v-4.036V158.896h72.814
+                                                c8.136,0,16.304-3.401,22.152-8.994c5.784-5.467,77.613-68.301,127.511-111.843V470.778L254.26,470.778z"
+                                        />
+                                        <path d="M448.006,254.276l54.825-54.857c7.628-7.564,7.628-19.864,0-27.428
+                                                c-7.532-7.564-19.864-7.564-27.397,0l-54.857,54.857l-54.92-54.857c-7.532-7.564-19.864-7.564-27.397,0
+                                                c-7.564,7.564-7.564,19.864,0,27.428l54.888,54.857l-54.888,54.888c-7.564,7.532-7.564,19.864,0,27.396
+                                                c7.532,7.564,19.864,7.564,27.396,0l54.92-54.857l54.857,54.857c7.532,7.564,19.864,7.564,27.397,0
+                                                c7.564-7.532,7.564-19.864,0-27.396L448.006,254.276z"/>
+                                        </g>
+                                </svg>
+                            </a>
+                       </div>
+                    </div>
+                    <div class="short-nav">
+                        <div class="nav_sections">
+                            <a class="navbar-brand">
+                                <div id="hamb-icon">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                </div>
+                            </a>
+                            <a id="mobile_section_title" class="navbar-brand mobile_section_title"></a>
+                        </div>
+                        <div class="nav_icons">
+                            <a class="navbar-brand" href="https://www.instagram.com/tedxistalameda/" target="_blank">
+                                    <svg class="instagram" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20"
+                                     height="20" viewBox="0 0 169.063 169.063">
+                                        <path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752
+                                                c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407
+                                                c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752
+                                                c17.455,0,31.656,14.201,31.656,31.655V122.407z" />
+                                        <path d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561
+                                                C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561
+                                                c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z"
+                                        />
+                                        <path d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78
+                                                c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78
+                                                C135.661,29.421,132.821,28.251,129.921,28.251z" />
+                                    </svg>
+                            </a>
+                            <a class="navbar-brand" href="https://www.facebook.com/tedxistalameda" target="_blank">
+                                <svg class="facebook" id="facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height='20'
+                                 width='20' viewBox="0 0 430.113 430.114">
+                                    <path d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805 c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354 c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878 0.004,158.081,72.48,158.081,83.3z"></path>
+
+                                </svg>
+                            </a>
+                            <a class="navbar-brand" href="https://twitter.com/tedxistalameda" target="_blank">
+                                    <svg class="twitter" id="twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="20px"
+                                     width="20px" viewBox="0 0 612 612">
+                                        <g>
+                                            <path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411
+                                                c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513
+                                                c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101
+                                                c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104
+                                                c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194
+                                                c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485
+                                                c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"
+                                            />
+                                        </g>
+                                    </svg>
+                                </a>
+                            <a class="navbar-brand" href="https://medium.com/tedxistalameda" target="_blank">
+                                <svg class="medium" id="medium" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="20px"
+                                 width="20px" viewBox="0 0 512 512">
+                                    <g>
+                                        <path d="M71.5 142.3c.6-5.9-1.7-11.8-6.1-15.8L20.3 72.1V64h140.2l108.4 237.7L364.2 64h133.7v8.1l-38.6 37c-3.3 2.5-5 6.7-4.3 10.8v272c-.7 4.1 1 8.3 4.3 10.8l37.7 37v8.1H307.3v-8.1l39.1-37.9c3.8-3.8 3.8-5 3.8-10.8V171.2L241.5 447.1h-14.7L100.4 171.2v184.9c-1.1 7.8 1.5 15.6 7 21.2l50.8 61.6v8.1h-144v-8L65 377.3c5.4-5.6 7.9-13.5 6.5-21.2V142.3z" class="st0"/>
+                                    </g>
+                                </svg>
+                            </a>
+                            <a class="navbar-brand mute" id="mute" target="_blank">
+                                <svg class="sound" id="sound" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 508.52 508.52" style="display: none" onclick="mute()">
+                                    <g>
+                                        <path d="M271.327,0.095L268.975,0c-5.244,0-11.251,1.621-18.148,5.784
+                                            c0,0-132.533,115.625-138.286,121.346H39.728c-17.544,0-31.782,14.239-31.782,31.782v194.731
+                                            c0,17.576,14.239,31.783,31.782,31.783h72.814c5.753,5.721,138.286,117.246,138.286,117.246
+                                            c6.897,4.227,12.904,5.848,18.148,5.848l2.352-0.095c11.759-1.112,20.15-10.965,22.661-21.358V21.485
+                                            C291.509,11.06,283.087,1.208,271.327,0.095z M262.205,470.794c-49.581-41.762-121.409-102.499-127.257-107.902
+                                            c-5.943-5.975-14.016-9.249-22.438-9.249H39.728v-4.036V158.912h72.814c8.136,0,16.273-3.401,22.152-8.994
+                                            c5.784-5.498,77.613-68.332,127.511-111.874V470.794L262.205,470.794z"/>
+                                        <path d="M342.965,309.784c-7.85,3.973-10.997,13.508-7.087,21.358c2.829,5.53,8.422,8.708,14.207,8.708
+                                            c2.352,0,4.767-0.572,7.151-1.684c32.132-16.241,52.091-48.341,52.091-83.969s-19.959-67.728-52.091-83.938
+                                            c-7.85-3.973-17.385-0.795-21.358,7.056c-3.909,7.85-0.763,17.385,7.087,21.358c21.326,10.774,34.579,32.037,34.579,55.556
+                                            S364.291,299.041,342.965,309.784z"/>
+                                        <path d="M339.723,59.306c-8.486-1.716-17.004,3.941-18.625,12.554
+                                            c-1.716,8.613,3.909,16.972,12.554,18.656c78.312,15.256,135.139,84.128,135.139,163.743s-56.827,148.488-135.139,163.743
+                                            c-8.613,1.684-14.239,9.98-12.554,18.656c1.494,7.596,8.136,12.808,15.51,12.808l3.115-0.318
+                                            c93.218-18.116,160.851-100.115,160.851-194.922C500.574,159.484,432.941,77.486,339.723,59.306z"/>
+                                    </g>
+                                </svg>
+                                <svg id="sound_mute" class="sound_mute" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                  width="20px" height="20px" viewBox="0 0 508.551 508.551" onclick="unmute()">
                                     <g>
                                         <path d="M263.381,0.079l-2.352-0.064c-5.244,0-11.251,1.621-18.116,5.784
@@ -323,84 +422,28 @@
                                         </g>
                                     </svg>
                                 </a>
-                       <!-- </div> -->
+                        </div>
                     </div>
-                    <div class="short-nav">
-                        <a class="navbar-brand" id="showBottom" style="margin-right: 30px;">
-                            <div id="hamb-icon">
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                            </div>
-                        </a>
-                        <a class="navbar-brand" href="https://www.instagram.com/tedxistalameda/" target="_blank">
-                                <svg class="instagram" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20"
-                                 height="20" viewBox="0 0 169.063 169.063">
-                                    <path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752
-                                            c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407
-                                            c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752
-                                            c17.455,0,31.656,14.201,31.656,31.655V122.407z" />
-                                    <path d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561
-                                            C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561
-                                            c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z"
-                                    />
-                                    <path d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78
-                                            c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78
-                                            C135.661,29.421,132.821,28.251,129.921,28.251z" />
-                                </svg>
-                        </a>
-                        <a class="navbar-brand" href="https://www.facebook.com/tedxistalameda" target="_blank">
-                            <svg class="facebook" id="facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height='20'
-                             width='20' viewBox="0 0 430.113 430.114">
-                                <path d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805 c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354 c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878 0.004,158.081,72.48,158.081,83.3z"></path>
-
-                            </svg>
-                        </a>
-                        <a class="navbar-brand" href="https://twitter.com/tedxistalameda" target="_blank">
-                                <svg class="twitter" id="twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="20px"
-                                 width="20px" viewBox="0 0 612 612">
-                                    <g>
-                                        <path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411
-                                            c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513
-                                            c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101
-                                            c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104
-                                            c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194
-                                            c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485
-                                            c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"
-                                        />
-                                    </g>
-                                </svg>
-                            </a>
-                        <a class="navbar-brand" href="https://medium.com/tedxistalameda" target="_blank">
-                            <svg class="medium" id="medium" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="20px"
-                             width="20px" viewBox="0 0 512 512">
-                                <g>
-                                    <path d="M71.5 142.3c.6-5.9-1.7-11.8-6.1-15.8L20.3 72.1V64h140.2l108.4 237.7L364.2 64h133.7v8.1l-38.6 37c-3.3 2.5-5 6.7-4.3 10.8v272c-.7 4.1 1 8.3 4.3 10.8l37.7 37v8.1H307.3v-8.1l39.1-37.9c3.8-3.8 3.8-5 3.8-10.8V171.2L241.5 447.1h-14.7L100.4 171.2v184.9c-1.1 7.8 1.5 15.6 7 21.2l50.8 61.6v8.1h-144v-8L65 377.3c5.4-5.6 7.9-13.5 6.5-21.2V142.3z" class="st0"/>
-                                </g>
-                            </svg>
-                        </a>
-
-                     </div>
                  </navbar>
             </div>    
             <div class="sections">
                 <!-- About -->
                 <div class="intro-container" id="about">
                     <ul id="og-grid-1" class="og-grid">
-                        <div id="sub_menu" class="sub_section">
+                       <!-- <div id="sub_menu" class="sub_section">
                             <a class=" sub_section_selected" data-section="about" data-description="1" data-hover="TED">TED</a>
                             <a data-section="team" data-description="1" data-hover="Our Team">Our Team</a>
-                        </div>
+                        </div> -->
                         <div class="content-list">
                             <div class="content content_selected" data-section="about" data-description="1">
+                                
                                 <table class="about_table" data-description="1">
                                     <tbody>
-                                                                            <tr>
-                                                                                <td colspan = "2" id="row-title">
-                                                                                    <h2>TED</h2>
-                                                                                </td>
-                                                                            </tr>
+                                        <tr>
+                                            <td colspan = "2" id="row-title">
+                                                <h2>TED</h2>
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td id="column1">
                                                 TED é uma organização sem fins lucrativos com mais de três décadas, dedicada a ideias que merecem ser espalhadas.
@@ -410,12 +453,12 @@
                                                 TED is a non-profit organisation that has been around for over 30 years, with the purpose of sharing "ideas worth spreading".
                                                 Originally as a 4 day conference about technology, entertainment ad design, TED is now a global stage which promotes an environment for sharing ideas and stimulates curiosity where lead thinkers and makers of today take part.
                                             </td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td colspan = "2" id="row-title">
-                                                                                            <h2>TEDx</h2>
-                                                                                        </td>
-                                                                                    </tr>
+                                        </tr>
+                                        <tr>
+                                            <td colspan = "2" id="row-title">
+                                                <h2>TEDx</h2>
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td id="column1">
                                                 Os eventos TEDx são conferências licenciadas do mesmo estilo, mas organizadas por um grupo independente e direcionadas para a sua comunidade. Os eventos locais são um fenómeno verdadeiramente internacional, a ter lugar em mais de 130 países.
@@ -423,225 +466,222 @@
                                             <td id="column2">
                                                 TEDx events are licensed conferences of the same style, but organized by and independent group and directed to its local community. These local events are an international phenomenon, taking place in over 130 countries.
                                             </td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td colspan = "2" id="row-title">
-                                                                                            <h2>TEDxISTAlameda</h2>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td id="column1">
+                                        </tr>
+                                        <tr>
+                                            <td colspan = "2" id="row-title">
+                                                <h2>TEDxISTAlameda</h2>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="column1">
                                                 Fundado em 2013, o TEDxISTAlameda é a experiência TED oficial do Instituto Superior Técnico, a maior e mais reputada faculdade de engenharia, ciência e tecnologia e arquitetura em Portugal. O seu objetivo é providenciar às comunidades estudantil e cientifica do IST o acesso a práticas, ideias e opiniões que estão a mudar o mundo, promovendo a inovação tencológica através da investigação e educação.
                                             </td>
                                             <td id="column2">
                                                 Founded in 2013, TEDxISTAlameda is the official TEDx experience of Instituto Superior Técnico, the biggest and well-known faculty of engineering, science, technology and architecture in Portugal. Its main goal is to provide student and scientific communities if IST the access to practices, ideas and opinions that are changing the world, promoting technological and innovation through investigation and education.
                                             </td>
 
-            </tr>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
                             <div class="content" data-section="team">
 
                             </div>
-                                                        <!-- FOOTER-->
-                                                        <div class="page_footer">
-                                                            <div class="footer_section">
-                                                                <div class="footer_logos">
-                                                                    <a class="navbar-brand" href="https://www.instagram.com/tedxistalameda/" target="_blank">
-                                                <svg class="instagram" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20"
-                                                 height="20" viewBox="0 0 169.063 169.063">
-                                                    <path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752
-                                                            c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407
-                                                            c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752
-                                                            c17.455,0,31.656,14.201,31.656,31.655V122.407z" />
-                                                    <path d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561
-                                                            C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561
-                                                            c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z"
+                            <!-- FOOTER-->
+                            <div class="page_footer">
+                                <div class="footer_section">
+                                    <div class="footer_logos">
+                                        <a class="navbar-brand" href="https://www.instagram.com/tedxistalameda/" target="_blank">
+                                            <svg class="instagram" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20"
+                                             height="20" viewBox="0 0 169.063 169.063">
+                                                <path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752
+                                                        c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407
+                                                        c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752
+                                                        c17.455,0,31.656,14.201,31.656,31.655V122.407z" />
+                                                <path d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561
+                                                        C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561
+                                                        c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z"
+                                                />
+                                                <path d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78
+                                                        c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78
+                                                        C135.661,29.421,132.821,28.251,129.921,28.251z" />
+                                            </svg>
+                                        </a>
+                                        <a class="navbar-brand" href="https://www.facebook.com/tedxistalameda" target="_blank">
+                                            <svg class="facebook" id="facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height='20'
+                                             width='20' viewBox="0 0 430.113 430.114">
+                                                <path d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805 c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354 c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878 0.004,158.081,72.48,158.081,83.3z"></path>
+
+                                            </svg>
+                                        </a>
+
+                                        <a class="navbar-brand" href="https://twitter.com/tedxistalameda" target="_blank">
+                                            <svg class="twitter" id="twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="20px"
+                                             width="20px" viewBox="0 0 612 612">
+                                                <g>
+                                                    <path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411
+                                                        c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513
+                                                        c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101
+                                                        c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104
+                                                        c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194
+                                                        c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485
+                                                        c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"
                                                     />
-                                                    <path d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78
-                                                            c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78
-                                                            C135.661,29.421,132.821,28.251,129.921,28.251z" />
-                                                </svg>
-                                            </a>
-                                            <a class="navbar-brand" href="https://www.facebook.com/tedxistalameda" target="_blank">
-                                                <svg class="facebook" id="facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height='20'
-                                                 width='20' viewBox="0 0 430.113 430.114">
-                                                    <path d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805 c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354 c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878 0.004,158.081,72.48,158.081,83.3z"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
 
-                                                </svg>
-                                            </a>
-
-                                            <a class="navbar-brand" href="https://twitter.com/tedxistalameda" target="_blank">
-                                                <svg class="twitter" id="twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="20px"
-                                                 width="20px" viewBox="0 0 612 612">
-                                                    <g>
-                                                        <path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411
-                                                            c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513
-                                                            c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101
-                                                            c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104
-                                                            c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194
-                                                            c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485
-                                                            c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"
-                                                        />
-                                                    </g>
-                                                </svg>
-                                            </a>
-
-                                            <a class="navbar-brand" href="https://medium.com/tedxistalameda" target="_blank">
-                                                <svg class="medium" id="medium" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="20px"
-                                                 width="20px" viewBox="0 0 512 512">
-                                                    <g>
-                                                        <path d="M71.5 142.3c.6-5.9-1.7-11.8-6.1-15.8L20.3 72.1V64h140.2l108.4 237.7L364.2 64h133.7v8.1l-38.6 37c-3.3 2.5-5 6.7-4.3 10.8v272c-.7 4.1 1 8.3 4.3 10.8l37.7 37v8.1H307.3v-8.1l39.1-37.9c3.8-3.8 3.8-5 3.8-10.8V171.2L241.5 447.1h-14.7L100.4 171.2v184.9c-1.1 7.8 1.5 15.6 7 21.2l50.8 61.6v8.1h-144v-8L65 377.3c5.4-5.6 7.9-13.5 6.5-21.2V142.3z" class="st0"/>
-                                                    </g>
-                                                </svg>
-                                            </a>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="copyright">
-                                                                <span>©TEDx ISTAlameda. All rights reserved.</span>
-                                                            </div>
-                                                        </div>
-                                                        <!-- FOOTER -->
+                                        <a class="navbar-brand" href="https://medium.com/tedxistalameda" target="_blank">
+                                            <svg class="medium" id="medium" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="20px"
+                                             width="20px" viewBox="0 0 512 512">
+                                                <g>
+                                                    <path d="M71.5 142.3c.6-5.9-1.7-11.8-6.1-15.8L20.3 72.1V64h140.2l108.4 237.7L364.2 64h133.7v8.1l-38.6 37c-3.3 2.5-5 6.7-4.3 10.8v272c-.7 4.1 1 8.3 4.3 10.8l37.7 37v8.1H307.3v-8.1l39.1-37.9c3.8-3.8 3.8-5 3.8-10.8V171.2L241.5 447.1h-14.7L100.4 171.2v184.9c-1.1 7.8 1.5 15.6 7 21.2l50.8 61.6v8.1h-144v-8L65 377.3c5.4-5.6 7.9-13.5 6.5-21.2V142.3z" class="st0"/>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="copyright">
+                                    <span>©TEDx ISTAlameda. All rights reserved.</span>
+                                </div>
+                            </div>
+                            <!-- FOOTER -->
                         </div>
                     </ul>
                  </div>
                 <!-- Speakers -->
                 <div class="speakers_container">
-            <div class="grid-container" id="speakers">
-                <ul id="og-grid-2" class="og-grid">
-                    <div id="sub_menu" class="sub_section">
-                        <a class=" sub_section_selected" data-section="2018_speakers" data-description="2" data-hover="2018 Speakers">2018 Speakers</a>
-                        <a data-section="past_speakers" data-description="2" data-hover="Past Speakers">Past Speakers</a>
-                    </div>
-                    <div class="content-list">
-                        <div class="content content_selected" data-section="2018_speakers" data-description="2">
-                            <li>
-                                <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="12">
-                                    <img src="images/thumbs/2.jpg" alt="img02"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="13">
-                                    <img src="images/thumbs/2.jpg" alt="img02"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="14">
-                                    <img src="images/thumbs/2.jpg" alt="img02"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="15">
-                                    <img src="images/thumbs/2.jpg" alt="img02"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="16">
-                                    <img src="images/thumbs/2.jpg" alt="img02"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="17">
-                                    <img src="images/thumbs/2.jpg" alt="img02"/>
-                                </a>
-                            </li>
-                        </div>
-                        <div class="content" data-section="past_speakers" data-description="2">
-                            <li>
-                                <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="12">
-                                    <img src="images/thumbs/3.jpg" alt="img02"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="13">
-                                    <img src="images/thumbs/3.jpg" alt="img02"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="14">
-                                    <img src="images/thumbs/3.jpg" alt="img02"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="15">
-                                    <img src="images/thumbs/3.jpg" alt="img02"/>
-                                </a>
-                            </li>
-                        </div>
+                    <div class="grid-container" id="speakers">
+                        <ul id="og-grid-2" class="og-grid">
+                            <div id="sub_menu" class="sub_section">
+                                <a class=" sub_section_selected" data-section="2018_speakers" data-description="2" data-hover="2018 Speakers">2018 Speakers</a>
+                                <a data-section="past_speakers" data-description="2" data-hover="Past Speakers">Past Speakers</a>
+                            </div>
+                            <div class="content-list">
+                                <div class="content content_selected" data-section="2018_speakers" data-description="2">
+                                    <li>
+                                        <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="12">
+                                            <img src="images/thumbs/2.jpg" alt="img02"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="13">
+                                            <img src="images/thumbs/2.jpg" alt="img02"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="14">
+                                            <img src="images/thumbs/2.jpg" alt="img02"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="15">
+                                            <img src="images/thumbs/2.jpg" alt="img02"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="16">
+                                            <img src="images/thumbs/2.jpg" alt="img02"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="17">
+                                            <img src="images/thumbs/2.jpg" alt="img02"/>
+                                        </a>
+                                    </li>
+                                </div>
+                                <div class="content" data-section="past_speakers" data-description="2">
+                                    <li>
+                                        <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="12">
+                                            <img src="images/thumbs/3.jpg" alt="img02"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu." id="13">
+                                            <img src="images/thumbs/3.jpg" alt="img02"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato." id="14">
+                                            <img src="images/thumbs/3.jpg" alt="img02"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." id="15">
+                                            <img src="images/thumbs/3.jpg" alt="img02"/>
+                                        </a>
+                                    </li>
+                                </div>
 
-                                                <!-- FOOTER-->
-                                                <div class="page_footer">
-                                                    <div class="footer_section">
-                                                        <div class="footer_logos">
-                                                            <a class="navbar-brand" href="https://www.instagram.com/tedxistalameda/" target="_blank">
-                                                                    <svg class="instagram" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20"
-                                                                     height="20" viewBox="0 0 169.063 169.063">
-                                                                            <path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752
-                                                                                            c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407
-                                                                                            c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752
-                                                                                            c17.455,0,31.656,14.201,31.656,31.655V122.407z" />
-                                                                            <path d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561
-                                                                                            C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561
-                                                                                            c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z"
-                                                                            />
-                                                                            <path d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78
-                                                                                            c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78
-                                                                                            C135.661,29.421,132.821,28.251,129.921,28.251z" />
-                                                                    </svg>
-                                                            </a>
-                                                            <a class="navbar-brand" href="https://www.facebook.com/tedxistalameda" target="_blank">
-                                                                    <svg class="facebook" id="facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height='20'
-                                                                     width='20' viewBox="0 0 430.113 430.114">
-                                                                            <path d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805 c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354 c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878 0.004,158.081,72.48,158.081,83.3z"></path>
+                                <!-- FOOTER-->
+                                <div class="page_footer">
+                                    <div class="footer_section">
+                                        <div class="footer_logos">
+                                            <a class="navbar-brand" href="https://www.instagram.com/tedxistalameda/" target="_blank">
+                                                    <svg class="instagram" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20"
+                                                     height="20" viewBox="0 0 169.063 169.063">
+                                                            <path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752
+                                                                            c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407
+                                                                            c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752
+                                                                            c17.455,0,31.656,14.201,31.656,31.655V122.407z" />
+                                                            <path d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561
+                                                                            C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561
+                                                                            c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z"
+                                                            />
+                                                            <path d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78
+                                                                            c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78
+                                                                            C135.661,29.421,132.821,28.251,129.921,28.251z" />
+                                                    </svg>
+                                            </a>
+                                            <a class="navbar-brand" href="https://www.facebook.com/tedxistalameda" target="_blank">
+                                                    <svg class="facebook" id="facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height='20'
+                                                     width='20' viewBox="0 0 430.113 430.114">
+                                                            <path d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805 c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354 c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878 0.004,158.081,72.48,158.081,83.3z"></path>
 
-                                                                    </svg>
-                                                            </a>
+                                                    </svg>
+                                            </a>
 
-                                                            <a class="navbar-brand" href="https://twitter.com/tedxistalameda" target="_blank">
-                                                                    <svg class="twitter" id="twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="20px"
-                                                                     width="20px" viewBox="0 0 612 612">
-                                                                            <g>
-                                                                                    <path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411
-                                                                                            c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513
-                                                                                            c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101
-                                                                                            c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104
-                                                                                            c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194
-                                                                                            c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485
-                                                                                            c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"
-                                                                                    />
-                                                                            </g>
-                                                                    </svg>
-                                                            </a>
+                                            <a class="navbar-brand" href="https://twitter.com/tedxistalameda" target="_blank">
+                                                    <svg class="twitter" id="twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="20px"
+                                                     width="20px" viewBox="0 0 612 612">
+                                                            <g>
+                                                                    <path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411
+                                                                            c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513
+                                                                            c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101
+                                                                            c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104
+                                                                            c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194
+                                                                            c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485
+                                                                            c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"
+                                                                    />
+                                                            </g>
+                                                    </svg>
+                                            </a>
 
-                                                            <a class="navbar-brand" href="https://medium.com/tedxistalameda" target="_blank">
-                                                                    <svg class="medium" id="medium" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="20px"
-                                                                     width="20px" viewBox="0 0 512 512">
-                                                                            <g>
-                                                                                    <path d="M71.5 142.3c.6-5.9-1.7-11.8-6.1-15.8L20.3 72.1V64h140.2l108.4 237.7L364.2 64h133.7v8.1l-38.6 37c-3.3 2.5-5 6.7-4.3 10.8v272c-.7 4.1 1 8.3 4.3 10.8l37.7 37v8.1H307.3v-8.1l39.1-37.9c3.8-3.8 3.8-5 3.8-10.8V171.2L241.5 447.1h-14.7L100.4 171.2v184.9c-1.1 7.8 1.5 15.6 7 21.2l50.8 61.6v8.1h-144v-8L65 377.3c5.4-5.6 7.9-13.5 6.5-21.2V142.3z" class="st0"/>
-                                                                            </g>
-                                                                    </svg>
-                                                            </a>
-                                                        </div>
-                                                    </div>
+                                            <a class="navbar-brand" href="https://medium.com/tedxistalameda" target="_blank">
+                                                    <svg class="medium" id="medium" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="20px"
+                                                     width="20px" viewBox="0 0 512 512">
+                                                            <g>
+                                                                    <path d="M71.5 142.3c.6-5.9-1.7-11.8-6.1-15.8L20.3 72.1V64h140.2l108.4 237.7L364.2 64h133.7v8.1l-38.6 37c-3.3 2.5-5 6.7-4.3 10.8v272c-.7 4.1 1 8.3 4.3 10.8l37.7 37v8.1H307.3v-8.1l39.1-37.9c3.8-3.8 3.8-5 3.8-10.8V171.2L241.5 447.1h-14.7L100.4 171.2v184.9c-1.1 7.8 1.5 15.6 7 21.2l50.8 61.6v8.1h-144v-8L65 377.3c5.4-5.6 7.9-13.5 6.5-21.2V142.3z" class="st0"/>
+                                                            </g>
+                                                    </svg>
+                                            </a>
+                                        </div>
+                                    </div>
 
-                                                    <div class="copyright">
-                                                        <span>©TEDx ISTAlameda. All rights reserved.</span>
-                                                    </div>
-                                                </div>
-                                                <!-- FOOTER -->
+                                    <div class="copyright">
+                                        <span>©TEDx ISTAlameda. All rights reserved.</span>
+                                    </div>
+                                </div>
+                                <!-- FOOTER -->
 
-                    </div>
-                </ul>
-            </div>
+                            </div>
+                        </ul>
+                </div>
             </div>
                 <!-- Partners -->
                 <div class="partners_container">
                     <div class="grid-container" id="partners">
                         <ul id="og-grid-3" class="og-grid">
-
-
                             <header class="major" id="partner_h1">
                                 <div class="container" id="speaker_cont">
                                     <div class="row">
@@ -1255,8 +1295,8 @@
             </div>
             </div>
 		</div>
-        <div class="mobile_nav">
-            <navbar>
+        <div class="mobile_nav_overlay">
+            <navbar class="mobile_nav">
                     <a class="navbar-brand button5">About</a>
                     <a class="navbar-brand button6">Speakers</a>
                     <a class="navbar-brand button7">Partners</a>
@@ -1281,11 +1321,10 @@
             var nav_height = $('#navbar').height(),
                 window_height = $(window).height(),
                 closed_top = window_height - nav_height;
-
             /*position the navbar and content in the bottom of the screen, and hidden under the screen, respecitvely*/
             $(".animated_content").css('top', closed_top + 'px');
             $(".sections").css('margin-top', nav_height + 'px');
-            $(".mobile_nav").css('height', closed_top + 'px');
+            $(".mobile_nav_overlay").css('height', closed_top + 'px');
         });
 
         $( window ).resize(function() {
@@ -1310,46 +1349,45 @@
             $('.long-nav').css( "display", "-moz-flex" );
             $('.long-nav').css( "display", "-ms-flex" );
             
-            if ($(window).width() < 480) {
+            if ($(window).width() < 750) {
                     $('.long-nav').css( "display", "none" );
                     $('.short-nav').css( "display", "flex" );
                     $('.short-nav').css( "display", "-webkit-flex" );
                     $('.short-nav').css( "display", "-moz-flex" );
                     $('.short-nav').css( "display", "-ms-flex" );
                     $('.animated_content').css({ "width": "100vw", "left": "0", "right": "0" });
+                    $('.mobile_section_title').css( "display", "block" );
+                    $('.navbar').css("padding-left", "8vw");
+                    $('.navbar').css("padding-right", "8vw");
                 } 
             
             //Screen resize testing
             $(window).resize(function() {
-                if ($(window).width() < 480) {
+                if ($(window).width() < 750) {
                     $('.long-nav').css( "display", "none" );
                     $('.short-nav').css( "display", "flex" );
                     $('.short-nav').css( "display", "-webkit-flex" );
                     $('.short-nav').css( "display", "-moz-flex" );
                     $('.short-nav').css( "display", "-ms-flex" );
                     $('.animated_content').css({ "width": "100vw", "left": "0", "right": "0" });
+                    $('.mobile_section_title').css( "display", "block" );
+                    $('.navbar').css("padding-left", "8vw");
+                    $('.navbar').css("padding-right", "8vw");
+                    
+                    
                 } 
                 else {
                     $('.short-nav').css( "display", "none" );
                     $('.long-nav').css( "display", "flex" );
                     $('.animated_content').css({ "width": "84vw", "left": "8vw", "right":"8vw" });
+                    $('.mobile_nav_overlay').removeClass('visible');
+                    $('.mobile_section_title').css( "display", "none" );
+                    $('.navbar').css("padding-left", "2vw");
+                    $('.navbar').css("padding-right", "4vw");
                 }
             });
         });
-
-        /*hamburguer menu toggle (3 traços vs. 'X') + abrir o menu mobile */
-        $(document).ready(function(){
-            $('#hamb-icon').click(function(){
-                $(this).toggleClass('open');
-                $('.mobile_nav').toggleClass('visible');
-                
-                
-                if (!(classie.has(container, 'container--open'))) {
-					toggleContent(0);
-				};
-	        });
-        });
-                
+                        
     </script>
 
     <!-- SUB MENU -->
@@ -1379,10 +1417,10 @@
 	</script>
 
     <script>
-		$(document).ready(function () {
+		(function () {
 			var container = document.getElementById('container');
 			//var trigger = container.querySelector( 'button.trigger' ), navbar = document.getElementById( 'navbar' )
-
+            
 			function playPause() {
 				var myVideo = document.getElementById("video-background");
 				if (myVideo.paused)
@@ -1390,7 +1428,29 @@
 				else
 					myVideo.pause();
 			}
-
+            
+            /*hamburguer menu toggle (3 traços vs. 'X') + abrir o menu mobile */
+            $('#hamb-icon').click(function(){
+                $('#hamb-icon').toggleClass('open');
+                $('.mobile_nav_overlay').toggleClass('visible');
+                
+                /*se se carregar no hamburguer com o conteúdo aberto: fechar content, mudar hamburguer para cruz, abrir menu overlay */
+                if ((classie.has(container, 'container--open'))) {
+					toggleContent(0);
+                    $('#hamb-icon').toggleClass('open');
+                    setTimeout(function(){  $('.mobile_nav_overlay').toggleClass('visible') }, 800);
+				};
+	        });
+            
+            /*Se o tamanho da janela for mudado com o conteúdo aberto, fechar o conteúdo para evitar erros */
+            $(window).resize(function() {
+                if ($(window).width() < 750) {
+                    if ((classie.has(container, 'container--open'))) {
+                        toggleContent(0);
+                    }
+                }
+            });
+        
             function toggleContent(n) {
 
                 var scrollTop = $(window).scrollTop(),
@@ -1401,7 +1461,7 @@
                 
                 if( $('#hamb-icon').hasClass('open') ) {
                     $('#hamb-icon').removeClass('open');
-                    $('.mobile_nav').removeClass('visible');
+                    $('.mobile_nav_overlay').removeClass('visible');
                 }
                  
 
@@ -1423,6 +1483,9 @@
                         var active_btn = navbar.querySelector( '.button' + i ).classList;
                         active_btn.remove('active');
                     }
+                    
+                    document.getElementById("mobile_section_title").innerHTML="";
+                    
                 }
                 else{
                     classie.add( container, 'container--open' );
@@ -1432,9 +1495,23 @@
 
                     //turn scrolling on
                     document.documentElement.style.overflowY = "visible";
+                    
+                    if(n==1){
+                        document.getElementById("mobile_section_title").innerHTML="About";  
+                    }
+                    else if(n==2){
+                        document.getElementById("mobile_section_title").innerHTML="Speakers";
+                    }
+                    else if(n==3){
+                        document.getElementById("mobile_section_title").innerHTML="Partners";
+                    }
+                    else if(n==4){
+                        document.getElementById("mobile_section_title").innerHTML="Info";
+                    }
                 };
-
-                playPause();
+                if ($(window).width() >= 480) {
+                    playPause();
+                }
 
             }
 
@@ -1500,7 +1577,6 @@
 
 			function navbutton1() {
 				// go to content 1
-                console.log('about');
 				hide_sections(1);
 			}
 
@@ -1571,7 +1647,7 @@
 		//mute button
 		$(document).ready(function () {
 
-			$("#mute").click(function () {
+			$(".mute").click(function () {
 				if ($("video").prop('muted')) {
 					$("video").prop('muted', false);
 				}
@@ -1584,7 +1660,9 @@
 			$(window).resize(function () {
 				if ($(window).width() <= 480) {
 					$("video").prop('muted', true);
+                    $(".mute").css("display", "none");
 				} else {
+                    $(".mute").css("display", "block");
 					if (document.getElementById("sound_mute").style.display == "none") {
 						$("video").prop('muted', false);
 						unmute();
@@ -1613,14 +1691,16 @@
 
 		// change icon
 		function mute() {
-
-			document.getElementById("sound").style.display = "none";
-			document.getElementById("sound_mute").style.display = "block";
+            $('.sound').css("display", "none");
+            $('.sound_mute').css("display", "block");
+			/*document.getElementsByClassName("sound").style.display = "none";
+			document.getElementsByClassName("sound_mute").style.display = "block";*/
 		}
 		function unmute() {
-
-			document.getElementById("sound_mute").style.display = "none";
-			document.getElementById("sound").style.display = "block";
+            $('.sound').css("display", "block");
+            $('.sound_mute').css("display", "none");
+			/*document.getElementById("sound_mute").style.display = "none";
+			document.getElementById("sound").style.display = "block";*/
 		}
 
 
