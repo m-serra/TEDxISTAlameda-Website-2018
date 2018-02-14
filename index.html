@@ -1309,7 +1309,7 @@
             $('.long-nav').css( "display", "-moz-flex" );
             $('.long-nav').css( "display", "-ms-flex" );
             
-            if ($(window).width() < 750) {
+            if ($(window).width() < 780) {
                     $('.long-nav').css( "display", "none" );
                     $('.short-nav').css( "display", "flex" );
                     $('.short-nav').css( "display", "-webkit-flex" );
@@ -1327,7 +1327,7 @@
             
             //Screen resize testing
             $(window).resize(function() {
-                if ($(window).width() < 750) {
+                if ($(window).width() < 780) {
                     $('.long-nav').css( "display", "none" );
                     $('.short-nav').css( "display", "flex" );
                     $('.short-nav').css( "display", "-webkit-flex" );
@@ -1408,7 +1408,7 @@
             
             /*Se o tamanho da janela for mudado com o conteúdo aberto, fechar o conteúdo para evitar erros */
             $(window).resize(function() {
-                if ($(window).width() < 750) {
+                if ($(window).width() < 780) {
                     if ((classie.has(container, 'container--open'))) {
                         toggleContent(0);
                     }
@@ -1462,7 +1462,7 @@
                         if (!(classie.has(sections[i], 'container--close'))) {
                                         classie.add(sections[i], 'container--close');
                                     }
-                    }},800);
+                    }},800)
 
                     
                 }
