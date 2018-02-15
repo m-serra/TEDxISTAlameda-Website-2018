@@ -115,7 +115,22 @@ html,body
   .video-background video {
     display: none;
   }
+
 }
+
+@media (min-width: 780px) {
+    .about_mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 780px) {
+    .about_pc {
+        display: none;
+    }
+}
+
+
 
 /* End of Landing Page */
 
@@ -251,7 +266,7 @@ html,body
     cursor: pointer;
 }
 
-#hamb-icon span{    
+#hamb-icon span{
     position: absolute;
     height: 3px;
     width: 100%;
@@ -329,7 +344,7 @@ hamb-icon span:active{
     border: 0px !important;
     text-transform: uppercase;
     cursor: pointer;
-    
+
     opacity: 0;
 	-webkit-transition: opacity 0.5s ease-in-out;
     -moz-transition: opacity 0.5s ease-in-out;
@@ -358,12 +373,12 @@ hamb-icon span:active{
     padding-bottom: 10px;
     text-decoration: none;
     float: left;
-    
+
     margin: 0;
     text-align: center;
     color: white;
     cursor: pointer;
-} 
+}
 
 .mobile_nav a:hover {
     background: rgba(255, 255, 255, 0.1);
@@ -606,6 +621,7 @@ margin-left: 10%}
 	list-style: none;
 	padding-bottom: 40px;
     padding-top: 40px;
+	padding-right: 40px;
 	margin: 0;
 	text-align: center;
     width: 100%;
@@ -842,6 +858,26 @@ margin-left: 10%}
     color: #ff2200;
     white-space: nowrap;
     width: 5% !important;
+}
+
+.about_mobile {
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 0 5vw;
+}
+
+.about_EN {
+    display: none;
+}
+
+.button_selected {
+    color: red;
+    border-bottom: 2px solid red;
+}
+
+.about_mobile h2 {
+    color: red;
+    text-align: center;
 }
 
 .about_table td {
