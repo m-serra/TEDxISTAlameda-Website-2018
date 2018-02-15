@@ -55,7 +55,7 @@ html,body
 
 @media screen and (max-width: 615px) {
     .logo-svg{
-        width: 200px;
+        width: 180px;
         left: 5vw;
     }
 }
