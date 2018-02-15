@@ -424,7 +424,7 @@
                         </div>
                     </div>
                  </navbar>
-            </div>    
+            </div>
             <div class="sections">
                 <!-- About -->
                 <div class="intro-container" id="about">
@@ -435,7 +435,7 @@
                         </div> -->
                         <div class="content-list">
                             <div class="content content_selected" data-section="about" data-description="1">
-                                
+                                <div class="about_pc">
                                 <table class="about_table" data-description="1">
                                     <tbody>
                                         <tr>
@@ -482,6 +482,55 @@
                                         </tr>
                                     </tbody>
                                 </table>
+															</div>
+															<div class="about_mobile" id="about_mobile">
+																<span class="button_language" style="float:right">
+																	<button onclick="about_PT();"><p class="button_selected" id="PT_button">
+																		PT
+																	</p></button>
+																	<button onclick="about_EN();"><p class="" id="EN_button">
+																		EN
+																	</p></button>
+																</span>
+																<br>
+																<div class="about_PT">
+																	<h2>TED</h2>
+																	<p>
+																		TED é uma organização sem fins lucrativos com mais de três décadas, dedicada a ideias que merecem ser espalhadas.
+																		Originalmente uma conferência de 4 dias sobre tecnologia, entretenimento e design, é agora um palco global de promoção de um ambiente de partilha de ideias e estimulação da curiosidade, onde participam os principais thinkers e makers do mundo.
+																	</p>
+																	<br>
+																	<h2>TEDx</h2>
+																	<p>
+																		Os eventos TEDx são conferências licenciadas do mesmo estilo, mas organizadas por um grupo independente e direcionadas para a sua comunidade. Os eventos locais são um fenómeno verdadeiramente internacional, a ter lugar em mais de 130 países.
+																	</p>
+																	<br />
+																	<h2>TEDxISTAlameda</h2>
+																	<p>
+																		Fundado em 2013, o TEDxISTAlameda é a experiência TED oficial do Instituto Superior Técnico, a maior e mais reputada faculdade de engenharia, ciência e tecnologia e arquitetura em Portugal. O seu objetivo é providenciar às comunidades estudantil e cientifica do IST o acesso a práticas, ideias e opiniões que estão a mudar o mundo, promovendo a inovação tencológica através da investigação e educação.
+																	</p>
+																	<br />
+																</div>
+
+																<div class="about_EN">
+																	<h2>TED</h2>
+																	<p>
+																		TED is a non-profit organisation that has been around for over 30 years, with the purpose of sharing "ideas worth spreading".
+																		Originally as a 4 day conference about technology, entertainment ad design, TED is now a global stage which promotes an environment for sharing ideas and stimulates curiosity where lead thinkers and makers of today take part.
+																	</p>
+																	<br>
+																	<h2>TEDx</h2>
+																	<p>
+																		TEDx events are licensed conferences of the same style, but organized by and independent group and directed to its local community. These local events are an international phenomenon, taking place in over 130 countries.
+																	</p>
+																	<br />
+																	<h2>TEDxISTAlameda</h2>
+																	<p>
+																		Founded in 2013, TEDxISTAlameda is the official TEDx experience of Instituto Superior Técnico, the biggest and well-known faculty of engineering, science, technology and architecture in Portugal. Its main goal is to provide student and scientific communities if IST the access to practices, ideas and opinions that are changing the world, promoting technological and innovation through investigation and education.
+																	</p>
+																	<br />
+																</div>
+															</div>
                             </div>
                             <div class="content" data-section="team">
 
@@ -1154,7 +1203,7 @@
                 <!-- Info -->
                 <div class="info_container">
                     <div class="grid-container" id="info">
-                    <ul id="og-grid-4" class="og-grid">            
+                    <ul id="og-grid-4" class="og-grid">
                         <li>
                             <a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato."
                              id="48">
@@ -1248,6 +1297,7 @@
 	</div>
 
 
+
 	<!-- Expandable grid scripts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/grid.js"></script>
@@ -1257,10 +1307,10 @@
 		});
 	</script>
 	<script src="js/classie.js"></script>
-    
+
     <script>
         jQuery(document).ready(function() {
-            
+
             /*start by hiding all sections to prevent address bar scroll in mobile*/
             var section1 = document.getElementById("about"),
 				section2 = document.getElementById("speakers"),
@@ -1268,7 +1318,7 @@
 				section4 = document.getElementById("info"),
 				sections = [section1, section2, section3, section4];
 
-            
+
             for (i = 0; i < 4; i++) {
                 if (!(classie.has(sections[i], 'container--close'))) {
                                 classie.add(sections[i], 'container--close');
@@ -1283,9 +1333,9 @@
             $(".sections").css('margin-top', nav_height + 'px');
             $(".mobile_nav_overlay").css('height', closed_top + 'px');
         });
-        
-        
-        
+
+
+
         $( window ).resize(function() {
             var nav_height = $('#navbar').height(),
                 window_height = $(window).height(),
@@ -1299,16 +1349,16 @@
     </script>
     <!-- MENU MOBILE -->
     <script>
-        
-        /* Toggle da navigation bar para hamburguer*/ 
+
+        /* Toggle da navigation bar para hamburguer*/
         jQuery(document).ready(function() {
-            
+
             $('.short-nav').css( "display", "none" );
             $('.long-nav').css( "display", "flex" );
             $('.long-nav').css( "display", "-webkit-flex" );
             $('.long-nav').css( "display", "-moz-flex" );
             $('.long-nav').css( "display", "-ms-flex" );
-            
+
             if ($(window).width() < 780) {
                     $('.long-nav').css( "display", "none" );
                     $('.short-nav').css( "display", "flex" );
@@ -1321,10 +1371,10 @@
                     $('.navbar').css("padding-right", "8vw");
                 }
             if ($(window).width() < 480) {
-                 $(".mute").css("display", "none");   
+                 $(".mute").css("display", "none");
             }
-            
-            
+
+
             //Screen resize testing
             $(window).resize(function() {
                 if ($(window).width() < 780) {
@@ -1337,9 +1387,9 @@
                     $('.mobile_section_title').css( "display", "block" );
                     $('.navbar').css("padding-left", "8vw");
                     $('.navbar').css("padding-right", "8vw");
-                    
-                    
-                } 
+
+
+                }
                 else {
                     $('.short-nav').css( "display", "none" );
                     $('.long-nav').css( "display", "flex" );
@@ -1351,7 +1401,7 @@
                 }
             });
         });
-                        
+
     </script>
 
     <!-- SUB MENU -->
@@ -1381,10 +1431,11 @@
 	</script>
 
     <script>
+
 		(function () {
 			var container = document.getElementById('container');
 			//var trigger = container.querySelector( 'button.trigger' ), navbar = document.getElementById( 'navbar' )
-            
+
 			function playPause() {
 				var myVideo = document.getElementById("video-background");
 				if (myVideo.paused)
@@ -1392,12 +1443,12 @@
 				else
 					myVideo.pause();
 			}
-            
+
             /*hamburguer menu toggle (3 traços vs. 'X') + abrir o menu mobile */
             $('#hamb-icon').click(function(){
                 $('#hamb-icon').toggleClass('open');
                 $('.mobile_nav_overlay').toggleClass('visible');
-                
+
                 /*se se carregar no hamburguer com o conteúdo aberto: fechar content, mudar hamburguer para cruz, abrir menu overlay */
                 if ((classie.has(container, 'container--open'))) {
 					toggleContent(0);
@@ -1405,7 +1456,7 @@
                     setTimeout(function(){  $('.mobile_nav_overlay').toggleClass('visible') }, 800);
 				};
 	        });
-            
+
             /*Se o tamanho da janela for mudado com o conteúdo aberto, fechar o conteúdo para evitar erros */
             $(window).resize(function() {
                 if ($(window).width() < 780) {
@@ -1414,7 +1465,7 @@
                     }
                 }
             });
-        
+
             function toggleContent(n) {
 
                 var scrollTop = $(window).scrollTop(),
@@ -1422,12 +1473,12 @@
                     window_height = $(window).height();
 
                 close_distance = window_height - nav_height + scrollTop;
-                
+
                 if( $('#hamb-icon').hasClass('open') ) {
                     $('#hamb-icon').removeClass('open');
                     $('.mobile_nav_overlay').removeClass('visible');
                 }
-                 
+
 
                 if( classie.has( container, 'container--open' ) ) {
                     classie.remove( container, 'container--open' );
@@ -1447,7 +1498,7 @@
                         var active_btn = navbar.querySelector( '.button' + i ).classList;
                         active_btn.remove('active');
                     }
-                    
+
                     document.getElementById("mobile_section_title").innerHTML="";
                     setTimeout(function(){
                     /*hide all section to prevent address bar scroll in mobile*/
@@ -1464,7 +1515,7 @@
                                     }
                     }},800)
 
-                    
+
                 }
                 else{
                     classie.add( container, 'container--open' );
@@ -1474,9 +1525,9 @@
 
                     //turn scrolling on
                     document.documentElement.style.overflowY = "visible";
-                    
+
                     if(n==1){
-                        document.getElementById("mobile_section_title").innerHTML="About";  
+                        document.getElementById("mobile_section_title").innerHTML="About";
                     }
                     else if(n==2){
                         document.getElementById("mobile_section_title").innerHTML="Speakers";
@@ -1516,7 +1567,7 @@
                 button6 = document.querySelector('.button6'),
                 button7 = document.querySelector('.button7'),
                 button8 = document.querySelector('.button8'),
-				
+
                 logo = document.getElementById('logo'),
 				video_bg = document.getElementById('video-background');
 
@@ -1553,7 +1604,7 @@
 
 				}
 			}
-            
+
 			function navbutton1() {
 				// go to content 1
 				hide_sections(1);
@@ -1613,7 +1664,7 @@
 
 				}
 			});
-            
+
 		})();
 	</script>
 
@@ -1682,6 +1733,27 @@
 			document.getElementById("sound").style.display = "block";*/
 		}
 
+		function about_EN() {
+			var EN_but = document.getElementById("EN_button");
+			var PT_but = document.getElementById("PT_button");
+			classie.add(EN_but,'button_selected');
+			classie.remove(PT_but,'button_selected');
+
+			$(".about_EN").css('display', 'inline');
+			$(".about_PT").css('display', 'none');
+
+
+		}
+
+		function about_PT() {
+			var EN_but = document.getElementById("EN_button");
+			var PT_but = document.getElementById("PT_button");
+			classie.add(PT_but,'button_selected');
+			classie.remove(EN_but,'button_selected');
+
+			$(".about_PT").css('display', 'inline');
+			$(".about_EN").css('display', 'none');
+		}
 
 	</script>
 
@@ -1699,6 +1771,7 @@
 	<script>
         (function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })()
     </script>
+
 </body>
 
 </html>
