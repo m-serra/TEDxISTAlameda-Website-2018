@@ -118,20 +118,6 @@ html,body
 
 }
 
-@media (min-width: 780px) {
-    .about_mobile {
-        display: none;
-    }
-}
-
-@media (max-width: 780px) {
-    .about_pc {
-        display: none;
-    }
-}
-
-
-
 /* End of Landing Page */
 
 /* Main Navigation Bar*/
@@ -838,32 +824,15 @@ margin-left: 10%}
   background-size: 100% 5px;
 }
 
-.about_table {
-    /*width:90%;*/
-    max-width: 100%;
-    margin-bottom: 1rem;
-    background-color: transparent;
-    border: none;
-    text-align: left;
-    font-size: 0.8em;
-}
-
- .about_table .table-title {
-    transform: rotate(-90deg);
-    /*transform-origin: left, top;*/
-    -ms-transform: rotate(-90deg);
-   /* -ms-transform-origin:left, top;*/
-    -webkit-transform: rotate(-90deg);
-   /* -webkit-transform-origin:left, top;*/
-    color: #ff2200;
-    white-space: nowrap;
-    width: 5% !important;
-}
-
-.about_mobile {
+.about {
     text-align: justify;
     text-justify: inter-word;
     padding: 0 5vw;
+}
+
+.about button {
+    background: none;
+    border: none;
 }
 
 .about_EN {
@@ -875,27 +844,11 @@ margin-left: 10%}
     border-bottom: 2px solid red;
 }
 
-.about_mobile h2 {
+.about h2 {
     color: red;
     text-align: center;
 }
 
-.about_table td {
-	text-align: justify;
-}
-
-#row-title {
-	color: red;
-	text-align: center;
-}
-
-#column1 {
-	padding: 0 2% 2% 20%;
-}
-
-#column2 {
-	padding: 0 20% 2% 2%;
-}
 #bg {
     height: 100vh;
 }
