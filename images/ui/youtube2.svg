@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="48px" viewBox="0 0 68 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>youtube2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="youtube2">
+            <path d="M0.66,37.62 C0.66,37.62 1.32,42.32 3.36,44.39 C5.94,47.1 9.34,47.02 10.85,47.3 C16.28,47.82 33.95,47.98 33.97,47.98 C33.97,47.979987 48.26,47.96 57.78,47.27 C59.1,47.12 62,47.1 64.59,44.38 C66.62,42.31 67.29,37.61 67.29,37.61 C67.29,37.61 67.96,32.09 67.96,26.57 L67.96,21.4 C67.96,15.88 67.29,10.36 67.29,10.36 C67.29,10.36 66.63,5.66 64.59,3.59 C62.03,0.86 59.13,0.84 57.8,0.69 C48.28,0 34,0 34,0 C33.97,0 19.69,0 10.18,0.69 C8.85,0.84 5.95,0.86 3.36,3.58 C1.32,5.65 0.66,10.35 0.66,10.35 C0.66,10.35 0.11,14.85 0,19.8 L0,28.16 C0.1,33.1 0.66,37.61 0.66,37.61 L0.66,37.62 Z" id="Shape" fill="#CE1412"></path>
+            <polygon id="Shape" fill="#FFFFFF" points="26.96 13.67 45.33 23.29 26.96 32.84 26.96 13.67"></polygon>
+            <polygon id="Shape" fill="#CCCCCC" points="45.02 23.46 45.32 23.28 26.96 13.67 43.32 24.34"></polygon>
+        </g>
+    </g>
+</svg>
