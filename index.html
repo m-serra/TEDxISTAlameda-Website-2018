@@ -197,7 +197,7 @@
 			<!-- Background Video -->
 			<div class="video-background" id="bg">
 				<video loop autoplay="autoplay" muted class="video-background" id="video-background">
-					<source src="videos/recap.mp4" />
+					<source src="videos/apple.mp4" />
 				</video>
 			</div>
 
@@ -630,7 +630,8 @@
 										<span class="list_subtitle">Learn from the past, focus on the future.</span>
 									</div>
 									<div class="flex_container">
-										<!-- 2017 Speakers -->
+										
+                                        <!-- 2017 Speakers -->
 										<div class="2017-container">
 											<div class="2017-header" style="text-align:center">
 												<div class="edition" style="order: 2; margin: 0; display: inline-block">
@@ -1146,7 +1147,8 @@
 												</div>
 											</div>
 										</div>
-									</div>
+									
+                                    </div>
 								</div>
 
 								<!-- FOOTER-->
@@ -1557,8 +1559,8 @@
 			$(".mobile_nav_overlay").css('height', closed_top + 'px');
 		});
 	</script>
-	<script>
-
+	
+    <script>
 		/* Toggle da navigation bar para hamburguer*/
 		jQuery(document).ready(function () {
 
@@ -1607,10 +1609,7 @@
 
 
 				}
-				/*on window resize, se o ecrã tiver width > 480, o video estiver pausado, e o conteúdo estiver fechado, dar play ao vídeo*/
-				/*if ($(window).width() >= 480 && myVideo.paused() && !(classie.has(container, 'container--open')) ) {
-					myVideo.play();
-				}*/
+
 				else {
 					$('.short-nav').css("display", "none");
 					$('.long-nav').css("display", "flex");
@@ -1652,8 +1651,8 @@
         
 	</script>
 
+    <!-- Toggle content, entre outros -->
 	<script>
-
 		(function () {
 			var container = document.getElementById('container');
 			//var trigger = container.querySelector( 'button.trigger' ), navbar = document.getElementById( 'navbar' )
@@ -1714,7 +1713,10 @@
 
 					//turn scrolling off
 					document.documentElement.style.overflowY = "hidden";
-
+                    
+                    //show mute button
+                    $(".mute").css("visibility", "visible");
+                    
 					for (i = 1; i < 5; i++) {
 						/*remove the 'active' class from the navbar tabs when content is closed*/
 						var active_btn = navbar.querySelector('.button' + i).classList;
@@ -1748,6 +1750,9 @@
 
 					//turn scrolling on
 					document.documentElement.style.overflowY = "visible";
+                    
+                    //hide mute button
+                    $(".mute").css("visibility", "hidden");
 
 					if (n == 1) {
 						document.getElementById("mobile_section_title").innerHTML = "About";
@@ -1996,10 +2001,12 @@
 		}
 	</script>
 
+    <!-- Attend Typeform -->
 	<script>
 		(function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })()
 	</script>
     
+    <!-- Past Speakers Lazy Loading -->
     <script>
         (function () {
             b = document.body;
