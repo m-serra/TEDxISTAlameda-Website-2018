@@ -852,10 +852,11 @@ margin-left: 10%}
 
 #bg {
     height: 100vh;
+    cursor: default;
 }
 
-.container--open .bg:hover{
-    cursor:pointer;
+.container--open #bg:hover{
+    cursor: pointer;
 }
 
 .list_title {
