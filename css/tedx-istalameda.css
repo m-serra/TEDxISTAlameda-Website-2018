@@ -77,11 +77,6 @@ html,body
     z-index: -1;
 }
 
-.container--open .video-background:hover{
-    cursor:pointer;
-
-}
-
 .video-background > video {
     position: absolute;
     top: 0; left: 0;
@@ -857,6 +852,10 @@ margin-left: 10%}
 
 #bg {
     height: 100vh;
+}
+
+.container--open .bg:hover{
+    cursor:pointer;
 }
 
 .list_title {
