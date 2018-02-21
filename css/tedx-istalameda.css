@@ -1070,17 +1070,10 @@ margin-left: 10%}
 }
 
 @media all and (min-width: 1171px) {
-	/*.item_section {
-		width: 942px;
-	}*/
 	.section__col:first-child {
-       /* width: 460px;
-		height: 254px;*/
 		border-right: 0;
     }
     .section__col:last-child {
-      /*  width: 480px;
-		height: 254px;*/
 		border-left: 0;
         padding: 30px 20px 30px 40px;
     } 
@@ -1103,6 +1096,10 @@ margin-left: 10%}
 		font-size: 18px;
 	}
 	.theme:after {
+		top: 181px;
+		width: 250px;
+	}
+    .theme:before {
 		top: 181px;
 		width: 250px;
 	}
@@ -1153,9 +1150,6 @@ margin-left: 10%}
 	}
 	.theme {
 		font-size: 17px;
-	}
-	.theme:after {
-		display: none;
 	}
 	.item_section {
 		width: 298px;
