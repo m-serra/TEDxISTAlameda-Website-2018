@@ -434,7 +434,7 @@
 						</div>
 					</div>
 				</navbar>
-			
+
 			<div class="sections">
 				<!-- About -->
 				<div class="intro-container" id="about">
@@ -630,10 +630,10 @@
 										<span class="list_subtitle">Learn from the past, focus on the future.</span>
 									</div>
 									<div class="flex_container">
-										
+
                                         <!-- 2017 Speakers -->
-										<div class="2017-container">
-											<div class="2017-header" style="text-align:center">
+										<div class="container-2017">
+											<div class="header-2017" style="text-align:center">
 												<div class="edition" style="order: 2; margin: 0; display: inline-block">
 													<div id="title" class="section_title">
 														<span class="year">2017</span>
@@ -813,12 +813,13 @@
 													</div>
 												</div>
 											</div>
+											<br>
 										</div>
 
 										<!-- 2016 Speakers -->
-									
-                                        <div class="2016-container">
-											<div class="2016-header" style="text-align:center">
+
+                    <div class="container-2016">
+											<div class="header-2016" style="text-align:center">
 												<div class="edition" style="order: 13; margin: 0; display: inline-block">
 													<div class="section_title">
 														<span class="year">2016</span>
@@ -881,11 +882,12 @@
 													</div>
 												</div>
 											</div>
-										</div> -
+											<br>
+										</div> 
 
 										<!-- 2013 Speakers -->
-										<div class="2013-container">
-											<div class="2013-header" style="text-align:center">
+										<div class="container-2013">
+											<div class="header-2013" style="text-align:center">
 												<div class="edition" style="order: 17; margin: 0; display: inline-block">
 													<div id="title" class="section_title">
 														<span class="year">2013</span>
@@ -1146,8 +1148,9 @@
 													</div>
 												</div>
 											</div>
+											<br>
 										</div>
-									
+
                                     </div>
 								</div>
 
@@ -1495,7 +1498,7 @@
 				</div>
 			</div>
 		</div>
-		
+
         <!-- overlay com o menu mobile -->
 		<div class="mobile_nav_overlay">
 			<navbar class="mobile_nav">
@@ -1559,7 +1562,7 @@
 			$(".mobile_nav_overlay").css('height', closed_top + 'px');
 		});
 	</script>
-	
+
     <script>
 		/* Toggle da navigation bar para hamburguer*/
 		jQuery(document).ready(function () {
@@ -1640,15 +1643,15 @@
 				var id = current.getAttribute('data-section');
 				var num = current.getAttribute('data-description');
 				current.classList.add("sub_section_selected");
-                
+
 				// Substitutes content, based on data-section attribute
 				document.querySelector('div[data-description="' + num + '"]').classList.remove("content_selected");
 				document.querySelector('div[data-section="' + id + '"]').classList.add("content_selected");
 
 			});
 		});
-        
-        
+
+
 	</script>
 
     <!-- Toggle content, entre outros -->
@@ -1713,10 +1716,10 @@
 
 					//turn scrolling off
 					document.documentElement.style.overflowY = "hidden";
-                    
+
                     //show mute button
                     $(".mute").css("visibility", "visible");
-                    
+
 					for (i = 1; i < 5; i++) {
 						/*remove the 'active' class from the navbar tabs when content is closed*/
 						var active_btn = navbar.querySelector('.button' + i).classList;
@@ -1750,7 +1753,7 @@
 
 					//turn scrolling on
 					document.documentElement.style.overflowY = "visible";
-                    
+
                     //hide mute button
                     $(".mute").css("visibility", "hidden");
 
@@ -2005,7 +2008,7 @@
 	<script>
 		(function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })()
 	</script>
-    
+
     <!-- Past Speakers Lazy Loading -->
     <script>
         (function () {
@@ -2014,7 +2017,7 @@
             // ADDS TALK VIDEO
             for (var ab = b.querySelectorAll(".talkcontainer"), c = 0; c < ab.length; c++) {
                 var e = ab[c];
-                e.addEventListener("click", P)   
+                e.addEventListener("click", P)
             }
             E();
 
@@ -2042,7 +2045,7 @@
                         c.parentNode.getElementsByTagName("div")[0].style.display = "none";
                         c.style.border = 0;
                 }
-            }  
+            }
             // CHANGES PLACEHOLDER IMAGE WITH THUMBNAIL FROM TALK
             function E() {
                 ca = !0;
@@ -2060,10 +2063,10 @@
                     // ADD YOUTUBE ICON
                     var f = document.createElement("div");
                     f.classList.add("hoverlay");
-                    ab[c].appendChild(f); 
+                    ab[c].appendChild(f);
                 }
             }
-            
+
             // ENDS TALK
             function a() {
                 for (var ab = b.querySelectorAll(".playing"), c = 0; c < ab.length; c++) {
@@ -2074,10 +2077,10 @@
                     (e = e.querySelector("iframe")) && e.parentNode.removeChild(e)
                 }
             }
-            
+
         })();
     </script>
-    
+
 </body >
 
 </html >
