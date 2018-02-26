@@ -183,6 +183,7 @@
 			</div>
 
 			<!-- Attend Button -->
+            
 			<!--<div style="padding:20px">
 				<button class="button button--antiman button--inverted button--border-thin button--text-thick button--size-s" onclick="on()">
 					<span>Attend</span>
@@ -1521,6 +1522,10 @@
 		});
 	</script>
 	<script src="js/classie.js"></script>
+    
+    <!-- Picture slideshow script -->
+	<script src="js/bg_slideshow.js"></script>
+
 
 	<script>
 		jQuery(document).ready(function () {
@@ -1593,7 +1598,7 @@
 				$(".medium_nav").css("display", "none");
 			}
 
-			if ($(window).width() >= 480 && myVideo.paused) {
+			if ($(window).width() >= 480 && myVideo.paused && os != 'iOS') {
 				myVideo.play();
 			}
 
@@ -1659,7 +1664,7 @@
 		(function () {
 			var container = document.getElementById('container');
 			//var trigger = container.querySelector( 'button.trigger' ), navbar = document.getElementById( 'navbar' )
-
+            
 			function playPause() {
 				var myVideo = document.getElementById("video-background");
 				if (myVideo.paused)
@@ -1899,9 +1904,6 @@
 		})();
 	</script>
 
-	<!-- Picture slideshow script -->
-	<script src="js/bg_slideshow.js"></script>
-
 	<!-- video script -->
 	<script>
 
@@ -2006,6 +2008,9 @@
 
     <!-- Attend Typeform -->
 	<script>
+        
+        console.log('typeform');
+        
 		(function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })()
 	</script>
 
