@@ -1544,7 +1544,7 @@
 			}
 
 			var nav_height = $('#navbar').height(),
-				window_height = $(window).height(),
+				window_height = window.innerHeight,
 				closed_top = window_height - nav_height;
 
 			/*position the navbar and content in the bottom of the screen, and hidden under the screen, respecitvely*/
@@ -1557,7 +1557,7 @@
 
 		$(window).resize(function () {
 			var nav_height = $('#navbar').height(),
-				window_height = $(window).height(),
+				window_height = window.innerHeight,
 				closed_top = window_height - nav_height;
 
 			/*position the navbar and content in the bottom of the screen, and hidden under the screen, respecitvely*/
@@ -1698,7 +1698,7 @@
 
 				var scrollTop = $(window).scrollTop(),
 					nav_height = $('#navbar').height(),
-					window_height = $(window).height();
+					window_height = window.innerHeight;
 
 				close_distance = window_height - nav_height + scrollTop;
 
