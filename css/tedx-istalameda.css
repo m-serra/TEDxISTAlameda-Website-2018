@@ -882,10 +882,8 @@ margin-left: 10%}
 
 .edition {
 	width: 100%;
-    height: auto;
-	/*height: 260px!important;*/
-	/*margin: 0px auto 40px auto;*/
-    margin-top: 40px;
+	height: auto;
+	margin-top: 40px;
 	overflow: hidden;
 }
 
@@ -905,7 +903,6 @@ margin-left: 10%}
 	margin-bottom: -16px;
 	margin-top: 0px;
 }
-
 
 
 .theme {
