@@ -1524,83 +1524,14 @@
     
     <!-- Picture slideshow script -->
 	<script src="js/bg_slideshow.js"></script>
-
-
-	<script>
-		jQuery(document).ready(function () {
-
-			/*start by hiding all sections to prevent address bar scroll in mobile*/
-			var section1 = document.getElementById("about"),
-				section2 = document.getElementById("speakers"),
-				section3 = document.getElementById("partners"),
-				section4 = document.getElementById("info"),
-				sections = [section1, section2, section3, section4];
-
-
-			for (i = 0; i < 4; i++) {
-				if (!(classie.has(sections[i], 'container--close'))) {
-					classie.add(sections[i], 'container--close');
-				}
-			}
-
-			var nav_height = $('#navbar').height(),
-				window_height = window.innerHeight,
-				closed_top = window_height - nav_height;
-
-			/*position the navbar and content in the bottom of the screen, and hidden under the screen, respecitvely*/
-			$(".animated_content").css('top', closed_top + 'px');
-			$(".sections").css('margin-top', nav_height + 'px');
-			$(".mobile_nav_overlay").css('height', closed_top + 'px');
-		});
-
-
-
-		$(window).resize(function () {
-			var nav_height = $('#navbar').height(),
-				window_height = window.innerHeight,
-				closed_top = window_height - nav_height;
-
-			/*position the navbar and content in the bottom of the screen, and hidden under the screen, respecitvely*/
-			$(".animated_content").css('top', closed_top + 'px');
-			$(".sections").css('margin-top', nav_height + 'px');
-			$(".mobile_nav_overlay").css('height', closed_top + 'px');
-		});
-	</script>
+    
+    <script src="js/tedx-istalameda.js"></script>
 
 	<script>
 		/* Toggle da navigation bar para hamburguer*/
 		jQuery(document).ready(function () {
 
-			var myVideo = document.getElementById("video-background");
-
-			$('.short-nav').css("display", "none");
-			$('.long-nav').css("display", "flex");
-			$('.long-nav').css("display", "-webkit-flex");
-			$('.long-nav').css("display", "-moz-flex");
-			$('.long-nav').css("display", "-ms-flex");
-
-			if ($(window).width() < 780) {
-				$('.long-nav').css("display", "none");
-				$('.short-nav').css("display", "flex");
-				$('.short-nav').css("display", "-webkit-flex");
-				$('.short-nav').css("display", "-moz-flex");
-				$('.short-nav').css("display", "-ms-flex");
-				$('.animated_content').css({ "width": "100vw", "left": "0", "right": "0" });
-				$('.mobile_section_title').css("display", "block");
-				$('.navbar').css("padding-left", "8vw");
-				$('.navbar').css("padding-right", "8vw");
-			}
-			if ($(window).width() < 480) {
-				$(".mute").css("display", "none");
-			}
-			if ($(window).width() <= 320) {
-				$(".medium_nav").css("display", "none");
-			}
-
-			if ($(window).width() >= 480) {
-				myVideo.play();
-			}
-
+			
 			//Screen resize testing
 			$(window).resize(function () {
 				if ($(window).width() < 780) {
@@ -1631,39 +1562,11 @@
 
 	</script>
 
-	<!-- SUB MENU -->
-	<script>
-		jQuery(document).ready(function () {
-
-			// VER hide() e show() <------------------------------
-			jQuery("#sub_menu a").bind("click", function (e) {
-				e.preventDefault();
-
-				// Removes selection from current button
-				document.querySelector(".sub_section_selected").classList.remove("sub_section_selected");
-
-				// Adds selection to clicked button
-				var current = $(this)[0];
-				var id = current.getAttribute('data-section');
-				var num = current.getAttribute('data-description');
-				current.classList.add("sub_section_selected");
-
-				// Substitutes content, based on data-section attribute
-				document.querySelector('div[data-description="' + num + '"]').classList.remove("content_selected");
-				document.querySelector('div[data-section="' + id + '"]').classList.add("content_selected");
-
-			});
-		});
-
-
-	</script>
-
 	<!-- Toggle content, entre outros -->
 	<script>
 		(function () {
 			var container = document.getElementById('container');
-			//var trigger = container.querySelector( 'button.trigger' ), navbar = document.getElementById( 'navbar' )
-            
+
 			function playPause() {
 				var myVideo = document.getElementById("video-background");
 				if (myVideo.paused)
@@ -1909,33 +1812,6 @@
 		//mute button
 		$(document).ready(function () {
 
-			$(".mute").click(function () {
-				if ($("video").prop('muted')) {
-					$("video").prop('muted', false);
-				}
-				else {
-					$("video").prop('muted', true);
-				}
-			});
-
-			// mute media query
-			$(window).resize(function () {
-				if ($(window).width() <= 480) {
-					$("video").prop('muted', true);
-					$(".mute").css("display", "none");
-					$(".medium_nav").css("display", "block");
-					if ($(window).width() <= 320) {
-						$(".medium_nav").css("display", "none");
-					}
-				} else {
-					$(".mute").css("display", "block");
-					$(".medium_nav").css("display", "block");
-					if (document.getElementById("sound_mute").style.display == "none") {
-						$("video").prop('muted', false);
-						unmute();
-					} else { mute() };
-				};
-			});
 
 			// mute hotkey
 			// M
@@ -1994,96 +1870,7 @@
 
 	</script>
 
-	<!-- Attend Overlay script -->
-	<script>
-		function on() {
-			document.getElementById("overlay").style.display = "block";
-		}
 
-		function off() {
-			document.getElementById("overlay").style.display = "none";
-		}
-	</script>
-
-	<!-- Attend Typeform -->
-	<script>
-        
-        console.log('typeform');
-        
-		(function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })()
-	</script>
-
-	<!-- Past Speakers Lazy Loading -->
-	<script>
-			(function () {
-				b = document.body;
-
-				// ADDS TALK VIDEO
-				for (var ab = b.querySelectorAll(".talkcontainer"), c = 0; c < ab.length; c++) {
-					var e = ab[c];
-					e.addEventListener("click", P)
-				}
-				E();
-
-
-				// ADDS PLAY MODE TO VIDEO TALK
-				function P(b) {
-					if (b.currentTarget.querySelector("iframe"))
-						a();
-					else {
-						a();
-						b.currentTarget.classList.add("playing");
-						var c = document.createElement("iframe");
-						c.src = "https://www.youtube.com/embed/" + b.currentTarget.getAttribute("data-media") + "?rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=1";
-						c.classList.add("videotalk");
-						c.frameborder = "0";
-						c.allowtransparency = "true";
-						c.style.display = "block";
-						c.setAttribute('allowFullScreen', '');
-						c.setAttribute('webkitAllowFullScreen', '');
-						c.setAttribute('mozallowFullScreen', '');
-						b.currentTarget.appendChild(c);
-
-						// HIDES THUMBNAIL & ICON
-						c.parentNode.getElementsByTagName("img")[0].style.display = "none";
-						c.parentNode.getElementsByTagName("div")[0].style.display = "none";
-						c.style.border = 0;
-					}
-				}
-				// CHANGES PLACEHOLDER IMAGE WITH THUMBNAIL FROM TALK
-				function E() {
-					ca = !0;
-					for (var ab = b.querySelectorAll(".talkcontainer"), c = 0; c < ab.length; c++) {
-						// ADD THUMBNAIL
-						var e = document.createElement("img");
-						e.num = c;
-						e.onload = function () {
-							ab[this.num].src = this.src
-						};
-						e.src = /*Model.IMAGE_PATH +*/ "https://img.youtube.com/vi/" + ab[c].getAttribute("data-media") + "/hqdefault.jpg"
-						e.classList.add("imgtalk");
-						ab[c].appendChild(e);
-
-						// ADD YOUTUBE ICON
-						var f = document.createElement("div");
-						f.classList.add("hoverlay");
-						ab[c].appendChild(f);
-					}
-				}
-
-				// ENDS TALK
-				function a() {
-					for (var ab = b.querySelectorAll(".playing"), c = 0; c < ab.length; c++) {
-						var e = ab[c];
-						e.classList.remove("playing");
-						e.getElementsByTagName("img")[0].style.display = "block";
-						e.getElementsByTagName("div")[0].style.display = "block";
-						(e = e.querySelector("iframe")) && e.parentNode.removeChild(e)
-					}
-				}
-
-			})();
-	</script>
 
 </body>
 

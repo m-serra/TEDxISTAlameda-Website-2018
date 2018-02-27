@@ -13,7 +13,7 @@ html,body
     position: fixed;
     
     /* Allow Smooth Scroll */
-    overflow-y: scroll; /* has to be scroll, not auto */
+    /*overflow-y: scroll; *//* has to be scroll, not auto */
     -webkit-overflow-scrolling: touch;
 }
 
