@@ -53,6 +53,11 @@ html,body
     cursor: default;
 }
 
+.logo-ISTAlameda{
+    fill: white;
+    color: white;
+}
+
 .container--open .logo-svg:hover{
     cursor: pointer;
 }
