@@ -537,7 +537,9 @@ margin-left: 10%}
 /* Footer */
 
 .page_footer {
-	margin-top: 50px;
+	margin-top: 100px;
+    margin-bottom:10px;
+
 }
 
 .footer_logos {
@@ -616,13 +618,14 @@ margin-left: 10%}
 .og-grid {
     position: absolute;
 	list-style: none;
-	padding-bottom: 40px;
+	padding-bottom: 50px;
     padding-top: 40px;
 	padding-right: 40px;
 	text-align: center;
     width: 100%;
     background-color: snow;
     z-index: 12;
+    margin-bottom: 0;
 }
 
 
@@ -942,6 +945,8 @@ margin-left: 10%}
     background: #292929;
 }
 
+
+
 .item_section {
 	width: 90%;
 	height: 280px!important;
@@ -1196,3 +1201,8 @@ margin-left: 10%}
 		line-height: 18px;
 	}
 }
+
+
+
+
+
