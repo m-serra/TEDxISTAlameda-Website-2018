@@ -11,7 +11,7 @@ html,body
     overflow-x:hidden;
     /*position fixed pode dar problemas*/
     position: fixed;
-    
+
     /* Allow Smooth Scroll */
     /*overflow-y: scroll; *//* has to be scroll, not auto */
     -webkit-overflow-scrolling: touch;
@@ -539,7 +539,6 @@ margin-left: 10%}
 .page_footer {
 	margin-top: 100px;
     margin-bottom:10px;
-
 }
 
 .footer_logos {
@@ -553,6 +552,10 @@ margin-left: 10%}
 	width:50px;
 	margin: auto;
 	padding: 15 0 15 15;
+}
+
+.footer_section {
+	margin-bottom: 20px;
 }
 
 .footer_logos a.navbar-brand {
@@ -1023,7 +1026,7 @@ margin-left: 10%}
 }
 
 .speaker{
-	color:#ff2100; 
+	color:#ff2100;
 	font-size: 24px;
 	margin: 5px 0 10px 0;
 }
@@ -1087,7 +1090,7 @@ margin-left: 10%}
     .section__col:last-child {
 		border-left: 0;
         padding: 30px 20px 30px 40px;
-    } 
+    }
 }
 @media all and (max-width: 1170px) {
 	.edition{
@@ -1201,8 +1204,3 @@ margin-left: 10%}
 		line-height: 18px;
 	}
 }
-
-
-
-
-
