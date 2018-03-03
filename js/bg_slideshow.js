@@ -241,11 +241,15 @@ if(slideshow_pics === undefined ){
 }
 
 function slideshow(os) {
+    var container = document.getElementById('container');
     setTimeout(function(){
+        if (!(classie.has(container, 'container--open'))){
         if($(window).width() <= 480 || os == 'iOS'){
             image = 'url(' + slideshow_pics[Math.floor(Math.random() * slideshow_pics.length)] + ')'
         };
+
         bg.style.backgroundImage = image;
+        };
         slideshow(os);
     }, 5000);
 };
@@ -262,3 +266,13 @@ alert(
     'Full User Agent: ' + navigator.userAgent
 ); */
 
+
+var images = [];
+function preload() {
+    for (var i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = slideshow_pics[i];
+    }
+};
+
+preload();
