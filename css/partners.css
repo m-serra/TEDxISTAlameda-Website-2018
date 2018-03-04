@@ -154,4 +154,6 @@
 	opacity: 0.3;
 }
 
-
+#title{
+	cursor: pointer;
+}

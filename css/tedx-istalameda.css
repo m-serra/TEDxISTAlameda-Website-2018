@@ -896,7 +896,6 @@ margin-left: 10%}
 }
 
 .edition {
-	width: 100%;
 	height: auto;
 	margin-top: 40px;
 	overflow: hidden;
@@ -1094,7 +1093,6 @@ margin-left: 10%}
 }
 @media all and (max-width: 1170px) {
 	.edition{
-		width: 460px;
 		height: 200px!important;
 	}
 	.year {
@@ -1151,7 +1149,6 @@ margin-left: 10%}
 }
 @media all and (max-width: 600px) {
 	.edition {
-		width: 300px;
 		height: 160px!important;
 	}
 	.year {

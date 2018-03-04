@@ -52,7 +52,6 @@
 	color: #fff;
 	vertical-align: middle;
 	position: absolute;
-	z-index: 1;
 	-webkit-backface-visibility: hidden;
 	-moz-osx-font-smoothing: grayscale;
 	display:inline;
@@ -168,4 +167,12 @@
 	opacity: 0;
 	-webkit-transform: scale3d(0.8, 0.8, 1);
 	transform: scale3d(0.8, 0.8, 1);
+}
+
+
+@media (max-width:780px) {
+#attend{
+	display:none;
+
+}
 }
