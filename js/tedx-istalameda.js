@@ -268,6 +268,8 @@ jQuery(document).ready(function () {
 
     if ($(window).width() < 480  && jscd.os != 'iOS') {
         $(".mute").css("display", "none");
+        /* logo letters turn black */
+        $('.logo-ISTAlameda').css('fill', 'black');
        /* myVideo.pause(); */
     }
 
@@ -319,8 +321,16 @@ jQuery(document).ready(function () {
         /* Window Size Testing to set proper navbar & other stuff */
         
         /* Default */
+        $('.short-nav').css("display", "none");
+        $('.long-nav').css("display", "flex");
+        $('.animated_content').css({ "width": "84vw", "left": "8vw", "right": "8vw" });
+        $('.mobile_nav_overlay').removeClass('visible');
+        $('.mobile_section_title').css("display", "none");
+        $('.navbar').css("padding-left", "2vw");
+        $('.navbar').css("padding-right", "4vw");
         $(".mute").css("display", "block");
         $(".medium").css("display", "block");
+        $('.logo-ISTAlameda').css('fill', 'white');
         if (document.getElementById("sound_mute").style.display == "none") {
             $("video").prop('muted', false);
             unmute();
@@ -328,6 +338,7 @@ jQuery(document).ready(function () {
         else { mute() };
         
         if ($(window).width() < 780) {
+            console.log('small');
             $('.long-nav').css("display", "none");
             $('.short-nav').css("display", "flex");
             $('.short-nav').css("display", "-webkit-flex");
@@ -342,21 +353,13 @@ jQuery(document).ready(function () {
         if ($(window).width() <= 480 && jscd.os != 'iOS') {
             $("video").prop('muted', true);
             $(".mute").css("display", "none");
+            $('.logo-ISTAlameda').css('fill', 'black');
         } 
         
         if ($(window).width() <= 335) {
             $(".medium").css("display", "none");
         }
 
-        else {
-            $('.short-nav').css("display", "none");
-            $('.long-nav').css("display", "flex");
-            $('.animated_content').css({ "width": "84vw", "left": "8vw", "right": "8vw" });
-            $('.mobile_nav_overlay').removeClass('visible');
-            $('.mobile_section_title').css("display", "none");
-            $('.navbar').css("padding-left", "2vw");
-            $('.navbar').css("padding-right", "4vw");
-        }
     });
     
 });
