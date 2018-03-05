@@ -458,3 +458,35 @@ function off() {
 (function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })()
 
 
+function select_speaker(n){
+    switch(n) {
+        case 1: 
+         $(document.getElementById("speaker18_2")).animate({ width:'8%' },200); 
+         $(document.getElementById("speaker18_3")).animate({ width:'8%' },200); 
+        $(document.getElementById("speaker18_4")).animate({ width:'8%' },200); 
+            $(document.getElementById("speaker18_1")).animate({ width:'75%' },200);
+            
+            break;
+        case 2:
+            $(document.getElementById("speaker18_1")).animate({ width:'8%' },200); 
+         $(document.getElementById("speaker18_3")).animate({ width:'8%' },200); 
+        $(document.getElementById("speaker18_4")).animate({ width:'8%' },200); 
+            $(document.getElementById("speaker18_2")).animate({ width:'75%' },200); 
+            break;
+        case 3:
+            $(document.getElementById("speaker18_1")).animate({ width:'8%' },200); 
+         $(document.getElementById("speaker18_2")).animate({ width:'8%' },200); 
+        $(document.getElementById("speaker18_4")).animate({ width:'8%' },200);
+            $(document.getElementById("speaker18_3")).animate({ width:'75%' },200); 
+            break;
+        case 4:
+            $(document.getElementById("speaker18_1")).animate({ width:'8%' },200); 
+         $(document.getElementById("speaker18_2")).animate({ width:'8%' },200); 
+         $(document.getElementById("speaker18_3")).animate({ width:'8%' },200); 
+        $(document.getElementById("speaker18_4")).animate({ width:'75%' },200); 
+            break;
+        default:
+    }
+}
+
+

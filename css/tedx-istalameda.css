@@ -1201,3 +1201,42 @@ margin-left: 10%}
 		line-height: 18px;
 	}
 }
+
+.ind_speaker18_container {
+    float:left;
+    margin:0;
+    width:25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.speakers18_container {
+    height: 400px;
+    width: 100%;
+}
+
+
+
+#speaker18_2 {
+    background-color: red;
+
+}
+
+#speaker18_1 {
+    background-color: blue;
+
+}
+
+.speaker_name {
+    margin: auto;
+}
+
+#speaker18_3 {
+    background-color: green;
+}
+
+#speaker18_4 {
+    background-color: yellow;
+}
