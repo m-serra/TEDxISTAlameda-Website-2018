@@ -139,7 +139,7 @@
 										l8.849,15.768l9.103-15.768h23.888l-21.829,31.896l22.677,33.347H389.47z" />
 					</g>
 				</g>
-				<text class="logo-ISTAlameda" transform="matrix(1 0 0 1 425.5791 143.8516)"  font-family="'Helvetica'" font-size="146.9047">ISTAlameda</text>
+				<text class="logo-ISTAlameda" transform="matrix(1 0 0 1 425.5791 143.8516)" font-family="'Helvetica'" font-size="146.9047">ISTAlameda</text>
 			</g>
 			<g id="open-icon" stroke="#000" stroke-width="2" transform="translate(1.000000, 1.000000)">
 				<path d="M16,7.5 L16,24.5" class="path-animate" id="path1-open-icon" stroke-linecap="round" />
@@ -183,12 +183,12 @@
 			</div>
 
 			<!-- Attend Button -->
-            
-			<!--<div style="padding:20px">
-				<button class="button button--antiman button--inverted button--border-thin button--text-thick button--size-s" onclick="on()">
+
+			<div style="padding:20px">
+				<button id="attend" class="button button--antiman button--inverted button--border-thin button--text-thick button--size-s" onclick="on()">
 					<span>Attend</span>
 				</button>
-			</div> -->
+			</div>
 
 			<!-- Logo -->
 			<svg class="logo-svg" id="logo" viewBox="0 0 1270 247">
@@ -566,43 +566,67 @@
 								<a data-section="past_speakers" data-description="2" data-hover="Past Speakers">Past Speakers</a>
 							</div>
 							<div class="content-list">
-								<div class="content content_selected" data-section="2018_speakers" data-description="2">
-									<li>
-										<a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."
-										 id="12">
-											<img src="images/thumbs/2.jpg" alt="img02" />
-										</a>
-									</li>
-									<li>
-										<a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu."
-										 id="13">
-											<img src="images/thumbs/2.jpg" alt="img02" />
-										</a>
-									</li>
-									<li>
-										<a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato."
-										 id="14">
-											<img src="images/thumbs/2.jpg" alt="img02" />
-										</a>
-									</li>
-									<li>
-										<a data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."
-										 id="15">
-											<img src="images/thumbs/2.jpg" alt="img02" />
-										</a>
-									</li>
-									<li>
-										<a data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu."
-										 id="16">
-											<img src="images/thumbs/2.jpg" alt="img02" />
-										</a>
-									</li>
-									<li>
-										<a data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato."
-										 id="17">
-											<img src="images/thumbs/2.jpg" alt="img02" />
-										</a>
-									</li>
+								<div class="content content_selected" data-section="2018_speakers" data-description="2" style="text-align: center;">
+									
+                                    <div class="speakers18_container">
+                                    
+                                        <div class="ind_speaker18_container" id="speaker18_1" onclick="select_speaker(1)">
+                                            <div class="speaker_name" id="speaker_name1">
+                                            S<br>
+                                            P<br>
+                                            E<br>
+                                            A<br>
+                                            K<br>
+                                            E<br>
+                                            R<br>
+                                            1<br>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="ind_speaker18_container" id="speaker18_2" onclick="select_speaker(2)">
+                                            <div class="speaker_name" id="speaker_name2">
+                                                S<br>
+                                            P<br>
+                                            E<br>
+                                            A<br>
+                                            K<br>
+                                            E<br>
+                                            R<br>
+                                            2<br>
+                                            
+                                            </div>
+                                        </div>
+                                        <div class="ind_speaker18_container" id="speaker18_3" onclick="select_speaker(3)">
+                                            <div class="speaker_name" id="speaker_name3">
+                                                S<br>
+                                            P<br>
+                                            E<br>
+                                            A<br>
+                                            K<br>
+                                            E<br>
+                                            R<br>
+                                            3<br>
+                                            
+                                            </div>
+                                        </div>
+                                        <div class="ind_speaker18_container" id="speaker18_4" onclick="select_speaker(4)">
+                                            <div class="speaker_name" id="speaker_name4">
+                                                S<br>
+                                            P<br>
+                                            E<br>
+                                            A<br>
+                                            K<br>
+                                            E<br>
+                                            R<br>
+                                            4<br>
+                                            
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    
+                                    
+                                    
 								</div>
 								<div class="content" data-section="past_speakers" data-description="2">
 									<br>
@@ -610,14 +634,16 @@
 									<div class="flex_container">
 										<!-- 2017 Speakers -->
 										<div class="container-2017">
-											<div class="header-2017" style="text-align:center">
-												<div class="edition" style="order: 2; margin: 0; display: inline-block">
-													<div id="title" class="section_title">
-														<span class="year">2017</span>
-														<span class="theme">THEME: FOCUS</span>
+											<center>
+												<div class="header-2017" style="text-align:center">
+													<div class="edition" style="order: 2; margin: 0; display: inline-block">
+														<div id="title" class="section_title">
+															<span class="year">2017</span>
+															<span class="theme">THEME: FOCUS</span>
+														</div>
 													</div>
 												</div>
-											</div>
+											</center>
 											<div class="2017-speakers">
 												<!-- Daniela Ribeiro -->
 												<div class="item_section" style="order: 3">
@@ -1483,6 +1509,9 @@
 				<a class="navbar-brand button6">Speakers</a>
 				<a class="navbar-brand button7">Partners</a>
 				<a class="navbar-brand button8">Info</a>
+				<a class="navbar-brand button9">Attend</a>
+				
+				
 			</navbar>
 		</div>
 	</div>
@@ -1498,17 +1527,17 @@
 		});
 	</script>
 	<script src="js/classie.js"></script>
-    
-    <!-- Picture slideshow script -->
+
+	<!-- Picture slideshow script -->
 	<script src="js/bg_slideshow.js"></script>
-    
-    <script src="js/tedx-istalameda.js"></script>
+
+	<script src="js/tedx-istalameda.js"></script>
 
 	<!--<script>
 		/* Toggle da navigation bar para hamburguer*/
 		jQuery(document).ready(function () {
 
-			
+
 			//Screen resize testing
 			$(window).resize(function () {
                 /*
@@ -1683,6 +1712,8 @@
 				button6 = document.querySelector('.button6'),
 				button7 = document.querySelector('.button7'),
 				button8 = document.querySelector('.button8'),
+				button9 = document.querySelector('.button9'),
+
 
 				logo = document.getElementById('logo'),
 				video_bg = document.getElementById('bg');
@@ -1758,6 +1789,8 @@
 			button6.addEventListener('click', function () { navtoggle('2'); });
 			button7.addEventListener('click', function () { navtoggle('3'); });
 			button8.addEventListener('click', function () { navtoggle('4'); });
+			button9.addEventListener('click', function () { on(); });
+
 
 			button1.addEventListener('click', navbutton1);
 			button2.addEventListener('click', navbutton2);
@@ -1767,6 +1800,8 @@
 			button6.addEventListener('click', navbutton2);
 			button7.addEventListener('click', navbutton3);
 			button8.addEventListener('click', navbutton4);
+		
+
 
 			// navbar buttons end
 
