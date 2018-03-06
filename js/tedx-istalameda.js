@@ -256,7 +256,7 @@ jQuery(document).ready(function () {
 
     if ($(window).width() < 780) {
         $('.long-nav').css("display", "none");
-        
+        console.log('short-nav');
         $('.short-nav').css("display", "flex");
         $('.short-nav').css("display", "-webkit-flex");
         $('.short-nav').css("display", "-moz-flex");
@@ -332,7 +332,7 @@ jQuery(document).ready(function () {
         $(".mute").css("display", "block");
         $(".medium").css("display", "block");
         $('.logo-ISTAlameda').css('fill', 'white');
-        if (document.getElementById("sound_mute").style.display == "none") {
+        if (jscd.os != 'iOS' && document.getElementById("sound_mute").style.display == "none") {
             $("video").prop('muted', false);
             unmute();
         }
@@ -450,6 +450,7 @@ if (window.mobilecheck == "true") {
 
 /* Attend Overlay */
 function on() {
+    $('.mobile_nav_overlay').toggleClass('visible');
     document.getElementById("overlay").style.display = "block";
 }
 

@@ -343,6 +343,7 @@ hamb-icon span:active{
     cursor: pointer;
 
     opacity: 0;
+    filter: alpha(opacity=0);
 	-webkit-transition: opacity 0.5s ease-in-out;
     -moz-transition: opacity 0.5s ease-in-out;
     -ms-transition: opacity 0.5s ease-in-out;
@@ -352,34 +353,58 @@ hamb-icon span:active{
 
 .mobile_nav_overlay.visible{
     opacity: 1;
+    filter: alpha(opacity=50);
     z-index: 14;
 }
 
 /*the navigation itself*/
 .mobile_nav{
-    position: absolute;
-    top: 50%;
+    /*position: absolute;*/
+   /* top: 50%;
     transform: translateY(-50%);
     left: 0;
-    right: 0;
+    right: 0;*/
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .mobile_nav a{
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
     text-decoration: none;
     float: left;
-
+    line-height: 100%;
     margin: 0;
-    text-align: center;
     color: white;
     cursor: pointer;
+}
+
+.mobile_nav a.attend{
+    background: #ff2200;
+    width: 50vw;
+    max-width: 200px;
+    /*left: 25vw;*/
+    border-radius: 5px;
+    text-align: center;
 }
 
 .mobile_nav a:hover {
     background: rgba(255, 255, 255, 0.1);
     color: #ff2200;
+    text-decoration: none;
+}
+
+.mobile_nav a.attend:hover {
+    background: rgba(255, 34, 0, 0.5);
+    color: white;
     text-decoration: none;
 }
 /* End of Mobile Navigation */
