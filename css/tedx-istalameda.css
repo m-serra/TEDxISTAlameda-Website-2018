@@ -1265,3 +1265,66 @@ margin-left: 10%}
 #speaker18_4 {
     background-color: yellow;
 }
+
+
+#morada{
+	width: 100%;
+	text-align: right;
+}
+
+#morada1{
+	width: 100%;
+	font-size: 17px;
+	text-align: right;
+	
+} 
+
+
+.theme1 {
+	font-size: 55px;
+	font-weight: 500;
+	color: #ff2100;
+	display: block;
+	margin-bottom: -16px;
+	margin-top: 0px;
+}
+
+
+.date {
+	font-size: 27px;
+	font-weight: 600;
+	color: #292929;
+}
+
+.date:after {
+	content: '';
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+    margin-top: 6px;
+    width: 600px;
+    height: 3px;
+    background: #292929;
+}
+
+.date:before{
+	content: '';
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+    margin-bottom: 6px;
+    width: 600px;
+    height: 3px;
+    background: #292929;
+}
+
+@media all and (max-width: 677px) {
+	.date:after {
+		width: 315px;
+	}	
+	.date:before {
+		width: 315px;
+	}		
+			
+		
+}	

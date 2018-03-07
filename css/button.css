@@ -41,11 +41,11 @@
 /* Common button styles */
 .button {
 	float:center;
-    width: 160px;
+	width: 160px;
 	min-width: 120px;
 	max-width: 150px;
 	margin-top: 8px;
-    margin-bottom: 8px;;
+	margin-bottom: 8px;
 	/*padding: 1em 2em;*/
 	border: none;
 	background: none;
@@ -55,18 +55,36 @@
 	-webkit-backface-visibility: hidden;
 	-moz-osx-font-smoothing: grayscale;
 	display:inline;
-	position:fixed;
-	right: 7vw;
-	top:4vh;
+	
 	z-index:90;
 	font-size:30px;
-    outline: none;
+	outline: none;
 }
 
+#attend{
+	right: 7vw;
+	top:4vh;
+}
+
+#attend1{
+	width: 250px;
+	min-width: 120px;
+	max-width: 250px;
+	height: 50px;
+
+}
+
+
+ 
 /* Sizes */
 .button--size-s {
 	font-size: 14px;
 }
+
+.button--size-m {
+	font-size: 20px;
+}
+
 
 /* Typography and Roundedness */
 .button--text-upper {
