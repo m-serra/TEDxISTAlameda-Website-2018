@@ -326,6 +326,7 @@ jQuery(document).ready(function () {
         $('.long-nav').css("display", "flex");
         $('.animated_content').css({ "width": "84vw", "left": "8vw", "right": "8vw" });
         $('.mobile_nav_overlay').removeClass('visible');
+        $('#hamb-icon').removeClass('open');
         $('.mobile_section_title').css("display", "none");
         $('.navbar').css("padding-left", "2vw");
         $('.navbar').css("padding-right", "4vw");
