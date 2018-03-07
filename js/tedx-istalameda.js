@@ -256,7 +256,7 @@ jQuery(document).ready(function () {
 
     if ($(window).width() < 780) {
         $('.long-nav').css("display", "none");
-        console.log('short-nav');
+
         $('.short-nav').css("display", "flex");
         $('.short-nav').css("display", "-webkit-flex");
         $('.short-nav').css("display", "-moz-flex");
@@ -271,7 +271,7 @@ jQuery(document).ready(function () {
         $(".mute").css("display", "none");
         /* logo letters turn black */
         $('.logo-ISTAlameda').css('fill', 'black');
-       /* myVideo.pause(); */
+        /* myVideo.pause(); */
     }
 
     if ($(window).width() <= 335) {
@@ -326,14 +326,13 @@ jQuery(document).ready(function () {
         $('.long-nav').css("display", "flex");
         $('.animated_content').css({ "width": "84vw", "left": "8vw", "right": "8vw" });
         $('.mobile_nav_overlay').removeClass('visible');
-        $('#hamb-icon').removeClass('open');
         $('.mobile_section_title').css("display", "none");
         $('.navbar').css("padding-left", "2vw");
         $('.navbar').css("padding-right", "4vw");
         $(".mute").css("display", "block");
         $(".medium").css("display", "block");
         $('.logo-ISTAlameda').css('fill', 'white');
-        if (jscd.os != 'iOS' && document.getElementById("sound_mute").style.display == "none") {
+        if (document.getElementById("sound_mute").style.display == "none") {
             $("video").prop('muted', false);
             unmute();
         }
@@ -356,8 +355,8 @@ jQuery(document).ready(function () {
             $("video").prop('muted', true);
             $(".mute").css("display", "none");
             $('.logo-ISTAlameda').css('fill', 'black');
-        } 
-        
+        }
+
         if ($(window).width() <= 335) {
             $(".medium").css("display", "none");
         }
@@ -365,6 +364,7 @@ jQuery(document).ready(function () {
     });
 
 });
+
 
 window.mobilecheck = function () {
     var check = false;
@@ -451,7 +451,6 @@ if (window.mobilecheck == "true") {
 
 /* Attend Overlay */
 function on() {
-    $('.mobile_nav_overlay').toggleClass('visible');
     document.getElementById("overlay").style.display = "block";
 }
 
@@ -463,35 +462,36 @@ function off() {
 (function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })()
 
 
-function select_speaker(n){
-    switch(n) {
-        case 1: 
-         $(document.getElementById("speaker18_2")).animate({ width:'8%' },200); 
-         $(document.getElementById("speaker18_3")).animate({ width:'8%' },200); 
-        $(document.getElementById("speaker18_4")).animate({ width:'8%' },200); 
-            $(document.getElementById("speaker18_1")).animate({ width:'75%' },200);
-            
+function select_speaker(n) {
+    switch (n) {
+        case 1:
+            $(document.getElementById("speaker18_2")).animate({ width: '8%' }, 200);
+            $(document.getElementById("speaker18_3")).animate({ width: '8%' }, 200);
+            $(document.getElementById("speaker18_4")).animate({ width: '8%' }, 200);
+            $(document.getElementById("speaker18_1")).animate({ width: '75%' }, 200);
+
             break;
         case 2:
-            $(document.getElementById("speaker18_1")).animate({ width:'8%' },200); 
-         $(document.getElementById("speaker18_3")).animate({ width:'8%' },200); 
-        $(document.getElementById("speaker18_4")).animate({ width:'8%' },200); 
-            $(document.getElementById("speaker18_2")).animate({ width:'75%' },200); 
+            $(document.getElementById("speaker18_1")).animate({ width: '8%' }, 200);
+            $(document.getElementById("speaker18_3")).animate({ width: '8%' }, 200);
+            $(document.getElementById("speaker18_4")).animate({ width: '8%' }, 200);
+            $(document.getElementById("speaker18_2")).animate({ width: '75%' }, 200);
             break;
         case 3:
-            $(document.getElementById("speaker18_1")).animate({ width:'8%' },200); 
-         $(document.getElementById("speaker18_2")).animate({ width:'8%' },200); 
-        $(document.getElementById("speaker18_4")).animate({ width:'8%' },200);
-            $(document.getElementById("speaker18_3")).animate({ width:'75%' },200); 
+            $(document.getElementById("speaker18_1")).animate({ width: '8%' }, 200);
+            $(document.getElementById("speaker18_2")).animate({ width: '8%' }, 200);
+            $(document.getElementById("speaker18_4")).animate({ width: '8%' }, 200);
+            $(document.getElementById("speaker18_3")).animate({ width: '75%' }, 200);
             break;
         case 4:
-            $(document.getElementById("speaker18_1")).animate({ width:'8%' },200); 
-         $(document.getElementById("speaker18_2")).animate({ width:'8%' },200); 
-         $(document.getElementById("speaker18_3")).animate({ width:'8%' },200); 
-        $(document.getElementById("speaker18_4")).animate({ width:'75%' },200); 
+            $(document.getElementById("speaker18_1")).animate({ width: '8%' }, 200);
+            $(document.getElementById("speaker18_2")).animate({ width: '8%' }, 200);
+            $(document.getElementById("speaker18_3")).animate({ width: '8%' }, 200);
+            $(document.getElementById("speaker18_4")).animate({ width: '75%' }, 200);
             break;
         default:
     }
 }
+
 
 
