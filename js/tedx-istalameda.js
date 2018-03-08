@@ -332,7 +332,7 @@ jQuery(document).ready(function () {
         $(".mute").css("display", "block");
         $(".medium").css("display", "block");
         $('.logo-ISTAlameda').css('fill', 'white');
-        if (jscd.os != 'iOS' && document.getElementById("sound_mute").style.display == "none") {
+        if (document.getElementById("sound_mute").style.display == "none") {
             $("video").prop('muted', false);
             unmute();
         }
@@ -451,7 +451,6 @@ if (window.mobilecheck == "true") {
 
 /* Attend Overlay */
 function on() {
-    $('.mobile_nav_overlay').toggleClass('visible');
     document.getElementById("overlay").style.display = "block";
 }
 
