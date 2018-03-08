@@ -156,7 +156,6 @@ html,body
     padding-left: 2vw;
     padding-right: 4vw !important;
     border-radius: 3px 3px 0 0 !important;
-    
 }
 
 .navbar a{
@@ -355,7 +354,7 @@ hamb-icon span:active{
 
 .mobile_nav_overlay.visible{
     opacity: 1;
-    filter: alpha(opacity=50);
+    filter: alpha(opacity=1);
     z-index: 14;
 }
 
@@ -1267,3 +1266,131 @@ margin-left: 10%}
 #speaker18_4 {
     background-color: yellow;
 }
+
+
+#morada{
+	width: 100%;
+	text-align: right;
+}
+
+#morada1{
+	width: 100%;
+	font-size: 17px;
+	text-align: right;
+	
+} 
+
+
+.theme1 {
+	font-size: 55px;
+	font-weight: 500;
+	color: #ff2100;
+	display: block;
+	margin-bottom: -16px;
+	margin-top: 0px;
+}
+
+
+.date {
+	font-size: 27px;
+	font-weight: 600;
+	color: #292929;
+}
+
+.date:after {
+	content: '';
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+    margin-top: 6px;
+    width: 600px;
+    height: 3px;
+    background: #292929;
+}
+
+.date:before{
+	content: '';
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+    margin-bottom: 6px;
+    width: 600px;
+    height: 3px;
+    background: #292929;
+}
+
+@media all and (max-width: 554px) {
+	.date:after {
+		width: 315px;
+	}	
+	.date:before {
+		width: 315px;
+	}		
+}	
+		
+ .item_list ol, ul {
+    list-style: none;
+}
+.item_list {
+    padding: 20px 0 20px;
+	vertical-align: middle;
+	display: inline-block;
+	height: 130px !important;
+}
+
+
+.toggle0{
+    position: relative;
+	display: block;
+	padding: 16px 0;
+    margin: 0 12px;
+    letter-spacing: 1px;
+    line-height: 16px;
+	font-size: 95px;
+	font-weight: 600;
+	color: #ff2100;
+
+}
+
+.toggle1{
+    position: relative;
+	display: block;
+	padding: 16px 0;
+    margin: 0 12px;
+    letter-spacing: 1px;
+    line-height: 16px;
+	font-size: 95px;
+	font-weight: 600;
+	color: #ff2100;
+}
+
+
+.toggle2{
+    position: relative;
+	display: block;
+	padding: 16px 0;
+    margin: 0 12px;
+    letter-spacing: 1px;
+    line-height: 16px;
+	font-size: 95px;
+	font-weight: 600;
+	color: #ff2100;
+}
+
+.toggle0:hover{
+	font-size: 120px !important;
+	transition-duration: 0.5s;
+	
+	
+}
+.toggle1:hover{
+	font-size: 120px !important;
+	transition-duration: 0.5s;
+	
+	
+}
+.toggle2:hover{
+	font-size: 120px !important;
+	transition-duration: 0.5s;
+}
+

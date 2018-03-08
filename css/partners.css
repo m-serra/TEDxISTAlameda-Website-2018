@@ -42,7 +42,6 @@
 	background-size: 270px;
 	background-repeat: no-repeat;
 	background-position: center; 
-  
 }
 
 .ch-img-2 { 
@@ -148,12 +147,3 @@
 	font-family: 'Open Sans', Arial, sans-serif;
 }
 
-
-/*PAST SPEAKERS*/
-#title:hover{
-	opacity: 0.3;
-}
-
-#title{
-	cursor: pointer;
-}
