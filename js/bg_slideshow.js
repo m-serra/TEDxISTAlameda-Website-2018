@@ -275,4 +275,4 @@ function preload() {
     }
 };
 
-preload();
+preload(slideshow_pics);
