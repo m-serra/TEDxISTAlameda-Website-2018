@@ -1321,9 +1321,11 @@ margin-left: 10%}
     margin: 0 12px;
     letter-spacing: 1px;
     line-height: 16px;
-	font-size: 95px;
+	font-size: 55px;
 	font-weight: 600;
 	color: #ff2100;
+	transition-duration: 0.5s;
+	
 
 }
 
@@ -1334,9 +1336,11 @@ margin-left: 10%}
     margin: 0 12px;
     letter-spacing: 1px;
     line-height: 16px;
-	font-size: 95px;
+	font-size: 55px;
 	font-weight: 600;
 	color: #ff2100;
+	transition-duration: 0.5s;
+	
 }
 
 
@@ -1347,25 +1351,26 @@ margin-left: 10%}
     margin: 0 12px;
     letter-spacing: 1px;
     line-height: 16px;
-	font-size: 95px;
+	font-size: 55px;
 	font-weight: 600;
 	color: #ff2100;
+	transition-duration: 0.5s;
+	
 }
 
 .toggle0:hover{
-	font-size: 120px !important;
+	font-size: 105px !important;
 	transition-duration: 0.5s;
 	
 	
 }
 .toggle1:hover{
-	font-size: 120px !important;
+	font-size: 105px !important;
 	transition-duration: 0.5s;
 	
 	
 }
 .toggle2:hover{
-	font-size: 120px !important;
+	font-size: 105px !important;
 	transition-duration: 0.5s;
 }
-
