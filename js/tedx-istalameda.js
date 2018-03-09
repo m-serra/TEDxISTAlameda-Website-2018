@@ -265,6 +265,7 @@ jQuery(document).ready(function () {
         $('.mobile_section_title').css("display", "block");
         $('.navbar').css("padding-left", "8vw");
         $('.navbar').css("padding-right", "8vw");
+        $('.navbar').css("border-radius", "0");
     }
 
     if ($(window).width() < 480 && jscd.os != 'iOS') {
@@ -326,6 +327,7 @@ jQuery(document).ready(function () {
         $('.long-nav').css("display", "flex");
         $('.animated_content').css({ "width": "84vw", "left": "8vw", "right": "8vw" });
         $('.mobile_nav_overlay').removeClass('visible');
+        $('#hamb-icon').removeClass('open');
         $('.mobile_section_title').css("display", "none");
         $('.navbar').css("padding-left", "2vw");
         $('.navbar').css("padding-right", "4vw");
@@ -349,6 +351,7 @@ jQuery(document).ready(function () {
             $('.mobile_section_title').css("display", "block");
             $('.navbar').css("padding-left", "8vw");
             $('.navbar').css("padding-right", "8vw");
+            $('.navbar').css("border-radius", "0");
         }
 
         if ($(window).width() <= 480 && jscd.os != 'iOS') {
@@ -451,6 +454,7 @@ if (window.mobilecheck == "true") {
 
 /* Attend Overlay */
 function on() {
+    $('.mobile_nav_overlay').removeClass('visible');
     document.getElementById("overlay").style.display = "block";
 }
 
