@@ -767,7 +767,7 @@
 									<center>
 										<ul style="padding-right:0px; padding-left:0px">
 											<li class="item_list ">
-												<p class="toggle0" style="font-size: 105px">2017
+												<p class="toggle0">2017
 													<p/>
 											</li>
 											<li class="item_list">
@@ -968,7 +968,7 @@
 
 										<!-- 2016 Speakers -->
 
-										<div class="container-2016" id="target1" style="display: block">
+										<div class="container-2016" id="target1" style="display: none">
 											<div class="header-2016" style="text-align:center">
 												<div class="edition" style="order: 13; margin: 0; display: inline-block">
 													<div class="section_title" id="title">
@@ -1035,7 +1035,7 @@
 										</div>
 
 										<!-- 2013 Speakers -->
-										<div class="container-2013" id="target2" style="display: block">
+										<div class="container-2013" id="target2" style="display: none">
 											<div class="header-2013" style="text-align:center">
 												<div class="edition" style="order: 17; margin: 0; display: inline-block">
 													<div id="title" class="section_title">
@@ -1713,9 +1713,14 @@
 
 		$('.toggle0').click(function () {
 
-			$('.toggle2').css("font-size", "55px");
-			$('.toggle1').css("font-size", "55px");
-			$('.toggle0').css("font-size", "105px");
+			$('.toggle2').css("font-size", "3.5em");
+            $('.toggle2').css("color", "black");
+			
+            $('.toggle1').css("font-size", "3.5em");
+            $('.toggle1').css("color", "black");
+			
+            $('.toggle0').css("font-size", "6.5em");
+			$('.toggle0').css("color", "red");
 
 			$('#target1, #target2').hide(500);
 
@@ -1727,10 +1732,16 @@
 
 		$('.toggle1').click(function () {
 
-			$('.toggle2').css("font-size", "55px");
-			$('.toggle1').css("font-size", "105px");
-			$('.toggle0').css("font-size", "55px");
-			$('#target0, #target2').hide(500);
+			$('.toggle2').css("font-size", "3.5em");
+            $('.toggle2').css("color", "black");
+            
+			$('.toggle1').css("font-size", "6.5em");
+            $('.toggle1').css("color", "red");
+            
+			$('.toggle0').css("font-size", "3.5em");
+			$('.toggle0').css("color", "black");
+			
+            $('#target0, #target2').hide(500);
 
 
 			$('#target1').css("display", "block");
@@ -1739,9 +1750,15 @@
 		});
 
 		$('.toggle2').click(function () {
-			$('.toggle2').css("font-size", "105px");
-			$('.toggle1').css("font-size", "55px");
-			$('.toggle0').css("font-size", "55px");
+			$('.toggle2').css("font-size", "6.5em");
+			$('.toggle2').css("color", "red");
+
+			$('.toggle1').css("font-size", "3.5em");
+			$('.toggle1').css("color", "black");
+
+			$('.toggle0').css("font-size", "3.5em");
+			$('.toggle0').css("color", "black");
+
 			$('#target0, #target1').hide(500);
 
 			$('#target2').css("display", "block");

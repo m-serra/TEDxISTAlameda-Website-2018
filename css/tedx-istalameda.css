@@ -1274,7 +1274,6 @@ margin-left: 10%}
 	height: 130px !important;
 }
 
-
 .toggle0{
     position: relative;
 	display: block;
@@ -1282,13 +1281,12 @@ margin-left: 10%}
     margin: 0 12px;
     letter-spacing: 1px;
     line-height: 16px;
-	font-size: 55px;
+	font-size: 6.5em;
 	font-weight: 600;
-	color: #ff2100;
+	color: red;
 	transition-duration: 0.5s;
-	
-
 }
+
 
 .toggle1{
     position: relative;
@@ -1297,9 +1295,9 @@ margin-left: 10%}
     margin: 0 12px;
     letter-spacing: 1px;
     line-height: 16px;
-	font-size: 55px;
+	font-size: 3.5em;
 	font-weight: 600;
-	color: #ff2100;
+	color: black;
 	transition-duration: 0.5s;
 	
 }
@@ -1312,26 +1310,27 @@ margin-left: 10%}
     margin: 0 12px;
     letter-spacing: 1px;
     line-height: 16px;
-	font-size: 55px;
+	font-size: 3.5em;
 	font-weight: 600;
-	color: #ff2100;
+	color: black;
 	transition-duration: 0.5s;
 	
 }
 
+
 .toggle0:hover{
-	font-size: 105px !important;
+	font-size: 6.5em !important;
 	transition-duration: 0.5s;
-	
-	
+	color: red;
 }
 .toggle1:hover{
-	font-size: 105px !important;
+	font-size: 6.5em !important;
 	transition-duration: 0.5s;
-	
+	color: red;
 	
 }
 .toggle2:hover{
-	font-size: 105px !important;
+	font-size: 6.5em !important;
 	transition-duration: 0.5s;
+    color: red;
 }
