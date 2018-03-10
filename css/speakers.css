@@ -37,8 +37,9 @@
     padding: 20% 15%;
     width:100%;
     height:100%;
-    background-color: rgba(255,0,0,0.7);
     color:white;
+    overflow: scroll;
+    background-color: rgba(255,0,0,0.6);
 }
 
 .close_speakers {
@@ -54,22 +55,26 @@
 
 #ind_container_2 {
     background: url("../images/speakers/unknown-avatar.jpg") no-repeat center;
-    background-size: cover;
+    background-size: auto 100%;
+    transition: all .1s ease-in-out;
 }
 
 #ind_container_3 {
     background: url("../images/speakers/3_rosarinho.jpg") no-repeat center;
-    background-size: cover;
+    background-size: auto 100%;
+    transition: all .1s ease-in-out;
 }
 
 #ind_container_4 {
     background: url("../images/speakers/unknown-avatar.jpg") no-repeat center;
-    background-size: cover;
+    background-size: auto 100%;
+    transition: all .1s ease-in-out;
 }
 
 #ind_container_5 {
     background: url("../images/speakers/unknown-avatar.jpg") no-repeat center;
-    background-size: cover;
+    background-size: auto 100%;
+    transition: all .1s ease-in-out;
 }
 
 .speakers_row {
@@ -83,32 +88,38 @@
 
 #ind_container_7 {
     background: url("../images/speakers/7_darchite.jpg") no-repeat center;
-    background-size: cover;
+    background-size: auto 100%;
+    transition: all .1s ease-in-out;
 }
 
 #ind_container_8 {
     background: url("../images/speakers/8_zaid.jpg") no-repeat center;
-    background-size: cover;
+    background-size: auto 100%;
+    transition: all .1s ease-in-out;
 }
 
 #ind_container_10 {
     background: url("../images/speakers/10_diogo.jpg") no-repeat center;
-    background-size: cover;
+    background-size: auto 100%;
+    transition: all .1s ease-in-out;
 }
 
 #ind_container_6 {
     background: url("../images/speakers/unknown-avatar.jpg") no-repeat center;
-    background-size: cover;
+    background-size: auto 100%;
+    transition: all .1s ease-in-out;
 }
 
 #ind_container_9 {
     background: url("../images/speakers/unknown-avatar.jpg") no-repeat center;
-    background-size: cover;
+    background-size: auto 100%;
+    transition: all .1s ease-in-out;
 }
 
 #ind_container_1 {
     background: url("../images/speakers/1_arlindo.jpg") no-repeat center;
-    background-size: cover;
+    background-size: auto 100%;
+    transition: all .1s ease-in-out;
 }
 
 .speaker_description {
@@ -119,13 +130,32 @@
     color:white;
 }
 
-#info_speaker3 {
-    display:none;
-    text-align: justify;
-    text-justify: inter-word;
-    padding: 20% 15%;
-    width:100%;
-    height:100%;
-    background-color: rgba(255,0,0,0.7);
-    color:white;
+#ind_container_11 {
+    background: url("../images/speakers/11_jans.jpg") no-repeat center;
+    background-size: auto 100%;
+    transition: all .1s ease-in-out;
+}
+
+#ind_container_12 {
+    background: url("../images/speakers/12_carmo.jpg") no-repeat center;
+    background-size: auto 100%;
+    transition: all .1s ease-in-out;
+}
+
+#ind_container_13 {
+    background: url("../images/speakers/unknown-avatar.jpg") no-repeat center;
+    background-size: auto 100%;
+    transition: all .1s ease-in-out;
+}
+
+#ind_container_14 {
+    background: url("../images/speakers/unknown-avatar.jpg") no-repeat center;
+    background-size: auto 100%;
+    transition: all .1s ease-in-out;
+}
+
+#ind_container_15 {
+    background: url("../images/speakers/unknown-avatar.jpg") no-repeat center;
+    background-size: auto 100%;
+    transition: all .1s ease-in-out;
 }
