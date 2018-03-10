@@ -583,7 +583,6 @@ margin-left: 10%}
 
 .row{
     width:100%;
-    padding-left:30px;
     padding-left: 30px;
 
 }
@@ -749,10 +748,8 @@ margin-left: 10%}
 	background: #ddd;
 	top: auto;
 	left: 0;
-	width: 96%;
 	width: 100%;
     margin: -20px 0 0 -15px;
-    margin-left: 2%;
     padding-left: 40px;
     padding-right: 40px;
     margin-left: 0%;
@@ -762,7 +759,6 @@ margin-left: 10%}
 }
 
 .og-expander-inner {
-	padding: 50px 30px;
 	padding: 20px 30px;
 	height: 100%;
     padding-right: 80px;
@@ -772,8 +768,6 @@ margin-left: 10%}
 	position: absolute;
 	width: 40px;
 	height: 40px;
-	top: 20px;
-	right: 20px;
 	top: 40px;
 	right: 40px;
 	cursor: pointer;
@@ -818,14 +812,10 @@ margin-left: 10%}
 }
 
 .og-fullimg {
-	text-align: center;
 	text-align: center;   
 }
 
 .og-fullimg img {
-	display: inline-block;
-	max-height: 100%;
-	max-width: 100%;
 	/*display: inline-block;*/
     width: 100%;
     height: auto;
@@ -839,8 +829,6 @@ margin-left: 10%}
 
 .og-details h3 {
 	font-weight: 300;
-	font-size: 52px;
-	padding: 40px 0 10px;
 	font-size: 32px;
 	padding: 0px 0 0px;
 	margin-bottom: 10px;
@@ -848,7 +836,6 @@ margin-left: 10%}
 
 .og-details p {
 	font-weight: 400;
-	font-size: 16px;
 	font-size: 14px;
 	line-height: 22px;
 	color: #999;
@@ -860,7 +847,6 @@ margin-left: 10%}
     transform: translate(-50%, -50%);
 }
 
-.og-details a {
 .og-fullimg a {
     position: absolute;
     max-height: 20%;
@@ -879,15 +865,6 @@ margin-left: 10%}
     transform: translate(-50%, -75%); 
 }
 
-.og-details a::before {
-	content: '\2192';
-	display: inline-block;
-	margin-right: 10px;
-}
-
-.og-details a:hover {
-	border-color: #999;
-	color: #999;
 .og-fullimg a:hover {
 	border-color: #ff2200;
 	color: #ff2200;
