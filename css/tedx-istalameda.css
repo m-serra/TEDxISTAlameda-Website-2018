@@ -475,6 +475,11 @@ hamb-icon span:active{
 /* End of Secondary Navigation */
 
 /* Partners Styles */
+.partners_container{
+    text-align: left;
+    padding: 0 !important;
+}
+
 #partner_h{
 	text-align:left;
 	margin-top:80px;
@@ -508,6 +513,7 @@ hamb-icon span:active{
     display: inline-block;
     height: 0.2em;
     width: 100%;
+    padding: 0 40px 0 40px;
 }
 
 #partner_h1:after{
@@ -553,6 +559,8 @@ hamb-icon span:active{
 
 header.major{
 	text-align: left;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 
@@ -576,6 +584,8 @@ margin-left: 10%}
 .row{
     width:100%;
     padding-left:30px;
+    padding-left: 30px;
+
 }
 
 #speaker_cont{
@@ -740,8 +750,12 @@ margin-left: 10%}
 	top: auto;
 	left: 0;
 	width: 96%;
+	width: 100%;
     margin: -20px 0 0 -15px;
     margin-left: 2%;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 0%;
 	text-align: left;
 	height: 0;
 	overflow: hidden;
@@ -749,7 +763,9 @@ margin-left: 10%}
 
 .og-expander-inner {
 	padding: 50px 30px;
+	padding: 20px 30px;
 	height: 100%;
+    padding-right: 80px;
 }
 
 .og-close {
@@ -758,7 +774,10 @@ margin-left: 10%}
 	height: 40px;
 	top: 20px;
 	right: 20px;
+	top: 40px;
+	right: 40px;
 	cursor: pointer;
+    z-index: 10;
 }
 
 .og-close::before,
@@ -800,29 +819,51 @@ margin-left: 10%}
 
 .og-fullimg {
 	text-align: center;
+	text-align: center;   
 }
 
 .og-fullimg img {
 	display: inline-block;
 	max-height: 100%;
 	max-width: 100%;
+	/*display: inline-block;*/
+    width: 100%;
+    height: auto;
+	max-height: 80%;
+	max-width: 80%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%); 
 }
 
 .og-details h3 {
 	font-weight: 300;
 	font-size: 52px;
 	padding: 40px 0 10px;
+	font-size: 32px;
+	padding: 0px 0 0px;
 	margin-bottom: 10px;
 }
 
 .og-details p {
 	font-weight: 400;
 	font-size: 16px;
+	font-size: 14px;
 	line-height: 22px;
 	color: #999;
+    text-align: justify;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .og-details a {
+.og-fullimg a {
+    position: absolute;
+    max-height: 20%;
 	font-weight: 700;
 	font-size: 16px;
 	color: #333;
@@ -830,9 +871,12 @@ margin-left: 10%}
 	letter-spacing: 2px;
 	padding: 10px 20px;
 	border: 3px solid #333;
-	display: inline-block;
+	/*display: inline-block;*/
 	margin: 30px 0 0;
 	outline: none;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -75%); 
 }
 
 .og-details a::before {
@@ -844,6 +888,11 @@ margin-left: 10%}
 .og-details a:hover {
 	border-color: #999;
 	color: #999;
+.og-fullimg a:hover {
+	border-color: #ff2200;
+	color: #ff2200;
+    list-style: none;
+    text-decoration: none;
 }
 
 .og-loading {

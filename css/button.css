@@ -80,6 +80,7 @@
 	font-size:30px;
 	outline: none;
 	border-radius: 3px;
+    text-transform: uppercase;
 }
 
 #attend{
