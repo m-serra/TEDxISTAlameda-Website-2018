@@ -8,13 +8,15 @@
     text-align: center;
     overflow: hidden;
     padding: 0.25em;
+    align-items: middle;
 }
 
 .speakers18_container {
+    margin-top: 30px;
     width: 60vw;
     padding: 0 4em;
     left:50%;
-    margin-left: -30vw;
+    margin-left: -29vw;
     overflow: hidden;
     position: relative;
 }
@@ -32,13 +34,8 @@
 
 .speaker_info {
     display:none;
-    text-align: justify;
-    text-justify: inter-word;
-    padding: 20% 15%;
     width:100%;
     height:100%;
-    color:white;
-    overflow: scroll;
     background-color: rgba(255,0,0,0.6);
 }
 
@@ -51,6 +48,13 @@
     background-color: red;
     float: right;
     display: block;
+}
+
+.speakers_row {
+    width: 60vw;
+    left:50%;
+    margin-left: -30vw;
+    position: relative;
 }
 
 #ind_container_2 {
@@ -75,15 +79,6 @@
     background: url("../images/speakers/unknown-avatar.jpg") no-repeat center;
     background-size: auto 100%;
     transition: all .1s ease-in-out;
-}
-
-.speakers_row {
-    width: 60vw;
-    height: 60vh;
-    left:50%;
-    margin-left: -30vw;
-    overflow: hidden;
-    position: relative;
 }
 
 #ind_container_7 {
@@ -130,32 +125,48 @@
     color:white;
 }
 
-#ind_container_11 {
-    background: url("../images/speakers/11_jans.jpg") no-repeat center;
-    background-size: auto 100%;
-    transition: all .1s ease-in-out;
+
+@media screen and (max-width: 896px) {
+    .ind_speaker18_container {
+        width:49%;
+    }
 }
 
-#ind_container_12 {
-    background: url("../images/speakers/12_carmo.jpg") no-repeat center;
-    background-size: auto 100%;
-    transition: all .1s ease-in-out;
+@media screen and (max-width: 1024px) {
+    .speakers18_container {
+        width: 75vw;
+        margin-left: -36.5vw;
+    }
+    
+    .speakers_row {
+        width: 75vw;
+        margin-left: -36.5vw;
+    }
 }
 
-#ind_container_13 {
-    background: url("../images/speakers/unknown-avatar.jpg") no-repeat center;
-    background-size: auto 100%;
-    transition: all .1s ease-in-out;
+@media screen and (max-width: 780px) {
+
+    .speakers18_container {
+        width: 90vw;
+        margin-left: -44vw;
+    }
+    
+    .speakers_row {
+        width: 90vw;
+        margin-left: -44vw;
+    }
+    
 }
 
-#ind_container_14 {
-    background: url("../images/speakers/unknown-avatar.jpg") no-repeat center;
-    background-size: auto 100%;
-    transition: all .1s ease-in-out;
+
+.speaker_info_content {
+    text-align: justify;
+    text-justify: inter-word;
+    overflow: scroll;
+    color:white;
+    padding: 20% 15%;
+    width:100%;
+    height:100%;
 }
 
-#ind_container_15 {
-    background: url("../images/speakers/unknown-avatar.jpg") no-repeat center;
-    background-size: auto 100%;
-    transition: all .1s ease-in-out;
-}
+
