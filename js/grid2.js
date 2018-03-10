@@ -238,7 +238,6 @@ var Grid = (function() {
 	function saveItemInfo( saveheight ) {
 		$items.each( function() {
 			var $item = $( this );
-            console.log($item.offset().top);
 			$item.data( 'offsetTop', $item.offset().top );
 			if( saveheight ) {
 				$item.data( 'height', $item.height() );

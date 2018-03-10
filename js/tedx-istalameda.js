@@ -301,9 +301,12 @@ jQuery(document).ready(function () {
         var id = current.getAttribute('data-section');
         var num = current.getAttribute('data-description');
         current.classList.add("sub_section_selected");
-
+        
         // Substitutes content, based on data-section attribute
-        document.querySelector('div[data-description="' + num + '"]').classList.remove("content_selected");
+        var clicked_menu = document.querySelectorAll('div[data-description="' + num + '"]');
+        clicked_menu.forEach(function(userItem) {
+          userItem.classList.remove("content_selected");
+        });
         document.querySelector('div[data-section="' + id + '"]').classList.add("content_selected");
 
     });
@@ -322,6 +325,7 @@ jQuery(document).ready(function () {
             $(".mobile_nav_overlay").css('height', closed_top + 'px');
         }
 
+        
         /* Default */
         $('.short-nav').css("display", "none");
         $('.long-nav').css("display", "flex");
