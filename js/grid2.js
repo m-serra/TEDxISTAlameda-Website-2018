@@ -164,7 +164,7 @@ $.fn.imagesLoaded = function( callback ) {
 var Grid = (function() {
 
 		// list of items
-	var $grid = $( '#og-grid' ),
+	var $grid = $( '.og-grid' ),
 		// the items
 		$items = $grid.children( '.flex_div' ),
 		// current expanded item's index
@@ -367,7 +367,7 @@ var Grid = (function() {
 			if( $item ) {
 				this.$item = $item;
 			}
-			console.log('update');
+
 			// if already expanded remove class "og-expanded" from current item and add it to new item
 			if( current !== -1 ) {
 				var $currentItem = $items.eq( current );
@@ -429,16 +429,18 @@ var Grid = (function() {
 		close : function() {
 
 			var self = this,
-				onEndFn = function() {
-					if( support ) {
-						$( this ).off( transEndEventName );
-					}
-					self.$item.removeClass( 'og-expanded' );
-					self.$previewEl.remove();
-				};
+            
+            onEndFn = function() {
+
+                if( support ) {
+                    $( this ).off( transEndEventName );
+                }
+                self.$item.removeClass( 'og-expanded' );
+                self.$previewEl.remove();
+            };
 
 			setTimeout( $.proxy( function() {
-
+                
 				if( typeof this.$largeImg !== 'undefined' ) {
 					this.$largeImg.fadeOut( 'fast' );
 				}
@@ -446,7 +448,8 @@ var Grid = (function() {
 				// the current expanded item (might be different from this.$item)
 				var $expandedItem = $items.eq( this.expandedIdx );
 				$expandedItem.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
-
+                /* ==== ACRESCENTEI ESTA LINHA ==== */
+                this.$item.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
 				if( !support ) {
 					onEndFn.call();
 				}

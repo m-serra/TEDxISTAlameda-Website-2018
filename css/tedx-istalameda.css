@@ -481,6 +481,14 @@ hamb-icon span:active{
 	margin-bottom:60px
 }
 
+#main_sponsor{
+	color: #ff2200;
+}
+
+#institutional_sponsor{
+	color: rgba(0,161,225,1);
+}
+
 #gold_sponsor{
 	color: rgba(244,218,74,1);
 }
@@ -493,6 +501,14 @@ hamb-icon span:active{
 	color: rgba(140,58,13,1);
 }
 
+
+#partner_4:after{
+    background: rgba(244,218,74,1);
+    content: '';
+    display: inline-block;
+    height: 0.2em;
+    width: 100%;
+}
 
 #partner_h1:after{
     background: rgba(244,218,74,1);
@@ -513,6 +529,22 @@ hamb-icon span:active{
 
 #partner_h3:after{
     background: rgba(140,58,13,1);
+    content: '';
+    display: inline-block;
+    height: 0.2em;
+    width: 100%;
+}
+
+#partner_h4:after{
+    background: rgba(0,161,225,1);
+    content: '';
+    display: inline-block;
+    height: 0.2em;
+    width: 100%;
+}
+
+#partner_h5:after{
+    background: #ff2200;
     content: '';
     display: inline-block;
     height: 0.2em;
