@@ -1,15 +1,35 @@
 /*overlay*/ 
-#overlay {
+.overlay {
 	display:none;
-	position:fixed;
-	left:47.5%;
-	top:2.5%;
-	height:90%;
-	width:85%;
+	position:absolute;
+	left:0vw;
+	top:0vh;
+	height:100vh;
+	width:100vw;
 	background:#333;
-	margin: 0 0 0 -40%;
-	overflow:auto;
+	margin: 0;
+	overflow:;
 	z-index:99;
+    
+   /* -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1); */
+}
+
+.overlay.open{    
+    /*-webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);*/
 }
 
 #closebutton{
@@ -63,8 +83,8 @@
 }
 
 #attend{
-	right: 7vw;
-	top:4vh;
+	right: 8vw;
+	top:5vh;
 }
 
 #attend1{

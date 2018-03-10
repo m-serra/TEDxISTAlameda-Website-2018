@@ -520,7 +520,6 @@ hamb-icon span:active{
 }
 
 header.major{
-	margin-top: 5%;
 	text-align: left;
 }
 
@@ -642,41 +641,54 @@ margin-left: 10%}
 }
 
 .og-grid {
-    position: absolute;
+    position: relative;
 	list-style: none;
-	padding-bottom: 50px;
-    padding-top: 40px;
 	padding-right: 40px;
 	text-align: center;
     width: 100%;
     background-color: snow;
     z-index: 12;
-    margin-bottom: 0;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-
-.og-grid li {
-	display: inline-block;
-	margin: 10px 5px 0 5px;
-	vertical-align: top;
-	height: 250px;
+.og-grid .flex_div{
+    width: 270px;
+    height: 250px;
+    margin: 1vh 1vw 1vh 1vw;   
+    display: inline-block;
 }
 
-.og-grid li > a{
-	border: none;
+.og-grid .flex_div > a{
+    border: none;
 	outline: none;
-	display: block;
+    display: block;
 	position: relative;
+    padding-top: 250px;
 }
 
-.og-grid li > a img {
-	border: none;
+.og-grid .flex_div > a:hover{
+    cursor: pointer;
+}
+
+.og-grid .flex_div > a img {
+    border: none;
 	outline: none;
-	display: block;
-	position: relative;
+    height: auto;
+    position: absolute;             
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.og-grid li.og-expanded > a::after {
+.og-grid .flex_div.og-expanded > a::after {
 	top: auto;
 	border: solid transparent;
 	content: " ";
@@ -687,7 +699,7 @@ margin-left: 10%}
 	border-bottom-color: #ddd;
 	border-width: 15px;
 	left: 50%;
-	margin: -20px 0 0 -15px;
+	margin: -50px 0 0 -15px;
 }
 
 .og-expander {
@@ -696,7 +708,7 @@ margin-left: 10%}
 	top: auto;
 	left: 0;
 	width: 96%;
-	margin-top: 10px;
+    margin: -20px 0 0 -15px;
     margin-left: 2%;
 	text-align: left;
 	height: 0;
@@ -848,19 +860,6 @@ margin-left: 10%}
 	.og-fullimg { display: none; }
 	.og-details { float: none; width: 100%; }
 
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 150%;
-}
-
-.overlay {
-  background: repeating-linear-gradient(0deg, rgba(0, 0, 255, 0.3), transparent);
-  background-size: 100% 5px;
 }
 
 .about {

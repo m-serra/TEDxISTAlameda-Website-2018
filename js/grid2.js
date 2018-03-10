@@ -166,7 +166,7 @@ var Grid = (function() {
 		// list of items
 	var $grid = $( '#og-grid' ),
 		// the items
-		$items = $grid.children( 'li' ),
+		$items = $grid.children( '.flex_div' ),
 		// current expanded item's index
 		current = -1,
 		// position (top) of the expanded item
@@ -238,6 +238,7 @@ var Grid = (function() {
 	function saveItemInfo( saveheight ) {
 		$items.each( function() {
 			var $item = $( this );
+            console.log($item.offset().top);
 			$item.data( 'offsetTop', $item.offset().top );
 			if( saveheight ) {
 				$item.data( 'height', $item.height() );
@@ -246,7 +247,8 @@ var Grid = (function() {
 	}
 
 	function initEvents() {
-		
+		button = document.querySelector('.button3');
+        button.addEventListener('click', saveItemInfo);
 		// when clicking an item, show the preview with the item´s info and large image.
 		// close the item if already expanded.
 		// also close if clicking on the item´s cross
@@ -260,6 +262,7 @@ var Grid = (function() {
 			previewPos = -1;
 			// save item´s offset
 			saveItemInfo();
+            
 			getWinSize();
 			var preview = $.data( this, 'preview' );
 			if( typeof preview != 'undefined' ) {
@@ -316,7 +319,6 @@ var Grid = (function() {
 			}
 			
 		}
-        console.log('first time');
 		// update previewPos
 		previewPos = position;
 		// initialize new preview for the clicked item
@@ -372,7 +374,7 @@ var Grid = (function() {
 				$currentItem.removeClass( 'og-expanded' );
 				this.$item.addClass( 'og-expanded' );
 				// position the preview correctly
-				this.positionPreview();
+				/*this.positionPreview();*/
 			}
 
 			// update current value
@@ -420,7 +422,7 @@ var Grid = (function() {
 				// set the height for the preview and the item
 				this.setHeights();
 				// scroll to position the preview in the right place
-				this.positionPreview();
+				/*this.positionPreview();*/
 			}, this ), 25 );
 
 		},

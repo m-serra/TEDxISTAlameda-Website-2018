@@ -311,16 +311,16 @@ jQuery(document).ready(function () {
     /* on window resize */
     $(window).resize(function () {
 
-        /* position the navbar in the bottom of the screen and the content hidden under the screen */
         var nav_height = $('#navbar').height(),
             window_height = window.innerHeight,
             closed_top = window_height - nav_height;
-
-        $(".animated_content").css('top', closed_top + 'px');
-        $(".sections").css('margin-top', nav_height + 'px');
-        $(".mobile_nav_overlay").css('height', closed_top + 'px');
-
-        /* Window Size Testing to set proper navbar & other stuff */
+        
+        /* if the container is  closed position the navbar in the bottom of the screen and the content hidden under the screen */
+        if ((!classie.has(container, 'container--open'))) {
+            $(".animated_content").css('top', closed_top + 'px');
+            $(".sections").css('margin-top', nav_height + 'px');
+            $(".mobile_nav_overlay").css('height', closed_top + 'px');
+        }
 
         /* Default */
         $('.short-nav').css("display", "none");
@@ -456,9 +456,11 @@ if (window.mobilecheck == "true") {
 function on() {
     $('.mobile_nav_overlay').removeClass('visible');
     document.getElementById("overlay").style.display = "block";
+    setTimeout(function () {$('.overlay').toggleClass('open')},5);
 }
 
 function off() {
+    $('.overlay').toggleClass('open');
     document.getElementById("overlay").style.display = "none";
 }
 
