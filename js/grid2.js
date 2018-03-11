@@ -250,7 +250,8 @@ var Grid = (function() {
         button.addEventListener('click', saveItemInfo);
 		// when clicking an item, show the preview with the item´s info and large image.
 		// close the item if already expanded.
-		// also close if clicking on the item´s cross
+		// also close if clicking on the item´s cross  
+        console.log("carregado");
 		initItemsEvents( $items );
 		
 		// on window resize get the window´s size again
@@ -273,14 +274,17 @@ var Grid = (function() {
 	}
 
 	function initItemsEvents( $items ) {
+        
 		$items.on( 'click', 'span.og-close', function() {
 			hidePreview();
 			return false;
 		} ).children( 'a' ).on( 'click', function(e) {
 
 			var $item = $( this ).parent();
+            var id = $item.data( 'id' );
 			// check if item already opened
-			current === $item.index() ? hidePreview() : showPreview( $item );
+            console.log('id: ' + id);
+			current === id ? hidePreview() : showPreview( $item );
 			return false;
 
 		} );
@@ -300,10 +304,9 @@ var Grid = (function() {
 
 		// if a preview exists and previewPos is different (different row) from item´s top then close it
 		if( typeof preview != 'undefined' ) {
-            
+            console.log('undefined');
 			// not in the same row
 			if( previewPos !== position ) {
-     
 				// if position > previewPos then we need to take te current preview´s height in consideration when scrolling the window
 				if( position > previewPos ) {
 					scrollExtra = preview.height;
@@ -311,13 +314,24 @@ var Grid = (function() {
 				hidePreview();
 			}
 			// same row
-			else {
-               
+			else { 
 				preview.update( $item );
 				return false;
 			}
 			
 		}
+        
+       /* i=1;
+        $items.each(function() {
+            var $item = $( this ).parent();
+            console.log('index = ' + $(this).index());
+            if(current === $item.index()){
+                hidePreview();
+                console.log('i = ' + i);
+            }
+        
+            i=i+1;
+        });*/
 		// update previewPos
 		previewPos = position;
 		// initialize new preview for the clicked item
@@ -337,7 +351,8 @@ var Grid = (function() {
 	// the preview obj / overlay
 	function Preview( $item ) {
 		this.$item = $item;
-		this.expandedIdx = this.$item.index();
+        var id = this.$item.data( 'id' );
+		this.expandedIdx = id;
 		this.create();
 		this.update();
 	}
@@ -377,7 +392,8 @@ var Grid = (function() {
 			}
 
 			// update current value
-			current = this.$item.index();
+            var id = this.$item.data( 'id' );
+			current = id;
 
 			// update preview´s content
 			var $itemEl = this.$item.children( 'a' ),
