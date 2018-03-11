@@ -48,7 +48,7 @@ html,body
 	margin-bottom: 8px;
     position: fixed;
     top: 4vh;
-    left: 7vw;
+    left: 7.2vw;
     width: 256px;
     cursor: default;
 }
@@ -838,8 +838,8 @@ margin-left: 10%}
 .og-fullimg,
 .og-details {
     position: absolute;
-	width: 80%;
-    /*margin-left: 10%;*/
+	/*width: 80%;*/
+    width: 60%;
 	height: 100%;
 	overflow: hidden;
     top: 50%;
@@ -877,14 +877,15 @@ margin-left: 10%}
 
 .og-details p {
 	font-weight: 400;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 22px;
 	color: #999;
     text-align: justify;
     position: absolute;
     width: 100%;
     height: auto;
-    top: 20%;
+    /*top: 20%;*/
+    top: 30%;
 
 }
 
