@@ -849,7 +849,8 @@ margin-left: 10%}
     
 }
 
-.og-details {
+#BCG .og-details {
+    width: 80%;
 }
 
 .og-fullimg {
@@ -889,6 +890,10 @@ margin-left: 10%}
 
 }
 
+#BCG p{
+    top: 20%;
+}
+
 .og-details a {
     position: absolute;
     max-height: 20%;
@@ -905,6 +910,12 @@ margin-left: 10%}
     top: 70%;
     left: 50%;
     transform: translate(-50%, -70%); 
+}
+
+#BCG .og-details a{
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%); 
 }
 
 .og-details a:hover {
