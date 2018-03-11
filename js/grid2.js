@@ -191,7 +191,7 @@ var Grid = (function() {
 		support = Modernizr.csstransitions,
 		// default settings
 		settings = {
-			minHeight : 500,
+			minHeight : 350,
 			speed : 350,
 			easing : 'ease'
 		};
@@ -348,11 +348,11 @@ var Grid = (function() {
 			this.$title = $( '<h3></h3>' );
 			this.$description = $( '<p></p>' );
 			this.$href = $( '<a href="#">Visit website</a>' );
-			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description );
+			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
 			this.$loading = $( '<div class="og-loading"></div>' );
-			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading, this.$href );
+			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
-			this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
+			this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview,/*this.$fullimage,*/this.$details );
 			this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
 			// append preview element to the item
 			this.$item.append( this.getEl() );
@@ -383,7 +383,7 @@ var Grid = (function() {
 			var $itemEl = this.$item.children( 'a' ),
 				eldata = {
 					href : $itemEl.attr( 'href' ),
-					largesrc : $itemEl.data( 'largesrc' ),
+					/*largesrc : $itemEl.data( 'largesrc' ),*/
 					title : $itemEl.data( 'title' ),
 					description : $itemEl.data( 'description' )
 				};
@@ -395,13 +395,13 @@ var Grid = (function() {
 			var self = this;
 			
 			// remove the current image in the preview
-			if( typeof self.$largeImg != 'undefined' ) {
+			/*if( typeof self.$largeImg != 'undefined' ) {
 				self.$largeImg.remove();
-			}
+			} */
 
 			// preload large image and add it to the preview
 			// for smaller screens we don´t display the large image (the media query will hide the fullimage wrapper)
-			if( self.$fullimage.is( ':visible' ) ) {
+			/*if( self.$fullimage.is( ':visible' ) ) {
 				this.$loading.show();
 				$( '<img/>' ).load( function() {
 					var $img = $( this );
@@ -412,7 +412,7 @@ var Grid = (function() {
 						self.$fullimage.append( self.$largeImg );
 					}
 				} ).attr( 'src', eldata.largesrc );	
-			}
+			} */
 
 		},
 		open : function() {
@@ -440,9 +440,9 @@ var Grid = (function() {
 
 			setTimeout( $.proxy( function() {
                 
-				if( typeof this.$largeImg !== 'undefined' ) {
+				/*if( typeof this.$largeImg !== 'undefined' ) {
 					this.$largeImg.fadeOut( 'fast' );
-				}
+				}*/
 				this.$previewEl.css( 'height', 0 );
 				// the current expanded item (might be different from this.$item)
 				var $expandedItem = $items.eq( this.expandedIdx );

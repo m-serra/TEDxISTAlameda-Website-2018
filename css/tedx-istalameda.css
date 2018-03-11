@@ -487,28 +487,41 @@ hamb-icon span:active{
 }
 
 #main_sponsor{
-	color: #ff2200;
+	color: #ff3417;
 }
 
 #institutional_sponsor{
-	color: rgba(0,161,225,1);
+	color: #00a1e0;
 }
 
+#social_sponsor{
+	color: #9c71c2;
+}
+
+#food_sponsor{
+	color: #71b041;
+}
+
+#logistics_sponsor{
+	color: #000000;
+}
+
+
 #gold_sponsor{
-	color: rgba(244,218,74,1);
+	color: #f5dc37;
 }
 
 #silver_sponsor{
-	color: rgba(194,194,194,1);
+	color: #d3d7de;
 }
 
 #bronze_sponsor{
-	color: rgba(140,58,13,1);
+	color: #893813;
 }
 
 
 #partner_4:after{
-    background: rgba(244,218,74,1);
+    background: #f5dc37;
     content: '';
     display: inline-block;
     height: 0.2em;
@@ -526,7 +539,7 @@ hamb-icon span:active{
 
 
 #partner_h2:after{
-    background: rgba(194,194,194,1);
+    background: #d3d7de;
     content: '';
     display: inline-block;
     height: 0.2em;
@@ -534,7 +547,7 @@ hamb-icon span:active{
 }
 
 #partner_h3:after{
-    background: rgba(140,58,13,1);
+    background: #893813;
     content: '';
     display: inline-block;
     height: 0.2em;
@@ -542,7 +555,7 @@ hamb-icon span:active{
 }
 
 #partner_h4:after{
-    background: rgba(0,161,225,1);
+    background: #00a1e0;
     content: '';
     display: inline-block;
     height: 0.2em;
@@ -550,7 +563,31 @@ hamb-icon span:active{
 }
 
 #partner_h5:after{
-    background: #ff2200;
+    background: #ff3417;
+    content: '';
+    display: inline-block;
+    height: 0.2em;
+    width: 100%;
+}
+
+#partner_h6:after{
+    background: #9c71c2;
+    content: '';
+    display: inline-block;
+    height: 0.2em;
+    width: 100%;
+}
+
+#partner_h7:after{
+    background: #71b041;
+    content: '';
+    display: inline-block;
+    height: 0.2em;
+    width: 100%;
+}
+
+#partner_h8:after{
+    background: #000000;
     content: '';
     display: inline-block;
     height: 0.2em;
@@ -800,15 +837,19 @@ margin-left: 10%}
 
 .og-fullimg,
 .og-details {
-	width: 50%;
-	float: left;
+    position: absolute;
+	width: 80%;
+    /*margin-left: 10%;*/
 	height: 100%;
 	overflow: hidden;
-	position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: inline-block;
+    
 }
 
 .og-details {
-	padding: 0 40px 0 20px;
 }
 
 .og-fullimg {
@@ -842,12 +883,12 @@ margin-left: 10%}
     text-align: justify;
     position: absolute;
     width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: auto;
+    top: 20%;
+
 }
 
-.og-fullimg a {
+.og-details a {
     position: absolute;
     max-height: 20%;
 	font-weight: 700;
@@ -860,12 +901,12 @@ margin-left: 10%}
 	/*display: inline-block;*/
 	margin: 30px 0 0;
 	outline: none;
-    top: 75%;
+    top: 70%;
     left: 50%;
-    transform: translate(-50%, -75%); 
+    transform: translate(-50%, -70%); 
 }
 
-.og-fullimg a:hover {
+.og-details a:hover {
 	border-color: #ff2200;
 	color: #ff2200;
     list-style: none;
@@ -1112,7 +1153,13 @@ margin-left: 10%}
 
 .speaker > a {
 	color: #ff2100!important;
-	cursor: pointer;
+	cursor: default;
+    text-decoration: none;
+}
+.speaker > a:hover {
+	color: #ff2100!important;
+	cursor: default;
+    text-decoration: none;
 }
 
 .excerpt {
@@ -1360,7 +1407,7 @@ margin-left: 10%}
     margin: 0 12px;
     letter-spacing: 1px;
     line-height: 16px;
-	font-size: 6.5em;
+	font-size: 4.5em;
 	font-weight: 600;
 	color: red;
 	transition-duration: 0.5s;
@@ -1398,20 +1445,20 @@ margin-left: 10%}
 
 
 .toggle0:hover{
-	font-size: 6.5em !important;
+	font-size: 5.5em !important;
 	transition-duration: 0.5s;
-	color: red;
+    cursor: pointer;
+
 }
 .toggle1:hover{
-	font-size: 6.5em !important;
+	font-size: 5.5em !important;
 	transition-duration: 0.5s;
-	color: red;
-	
+    cursor: pointer;
 }
 .toggle2:hover{
-	font-size: 6.5em !important;
+	font-size: 5.5em !important;
 	transition-duration: 0.5s;
-    color: red;
+    cursor: pointer;
 }
 
 
