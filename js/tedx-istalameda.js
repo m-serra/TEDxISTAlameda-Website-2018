@@ -217,6 +217,11 @@ jQuery(document).ready(function () {
         ];
 
     }
+    /*necessário para o menu ficar fixado em baixo e para fixar a adress bar*/
+    if( jscd.os == 'iOS' || jscd.os == 'Android'){
+        $('html').css('position', 'fixed');
+        $('body').css('position', 'fixed');
+    }
 
     slideshow(jscd.os);
 

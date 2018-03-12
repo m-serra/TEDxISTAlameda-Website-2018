@@ -9,8 +9,9 @@ html,body
     left: 0;
     font-family: 'Helvetica', 'Arial', sans-serif;
     overflow-x:hidden;
+    
     /*position fixed pode dar problemas*/
-    position: fixed;
+   /* position: fixed;*/
 
     /* Allow Smooth Scroll */
     /*overflow-y: scroll; *//* has to be scroll, not auto */
@@ -890,7 +891,7 @@ margin-left: 10%}
 
 }
 
-#BCG p{
+#BCG .og-details p{
     top: 20%;
 }
 
@@ -940,28 +941,17 @@ margin-left: 10%}
 	animation: loader 0.5s infinite ease-in-out both;
 }
 
-@-webkit-keyframes loader {
-	0% { background: #ddd; }
-	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
-}
 
-@-moz-keyframes loader {
-	0% { background: #ddd; }
-	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
-}
+@media screen and (max-width: 930px) {
 
-@keyframes loader {
-	0% { background: #ddd; }
-	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+    #BCG .og-details p{line-height: 18px;}
+    .og-expander p { font-size: 14px; }
 }
 
 @media screen and (max-width: 830px) {
 
 	.og-expander h3 { font-size: 32px; }
-	.og-expander p { font-size: 13px; }
+	.og-expander p { font-size: 12px; }
 	.og-expander a { font-size: 12px; }
 
 }
@@ -969,8 +959,19 @@ margin-left: 10%}
 @media screen and (max-width: 650px) {
 
 	.og-fullimg { display: none; }
-	.og-details { float: none; width: 100%; }
+	.og-details { float: none; width: 80%; top:45%; }
+    #BCG .og-details p{ font-size: 10px; line-height: 16px; top: 25%;}
+    #BCG .og-details a {top: 88%;}
 
+}
+
+@media screen and (max-width: 450px) {
+
+	.og-fullimg { display: none; }
+	.og-details { float: none; width: 80%; top:40%; }
+    .og-expander a { font-size: 10px; padding: 8px 16px; }
+    .og-close {top:20px;}
+    #BCG .og-details p{ font-size: 9px; line-height: 14px; top: 25%;}
 }
 
 .about {
