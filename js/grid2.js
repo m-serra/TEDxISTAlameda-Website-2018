@@ -499,7 +499,7 @@ var Grid = (function() {
 				};
 
 			this.calcHeight();
-			this.$previewEl.css( 'height', this.height - 100 );
+			this.$previewEl.css( 'height', this.height );
 			this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
 
 			if( !support ) {
