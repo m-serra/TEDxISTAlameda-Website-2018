@@ -1472,7 +1472,7 @@ Com presença em diferentes países europeus e com mais de 250 funcionários, a 
                                 </div>
 							</header>
 							<br>
-							<section style="margin-bottom: 60px">
+							<section>
 								<div class="og-grid id6" >
                                     <div class="flex_div_noInfo" data-id="">
                                         <a data-largesrc="images/logos/7.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato."
@@ -1903,6 +1903,9 @@ Com presença em diferentes países europeus e com mais de 250 funcionários, a 
 
 					//show mute button
 					$(".mute").css("visibility", "visible");
+                    //fix body and html position
+                    $("html").css("position", "fixed");
+                    $("body").css("position", "fixed");
 
 					for (i = 1; i < 5; i++) {
 						/*remove the 'active' class from the navbar tabs when content is closed*/
@@ -1940,6 +1943,9 @@ Com presença em diferentes países europeus e com mais de 250 funcionários, a 
 
 					//hide mute button
 					$(".mute").css("visibility", "hidden");
+                    //remove position fixed from body and html to allow scrollbar drag
+                    $("html").css("position", "static");
+                    $("body").css("position", "static");
 
 					if (n == 1) {
 						document.getElementById("mobile_section_title").innerHTML = "About";
