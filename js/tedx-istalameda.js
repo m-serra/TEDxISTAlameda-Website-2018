@@ -463,13 +463,24 @@ if (window.mobilecheck == "true") {
 
 /* Attend Overlay */
 function on() {
+    
+    var myVideo = document.getElementById("video-background");
+    if (!myVideo.paused)
+        myVideo.pause();
+    
     $('.mobile_nav_overlay').removeClass('visible');
+    $('.animated_content').css('visibility','hidden');
     document.getElementById("overlay").style.display = "block";
     setTimeout(function () {$('.overlay').toggleClass('open')},5);
 }
 
 function off() {
+    var myVideo = document.getElementById("video-background");
+    if (myVideo.paused)
+        myVideo.play();
+    
     $('.overlay').toggleClass('open');
+    $('.animated_content').css('visibility','visible');
     document.getElementById("overlay").style.display = "none";
 }
 
