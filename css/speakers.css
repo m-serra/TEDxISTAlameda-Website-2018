@@ -48,7 +48,7 @@
 
 
 .speaker_name {
-    width: 63%;
+    width: 99%;
     margin: 0 auto;
     position: relative;
     top:0;
@@ -157,6 +157,16 @@
     
 }
 
+@media screen and (max-width: 480px) {
+    
+    .speaker_name {
+        margin: 0;
+        text-align: left;
+    }
+
+    
+}
+
 
 .speaker_info_content {
     text-align: justify;
@@ -185,4 +195,6 @@
     margin: 2vh 1vh;
     z-index: 99;
 }
+
+
 
