@@ -18,10 +18,14 @@
     flex-wrap: wrap;
     flex-flow: row wrap;
     justify-content: center;
+    
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
 }
 
 
 .ind_speaker18_container {
+    position: relative;
     margin:0;
     height: 60vh;
     width: 200px;
@@ -61,15 +65,14 @@
     background-color: rgba(255,0,0,0.6);
     padding: 0 10% 10% 10%;
     overflow:hidden;
+    position: relative;
 }
 
 .close_speakers {
-    width:25px;
-    height:25px;
     top:0;
     right:0;
-    position: relative;
-    background-color: red;
+    margin: 3vh;
+    position: absolute;
     float: right;
     display: block;
 }
@@ -164,4 +167,22 @@
     height:80%;
 }
 
+
+
+
+.overlay_name {
+    display: inline;
+    writing-mode: vertical-lr;
+    -ms-writing-mode: tb-rl;
+    transform-origin: center;
+    transform: rotate(180deg);
+    color: white;
+    font-size: 3.5vh;
+    font-weight: bold;
+    position: absolute; 
+    bottom: 0; 
+    right: 0;
+    margin: 2vh 1vh;
+    z-index: 99;
+}
 

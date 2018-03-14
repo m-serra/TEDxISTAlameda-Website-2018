@@ -14,16 +14,26 @@ $(document).ready(function(){
     };
 
     preload(preload_pics);
-
+    
+    
+    $(".close_speakers").click(function() {
+        close_speakers();
+        return false;
+    });
+    
+    $("#speakers").click(function() {
+        close_speakers();
+        return false;
+    });
 
     $(".ind_container").click(function() {
 
         if($(window).width()>480){
-            var altura=$(this).position();    
-
+            var altura=$(this).offset().top;
+            
             for(i=1;i<=10;i++){
                 
-                if($("#ind_container_"+i).position().top==altura.top){
+                if($("#ind_container_"+i).offset().top==altura){
                     $("#speaker18_"+i).css({"width": size_min});
                 }else{
                     $("#speaker18_"+i).css({"width": size_default});
@@ -38,14 +48,17 @@ $(document).ready(function(){
                 
                 if($(this)[0]!=$("#ind_container_"+i)[0]){
                     $("#ind_container_"+i).children().fadeOut(100);
+                    $("#ind_container_"+i).prev().fadeIn(200);
                     $("#ind_container_"+i).css({"background-size": "background-size: auto 100%;"});
                 }
                
             }
             
             $(this).children().fadeIn(200);
+            $(this).prev().fadeOut(200);
             $(this).css({"background-size": "cover"});
         
+    return false;
     });
 
     var size_max, size_min, size_default, size_full;
@@ -71,7 +84,6 @@ $(document).ready(function(){
         }
 
         if(janela<=480){
-            console.log('ye');
             $(".speakers18_container").css({"padding": "0"});
             for(i=1;i<=10;i++){
                 $("#speaker18_"+i).css({"width": size_full});
@@ -81,6 +93,7 @@ $(document).ready(function(){
             for(i=1;i<=10;i++){
                 $("#speaker18_"+i).css({"width": size_default});
                 $("#ind_container_"+i).children().fadeOut(100);
+                $("#ind_container_"+i).prev().fadeIn(200);
                 $("#ind_container_"+i).css({"background-size": "background-size: auto 100%;"});
             }
 
@@ -121,5 +134,21 @@ $(document).ready(function(){
             $(this).css({"background-size": "auto 100%"});
             };
         });
+    
+    
+    function close_speakers(){
+        if($(window).width()>480){
+            for(i=1;i<=10;i++){
+                $("#speaker18_"+i).css({"width": size_default});
+            }
+        }
+        
+        for(i=1;i<=10;i++){    
+            $("#ind_container_"+i).children().fadeOut(100);
+            $("#ind_container_"+i).prev().fadeIn(200);
+            $("#ind_container_"+i).css({"background-size": "background-size: auto 100%;"});
+                
+        }
+    }
     
 });
