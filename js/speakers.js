@@ -3,7 +3,7 @@ $(document).ready(function(){
     var slow = 250;
     var fast = 100;
 
-    preload_pics=["images/speakers/unknown-avatar.jpg","images/speakers/1_arlindo.jpg","images/speakers/3_rosarinho.jpg","images/speakers/7_darchite.jpg","images/speakers/8_zaid.jpg","images/speakers/10_diogo.jpg","images/speakers/11_jans.jpg","images/speakers/12_carmo.jpg"];
+    preload_pics=["images/speakers/1_arlindo.jpg","images/speakers/3_rosarinho.jpg","images/speakers/7_darchite.jpg","images/speakers/8_zaid.jpg","images/speakers/10_diogo.jpg","images/speakers/11_jans.jpg","images/speakers/12_carmo.jpg","/images/speakers/bw/1_arlindo.jpg"];
 
     var images = [];
     function preload() {
@@ -150,5 +150,51 @@ $(document).ready(function(){
                 
         }
     }
+    
+    
+    
+    $("#ind_container_1").click(function() {
+        document.getElementById('ind_container_1').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+    });
+    
+    $("#ind_container_2").click(function() {
+        document.getElementById('ind_container_2').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+    });
+    
+    $("#ind_container_3").click(function() {
+        document.getElementById('ind_container_3').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+    });
+    
+    $("#ind_container_4").click(function() {
+        document.getElementById('ind_container_4').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+    });
+    
+    $("#ind_container_5").click(function() {
+        document.getElementById('ind_container_5').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+    });
+    
+    $("#ind_container_6").click(function() {
+        document.getElementById('ind_container_6').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+    });
+    
+    $("#ind_container_7").click(function() {
+        document.getElementById('ind_container_7').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+    });
+    
+    $("#ind_container_8").click(function() {
+        document.getElementById('ind_container_8').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+    });
+    
+    $("#ind_container_9").click(function() {
+        document.getElementById('ind_container_9').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+    });
+    
+    $("#ind_container_10").click(function() {
+        document.getElementById('ind_container_10').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+    });
+    
+    
+    
+    
     
 });
