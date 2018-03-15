@@ -79,8 +79,20 @@
     float: right;
     display: block;
     z-index: 99;
+    stroke:white;
 }
 
+.close_speakers:hover {
+    stroke:black;
+}
+
+.ind_container {
+    cursor: pointer; 
+}
+
+.speaker_info {
+    cursor: auto; 
+}
 
 #ind_container_1 {
     background: url("../images/speakers/12_carmo.jpg") no-repeat center;

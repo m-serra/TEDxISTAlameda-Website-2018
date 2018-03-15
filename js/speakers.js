@@ -58,7 +58,10 @@ $(document).ready(function(){
             
             $(this).children().fadeIn(200);
             $(this).prev().fadeOut(200);
-            $(this).css({"background-size": "cover"});
+            $( this ).fadeTo( fast , 1, function() {
+            // Animation complete.
+            });
+            
             toggle_color();
 
         };
@@ -136,18 +139,21 @@ $(document).ready(function(){
     addEvent(window, "resize", padding_speakers);
 
 
-/*
+
     $(".ind_container").hover(function(){
         if($(this).children().css('display')=='none'){
-            $(this).css({"background-size": "auto 110%"});
+            $("html").css("cursor: url('cursor url with protocol'), auto");
+            $( this ).fadeTo( fast , 0.8, function() {
+            // Animation complete.
+            });
             };
         }, function(){
-            if($(this).children().css('display')=='none'){
-            $(this).css({"background-size": "cover"});
-            };
+             $( this ).fadeTo( fast , 1, function() {
+            // Animation complete.
+            });
         });
         
-*/
+
     
     
 
