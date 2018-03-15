@@ -185,12 +185,12 @@
 
 			<!-- Attend Button -->
             
-			<!--<div style="padding:20px">
+			<div style="padding:20px">
 				<button id="attend" class="button button--antiman button--inverted button--border-thin button--text-thick button--size-s"
 				 onclick="on()">
 					<span>Attend</span>
 				</button>
-			</div> -->
+			</div>
 
 			<!-- Logo -->
 			<svg class="logo-svg" id="logo" viewBox="0 0 1270 247">
@@ -1474,12 +1474,6 @@ Com presença em diferentes países europeus e com mais de 250 funcionários, a 
 							<br>
 							<section>
 								<div class="og-grid id6" >
-                                    <div class="flex_div_noInfo" data-id="">
-                                        <a data-largesrc="images/logos/7.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato."
-                                         id="4">
-                                            <img class="partner_logo" src="images/logos/7.jpg" alt="img01"/>
-                                        </a>
-                                    </div>
                                     <div class="flex_div" data-id="6">
                                         <a href="https://taxify.eu/pt-pt/" target="_blank" data-largesrc="images/logos/9.png" data-title="" data-description="Taxify é a forma mais eficiente e económica para viajar em Lisboa. Estamos a interligar os passageiros com os melhores motoristas privados locais aos melhores preços. Quando viaja com a Taxify, fazemos o nosso melhor para que a viagem seja a mais perfeita e confortável possível. Obtenha a App compatível com Iphone e Android."
                                          id="4">
@@ -1728,7 +1722,7 @@ Com presença em diferentes países europeus e com mais de 250 funcionários, a 
             <a class="navbar-brand button6" style="order:2">Speakers</a>
             <a class="navbar-brand button7" style="order:3">Partners</a>
             <a class="navbar-brand button8" style="order:4">Info</a>
-           <!-- <a class="navbar-brand attend button9" style="order:5">Attend</a> -->
+            <a class="navbar-brand attend button9" style="order:5">Attend</a>
         </navbar>
     </div>
 	</div>
@@ -2065,7 +2059,7 @@ Com presença em diferentes países europeus e com mais de 250 funcionários, a 
 			button6.addEventListener('click', function () { navtoggle('2'); });
 			button7.addEventListener('click', function () { navtoggle('3'); });
 			button8.addEventListener('click', function () { navtoggle('4'); });
-			//button9.addEventListener('click', function () { on(); });
+			button9.addEventListener('click', function () { on(); });
 
 
 			button1.addEventListener('click', navbutton1);
@@ -2083,14 +2077,14 @@ Com presença em diferentes países europeus e com mais de 250 funcionários, a 
 
 			// content toggle HOTKEY
 			// SPACE
-			$(document).keydown(function (e) {
+			/*$(document).keydown(function (e) {
 				if (e.keyCode == 32) { // key SPACE (content)
 					e.preventDefault(); // prevents Default function of key
 					//$(trigger).blur(); // unselects the trigger button if it was previous selected by clicking on it
 					toggleContent('0');
 
 				}
-			});
+			});*/
 
 		})();
 	</script>
