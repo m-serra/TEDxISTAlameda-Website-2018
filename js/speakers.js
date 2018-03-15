@@ -3,7 +3,7 @@ $(document).ready(function(){
     var slow = 250;
     var fast = 100;
 
-    preload_pics=["images/speakers/1_arlindo.jpg","images/speakers/3_rosarinho.jpg","images/speakers/7_darchite.jpg","images/speakers/8_zaid.jpg","images/speakers/10_diogo.jpg","images/speakers/11_jans.jpg","images/speakers/12_carmo.jpg","/images/speakers/bw/1_arlindo.jpg"];
+    preload_pics=["images/speakers/1_arlindo.jpg","images/speakers/3_rosarinho.jpg","images/speakers/7_darchite.jpg","images/speakers/8_zaid.jpg","images/speakers/10_diogo.jpg","images/speakers/11_jans.jpg","images/speakers/12_carmo.jpg","images/speakers/bw/12_carmo.jpg"];
 
     var images = [];
     function preload() {
@@ -27,6 +27,8 @@ $(document).ready(function(){
     });
 
     $(".ind_container").click(function() {
+        
+        if($(this).children().css('display')=='none'){
 
         if($(window).width()>480){
             var altura=$(this).offset().top;
@@ -49,7 +51,7 @@ $(document).ready(function(){
                 if($(this)[0]!=$("#ind_container_"+i)[0]){
                     $("#ind_container_"+i).children().fadeOut(100);
                     $("#ind_container_"+i).prev().fadeIn(200);
-                    $("#ind_container_"+i).css({"background-size": "background-size: auto 100%;"});
+                    $("#ind_container_"+i).css({"background-size": "background-size: cover"});
                 }
                
             }
@@ -57,7 +59,9 @@ $(document).ready(function(){
             $(this).children().fadeIn(200);
             $(this).prev().fadeOut(200);
             $(this).css({"background-size": "cover"});
-        
+            toggle_color();
+
+        };
     return false;
     });
 
@@ -88,14 +92,21 @@ $(document).ready(function(){
             for(i=1;i<=10;i++){
                 $("#speaker18_"+i).css({"width": size_full});
             }
-        }else{
+            size_d=0.9*$(".speakers18_container")[0].getBoundingClientRect().width;
+            console.log(size_d);
+        }
 
             for(i=1;i<=10;i++){
-                $("#speaker18_"+i).css({"width": size_default});
+                if(janela<=480){
+                    $("#speaker18_"+i).css({"width": size_full});
+                }else{
+                    $("#speaker18_"+i).css({"width": size_default}); 
+                }
+
                 $("#ind_container_"+i).children().fadeOut(100);
                 $("#ind_container_"+i).prev().fadeIn(200);
-                $("#ind_container_"+i).css({"background-size": "background-size: auto 100%;"});
-            }
+                $("#ind_container_"+i).css({"background-size": "background-size: cover;"});
+            
 
             var nr = Math.floor(comprimento/size_d);
             var padding = Math.floor(Math.floor(comprimento-nr*size_d)/2);
@@ -103,7 +114,7 @@ $(document).ready(function(){
             $(".speakers18_container").css({"padding": "0 "+padding+"px"});
             size_min = Math.floor( (100-size_max) / (nr-1) ) + "%";
             
-            
+            toggle_color();
 
         }
 
@@ -125,16 +136,21 @@ $(document).ready(function(){
     addEvent(window, "resize", padding_speakers);
 
 
+/*
     $(".ind_container").hover(function(){
-            if($(this).parent().width()<=143){
+        if($(this).children().css('display')=='none'){
             $(this).css({"background-size": "auto 110%"});
             };
         }, function(){
-            if($(this).parent().width()<=143){
-            $(this).css({"background-size": "auto 100%"});
+            if($(this).children().css('display')=='none'){
+            $(this).css({"background-size": "cover"});
             };
         });
+        
+*/
     
+    
+
     
     function close_speakers(){
         if($(window).width()>480){
@@ -146,54 +162,80 @@ $(document).ready(function(){
         for(i=1;i<=10;i++){    
             $("#ind_container_"+i).children().fadeOut(100);
             $("#ind_container_"+i).prev().fadeIn(200);
-            $("#ind_container_"+i).css({"background-size": "background-size: auto 100%;"});
+            $("#ind_container_"+i).css({"background-size": "background-size: cover;"});
                 
         }
+        
+        toggle_color();
     }
     
     
     
     $("#ind_container_1").click(function() {
-        document.getElementById('ind_container_1').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        setTimeout(function() {
+            document.getElementById('ind_container_1').style.backgroundImage = 'url(./images/speakers/bw/12_carmo.jpg)';
+        }, 100);
     });
-    
     $("#ind_container_2").click(function() {
-        document.getElementById('ind_container_2').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        setTimeout(function() {
+            document.getElementById('ind_container_2').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        }, 100);
     });
-    
     $("#ind_container_3").click(function() {
-        document.getElementById('ind_container_3').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        setTimeout(function() {
+            document.getElementById('ind_container_3').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        }, 100);
     });
-    
     $("#ind_container_4").click(function() {
-        document.getElementById('ind_container_4').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        setTimeout(function() {
+            document.getElementById('ind_container_4').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        }, 100);
     });
-    
     $("#ind_container_5").click(function() {
-        document.getElementById('ind_container_5').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        setTimeout(function() {
+            document.getElementById('ind_container_5').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        }, 100);
     });
-    
     $("#ind_container_6").click(function() {
-        document.getElementById('ind_container_6').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        setTimeout(function() {
+            document.getElementById('ind_container_6').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        }, 100);
     });
-    
     $("#ind_container_7").click(function() {
-        document.getElementById('ind_container_7').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        setTimeout(function() {
+            document.getElementById('ind_container_7').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        }, 100);
     });
-    
     $("#ind_container_8").click(function() {
-        document.getElementById('ind_container_8').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        setTimeout(function() {
+            document.getElementById('ind_container_8').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        }, 100);
     });
-    
     $("#ind_container_9").click(function() {
-        document.getElementById('ind_container_9').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        setTimeout(function() {
+            document.getElementById('ind_container_9').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        }, 100);
     });
-    
     $("#ind_container_10").click(function() {
-        document.getElementById('ind_container_10').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        setTimeout(function() {
+            document.getElementById('ind_container_10').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        }, 100);
     });
+
+        
     
-    
+    function toggle_color(){
+        document.getElementById('ind_container_1').style.backgroundImage = 'url(./images/speakers/12_carmo.jpg)';
+        document.getElementById('ind_container_2').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';
+        document.getElementById('ind_container_3').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+        document.getElementById('ind_container_4').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+        document.getElementById('ind_container_5').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+        document.getElementById('ind_container_6').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+        document.getElementById('ind_container_7').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+        document.getElementById('ind_container_8').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+        document.getElementById('ind_container_9').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+        document.getElementById('ind_container_10').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+    }
     
     
     
