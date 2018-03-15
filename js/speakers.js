@@ -1,214 +1,242 @@
-var slow = 250;
-var fast = 100;
-
 $(document).ready(function(){
     
-    
-    $("#ind_container_1").hover(function(){
-        if($("#ind_container_1").width()<=$("#ind_container_2").width()){
-        $("#ind_container_1").css({"background-size": "auto 110%"});
-        };
-    }, function(){
-        if($("#ind_container_1").width()<=$("#ind_container_2").width()){
-        $("#ind_container_1").css({"background-size": "auto 100%"});
-        };
-    });
-    
-    
-    $("#ind_container_2").hover(function(){
-        if($("#ind_container_2").width()<=$("#ind_container_1").width()){
-        $("#ind_container_2").css({"background-size": "auto 110%"});
-        };
-    }, function(){
-        if($("#ind_container_2").width()<=$("#ind_container_1").width()){
-        $("#ind_container_2").css({"background-size": "auto 100%"});
-        };
-    });
-    
-    
-    $("#ind_container_3").hover(function(){
-        if($("#ind_container_3").width()<=$("#ind_container_4").width()){
-        $("#ind_container_3").css({"background-size": "auto 110%"});
-        };
-    }, function(){
-        if($("#ind_container_3").width()<=$("#ind_container_4").width()){
-        $("#ind_container_3").css({"background-size": "auto 100%"});
-        };
-    });
-    
-    
-    $("#ind_container_4").hover(function(){
-        if($("#ind_container_4").width()<=$("#ind_container_3").width()){
-        $("#ind_container_4").css({"background-size": "auto 110%"});
-        };
-    }, function(){
-        if($("#ind_container_4").width()<=$("#ind_container_3").width()){
-        $("#ind_container_4").css({"background-size": "auto 100%"});
-        };
-    });
-    
-    
-    $("#ind_container_5").hover(function(){
-        if($("#ind_container_5").width()<=$("#ind_container_6").width()){
-        $("#ind_container_5").css({"background-size": "auto 110%"});
-        };
-    }, function(){
-        if($("#ind_container_5").width()<=$("#ind_container_6").width()){
-        $("#ind_container_5").css({"background-size": "auto 100%"});
-        };
-    });
-    
-    
-    $("#ind_container_6").hover(function(){
-        if($("#ind_container_6").width()<=$("#ind_container_5").width()){
-        $("#ind_container_6").css({"background-size": "auto 110%"});
-        };
-    }, function(){
-        if($("#ind_container_6").width()<=$("#ind_container_5").width()){
-        $("#ind_container_6").css({"background-size": "auto 100%"});
-        };
-    });
-    
-    
-    $("#ind_container_7").hover(function(){
-        if($("#ind_container_7").width()<=$("#ind_container_8").width()){
-        $("#ind_container_7").css({"background-size": "auto 110%"});
-        };
-    }, function(){
-        if($("#ind_container_7").width()<=$("#ind_container_8").width()){
-        $("#ind_container_7").css({"background-size": "auto 100%"});
-        };
-    });
-    
-    $("#ind_container_8").hover(function(){
-        if($("#ind_container_8").width()<=$("#ind_container_7").width()){
-        $("#ind_container_8").css({"background-size": "auto 110%"});
-        };
-    }, function(){
-        if($("#ind_container_8").width()<=$("#ind_container_7").width()){
-        $("#ind_container_8").css({"background-size": "auto 100%"});
-        };
-    });
-    
-    
-    $("#ind_container_9").hover(function(){
-        if($("#ind_container_9").width()<=$("#ind_container_10").width()){
-        $("#ind_container_9").css({"background-size": "auto 110%"});
-        };
-    }, function(){
-        if($("#ind_container_9").width()<=$("#ind_container_10").width()){
-        $("#ind_container_9").css({"background-size": "auto 100%"});
-        };
-    });
-    
-    
-    $("#ind_container_10").hover(function(){
-        if($("#ind_container_10").width()<=$("#ind_container_9").width()){
-        $("#ind_container_10").css({"background-size": "auto 110%"});
-        };
-    }, function(){
-        if($("#ind_container_10").width()<=$("#ind_container_9").width()){
-        $("#ind_container_10").css({"background-size": "auto 100%"});
-        };
-    });
-        
-        
-});
+    var slow = 250;
+    var fast = 100;
 
+    preload_pics=["images/speakers/1_arlindo.jpg","images/speakers/3_rosarinho.jpg","images/speakers/7_darchite.jpg","images/speakers/8_zaid.jpg","images/speakers/10_diogo.jpg","images/speakers/11_jans.jpg","images/speakers/12_carmo.jpg","images/speakers/bw/12_carmo.jpg"];
 
-
-function select_speaker(n){
-    
-    var min, max, size_default, size_min, size_max;
-    
-    if($(window).width()>896){
-        if(n<=5){
-            min=1;
-            max=5;
-        }else if(n<=10){
-            min=6;
-            max=10;
+    var images = [];
+    function preload() {
+        for (var i = 0; i < arguments.length; i++) {
+            images[i] = new Image();
+            images[i].src = preload_pics[i];
         }
-        size_default="19%";
-        size_min="7%";
-        size_max="67%";
-    }else{
-       if(n<=2){
-            min=1;
-            max=2;
-        }else if(n<=4){
-            min=3;
-            max=4;
-        }else if(n<=6){
-            min=5;
-            max=6;
-        }else if(n<=8){
-            min=7;
-            max=8;
-        }else if(n<=10){
-            min=9;
-            max=10;
-        }
-        
-        size_default="49%";
-        size_min="14%";
-        size_max="85%";
-    }
+    };
+
+    preload(preload_pics);
     
-    if(n==0){
-        
-        for(i=1;i<=15;i++){
-        $(document.getElementById("speaker18_"+i)).animate({ width:size_default },slow);
-        $("#info_speaker"+i).fadeOut(slow); 
-        $("#ind_container_"+i).css({"background-size": "background-size: auto 100%;"});
-        };
-        return
-    }
     
-    for(i=1;i<=10;i++){
-        if(i==n){
-            $(document.getElementById("speaker18_"+i)).animate({ width:size_max },slow);
-            $("#info_speaker"+i).fadeIn(200);
-            $("#ind_container_"+i).css({"background-size": "cover"});
+    $(".close_speakers").click(function() {
+        close_speakers();
+        return false;
+    });
+    
+    $("#speakers").click(function() {
+        close_speakers();
+        return false;
+    });
+
+    $(".ind_container").click(function() {
+        
+        if($(this).children().css('display')=='none'){
+
+        if($(window).width()>480){
+            var altura=$(this).offset().top;
             
-        }else if((min<=i)&&(i<=max)){
-            $(document.getElementById("speaker18_"+i)).animate({ width:size_min },slow);
-            $("#info_speaker"+i).fadeOut(100);
-            $("#ind_container_"+i).css({"background-size": "background-size: auto 100%;"});
+            for(i=1;i<=10;i++){
+                
+                if($("#ind_container_"+i).offset().top==altura){
+                    $("#speaker18_"+i).css({"width": size_min});
+                }else{
+                    $("#speaker18_"+i).css({"width": size_default});
+                }
+            }
+
+            $(this).parent().css({"width": size_max+'%'});
+
+            }
+        
+        for(i=1;i<=10;i++){
+                
+                if($(this)[0]!=$("#ind_container_"+i)[0]){
+                    $("#ind_container_"+i).children().fadeOut(100);
+                    $("#ind_container_"+i).prev().fadeIn(200);
+                    $("#ind_container_"+i).css({"background-size": "background-size: cover"});
+                }
+               
+            }
+            
+            $(this).children().fadeIn(200);
+            $(this).prev().fadeOut(200);
+            $(this).css({"background-size": "cover"});
+            toggle_color();
+
+        };
+    return false;
+    });
+
+    var size_max, size_min, size_default, size_full;
+
+    size_default = "200px";
+    size_d = 200;
+
+    size_full = "90%";
+
+
+    function padding_speakers(){
+
+        var comprimento = $(".speakers18_container")[0].getBoundingClientRect().width;
+        var janela = $(window).width();
+
+
+        if(janela>1000){
+            size_max = 60;
+        }else if(janela>500){
+            size_max = 70;
         }else{
-            $(document.getElementById("speaker18_"+i)).animate({ width:size_default },slow);
-            $("#info_speaker"+i).fadeOut(100);
-            $("#ind_container_"+i).css({"background-size": "background-size: auto 100%;"});
+            size_max = 80;
         }
+
+        if(janela<=480){
+            $(".speakers18_container").css({"padding": "0"});
+            for(i=1;i<=10;i++){
+                $("#speaker18_"+i).css({"width": size_full});
+            }
+            size_d=0.9*$(".speakers18_container")[0].getBoundingClientRect().width;
+            console.log(size_d);
+        }
+
+            for(i=1;i<=10;i++){
+                if(janela<=480){
+                    $("#speaker18_"+i).css({"width": size_full});
+                }else{
+                    $("#speaker18_"+i).css({"width": size_default}); 
+                }
+
+                $("#ind_container_"+i).children().fadeOut(100);
+                $("#ind_container_"+i).prev().fadeIn(200);
+                $("#ind_container_"+i).css({"background-size": "background-size: cover;"});
+            
+
+            var nr = Math.floor(comprimento/size_d);
+            var padding = Math.floor(Math.floor(comprimento-nr*size_d)/2);
+
+            $(".speakers18_container").css({"padding": "0 "+padding+"px"});
+            size_min = Math.floor( (100-size_max) / (nr-1) ) + "%";
+            
+            toggle_color();
+
+        }
+
     }
-           
-}
+
+    padding_speakers();
+
+    var addEvent = function(object, type, callback) {
+        if (object == null || typeof(object) == 'undefined') return;
+        if (object.addEventListener) {
+            object.addEventListener(type, callback, false);
+        } else if (object.attachEvent) {
+            object.attachEvent("on" + type, callback);
+        } else {
+            object["on"+type] = callback;
+        }
+    };
+
+    addEvent(window, "resize", padding_speakers);
 
 
-preload_pics=["images/speakers/unknown-avatar.jpg","images/speakers/1_arlindo.jpg","images/speakers/3_rosarinho.jpg","images/speakers/7_darchite.jpg","images/speakers/8_zaid.jpg","images/speakers/10_diogo.jpg","images/speakers/11_jans.jpg","images/speakers/12_carmo.jpg"];
+/*
+    $(".ind_container").hover(function(){
+        if($(this).children().css('display')=='none'){
+            $(this).css({"background-size": "auto 110%"});
+            };
+        }, function(){
+            if($(this).children().css('display')=='none'){
+            $(this).css({"background-size": "cover"});
+            };
+        });
+        
+*/
+    
+    
 
-var images = [];
-function preload() {
-    for (var i = 0; i < arguments.length; i++) {
-        images[i] = new Image();
-        images[i].src = preload_pics[i];
+    
+    function close_speakers(){
+        if($(window).width()>480){
+            for(i=1;i<=10;i++){
+                $("#speaker18_"+i).css({"width": size_default});
+            }
+        }
+        
+        for(i=1;i<=10;i++){    
+            $("#ind_container_"+i).children().fadeOut(100);
+            $("#ind_container_"+i).prev().fadeIn(200);
+            $("#ind_container_"+i).css({"background-size": "background-size: cover;"});
+                
+        }
+        
+        toggle_color();
     }
-};
+    
+    
+    
+    $("#ind_container_1").click(function() {
+        setTimeout(function() {
+            document.getElementById('ind_container_1').style.backgroundImage = 'url(./images/speakers/bw/12_carmo.jpg)';
+        }, 100);
+    });
+    $("#ind_container_2").click(function() {
+        setTimeout(function() {
+            document.getElementById('ind_container_2').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        }, 100);
+    });
+    $("#ind_container_3").click(function() {
+        setTimeout(function() {
+            document.getElementById('ind_container_3').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        }, 100);
+    });
+    $("#ind_container_4").click(function() {
+        setTimeout(function() {
+            document.getElementById('ind_container_4').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        }, 100);
+    });
+    $("#ind_container_5").click(function() {
+        setTimeout(function() {
+            document.getElementById('ind_container_5').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        }, 100);
+    });
+    $("#ind_container_6").click(function() {
+        setTimeout(function() {
+            document.getElementById('ind_container_6').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        }, 100);
+    });
+    $("#ind_container_7").click(function() {
+        setTimeout(function() {
+            document.getElementById('ind_container_7').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        }, 100);
+    });
+    $("#ind_container_8").click(function() {
+        setTimeout(function() {
+            document.getElementById('ind_container_8').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        }, 100);
+    });
+    $("#ind_container_9").click(function() {
+        setTimeout(function() {
+            document.getElementById('ind_container_9').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        }, 100);
+    });
+    $("#ind_container_10").click(function() {
+        setTimeout(function() {
+            document.getElementById('ind_container_10').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+        }, 100);
+    });
 
-preload(preload_pics);
-
-
-$("#ind_container_1").click(function(){select_speaker(1);return false});
-$("#ind_container_2").click(function(){select_speaker(2);return false});
-$("#ind_container_3").click(function(){select_speaker(3);return false});
-$("#ind_container_4").click(function(){select_speaker(4);return false});
-$("#ind_container_5").click(function(){select_speaker(5);return false});
-$("#ind_container_6").click(function(){select_speaker(6);return false});
-$("#ind_container_7").click(function(){select_speaker(7);return false});
-$("#ind_container_8").click(function(){select_speaker(8);return false});
-$("#ind_container_9").click(function(){select_speaker(9);return false});
-$("#ind_container_10").click(function(){select_speaker(10);return false});
-$("#speakers").click(function(){select_speaker(0);return false});
-$(".button2").click(function(){select_speaker(0);return false});
-$(".button6").click(function(){select_speaker(0);return false});
-
+        
+    
+    function toggle_color(){
+        document.getElementById('ind_container_1').style.backgroundImage = 'url(./images/speakers/12_carmo.jpg)';
+        document.getElementById('ind_container_2').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';
+        document.getElementById('ind_container_3').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+        document.getElementById('ind_container_4').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+        document.getElementById('ind_container_5').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+        document.getElementById('ind_container_6').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+        document.getElementById('ind_container_7').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+        document.getElementById('ind_container_8').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+        document.getElementById('ind_container_9').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+        document.getElementById('ind_container_10').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+    }
+    
+    
+    
+});
