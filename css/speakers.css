@@ -56,7 +56,7 @@
     position: relative;
     top:0;
     color: white;
-    padding: 3% 40px 0 8%;
+    padding: 3% 40px 3% 8%;
 }
 
 
@@ -65,8 +65,8 @@
     display:none;
     width:100%;
     height:100%;
-    background-color: rgba(255,0,0,0.6);
-    padding: 0 2% 10% 2%;
+    background-color: rgba(255,0,0,0.65);
+    padding: 0 2% 8% 2%;
     overflow:hidden;
     position: relative;
 }
@@ -107,8 +107,8 @@
 }
 
 #ind_container_2 {
-    background: url("../images/speakers/1_arlindo.jpg") no-repeat center;
-    background-size: auto 100%;
+    background: url("../images/speakers/11_jans.jpg") no-repeat center;
+    background-size: cover;
     transition: background-image 0.1s ease-out;
     -moz-transition: background-image 0.1s ease-out; /* Firefox 4 */
     -webkit-transition: background-image 0.1s ease-out; /* Safari and Chrome */
@@ -117,7 +117,7 @@
 
 #ind_container_3 {
     background: url("../images/speakers/1_arlindo.jpg") no-repeat center;
-    background-size: auto 100%;
+    background-size: cover;
     transition: background-image 0.1s ease-out;
     -moz-transition: background-image 0.1s ease-out; /* Firefox 4 */
     -webkit-transition: background-image 0.1s ease-out; /* Safari and Chrome */
@@ -125,8 +125,8 @@
 }
 
 #ind_container_4 {
-    background: url("../images/speakers/1_arlindo.jpg") no-repeat center;
-    background-size: auto 100%;
+    background: url("../images/speakers/3_rosarinho.jpg") no-repeat center;
+    background-size: cover;
     transition: background-image 0.1s ease-out;
     -moz-transition: background-image 0.1s ease-out; /* Firefox 4 */
     -webkit-transition: background-image 0.1s ease-out; /* Safari and Chrome */
@@ -134,8 +134,8 @@
 }
 
 #ind_container_5 {
-    background: url("../images/speakers/1_arlindo.jpg") no-repeat center;
-    background-size: auto 100%;
+    background: url("../images/speakers/7_darchite.jpg") no-repeat center;
+    background-size: cover;
     transition: background-image 0.1s ease-out;
     -moz-transition: background-image 0.1s ease-out; /* Firefox 4 */
     -webkit-transition: background-image 0.1s ease-out; /* Safari and Chrome */
@@ -144,7 +144,7 @@
 
 #ind_container_6 {
     background: url("../images/speakers/1_arlindo.jpg") no-repeat center;
-    background-size: auto 100%;
+    background-size: cover;
     transition: background-image 0.1s ease-out;
     -moz-transition: background-image 0.1s ease-out; /* Firefox 4 */
     -webkit-transition: background-image 0.1s ease-out; /* Safari and Chrome */
@@ -153,7 +153,7 @@
 
 #ind_container_7 {
     background: url("../images/speakers/1_arlindo.jpg") no-repeat center;
-    background-size: auto 100%;
+    background-size: cover;
     transition: background-image 0.1s ease-out;
     -moz-transition: background-image 0.1s ease-out; /* Firefox 4 */
     -webkit-transition: background-image 0.1s ease-out; /* Safari and Chrome */
@@ -162,7 +162,7 @@
 
 #ind_container_8 {
     background: url("../images/speakers/1_arlindo.jpg") no-repeat center;
-    background-size: auto 100%;
+    background-size: cover;
     transition: background-image 0.1s ease-out;
     -moz-transition: background-image 0.1s ease-out; /* Firefox 4 */
     -webkit-transition: background-image 0.1s ease-out; /* Safari and Chrome */
@@ -171,7 +171,7 @@
 
 #ind_container_9 {
     background: url("../images/speakers/1_arlindo.jpg") no-repeat center;
-    background-size: auto 100%;
+    background-size: cover;
     transition: background-image 0.1s ease-out;
     -moz-transition: background-image 0.1s ease-out; /* Firefox 4 */
     -webkit-transition: background-image 0.1s ease-out; /* Safari and Chrome */
@@ -180,7 +180,7 @@
 
 #ind_container_10 {
     background: url("../images/speakers/1_arlindo.jpg") no-repeat center;
-    background-size: auto 100%;
+    background-size: cover;
     transition: background-image 0.1s ease-out;
     -moz-transition: background-image 0.1s ease-out; /* Firefox 4 */
     -webkit-transition: background-image 0.1s ease-out; /* Safari and Chrome */
@@ -227,6 +227,7 @@
 .speaker_info_content {
     text-align: justify;
     text-justify: inter-word;
+    line-height: 1.5;
     overflow-y: scroll;
     color:white;
     width:100%;
@@ -251,7 +252,11 @@
     right: 0;
     margin: 2vh 1vh;
     z-index: 99;
+    
+    transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out; /* Firefox 4 */
+    -webkit-transition: all 0.1s ease-out; /* Safari and Chrome */
+    -o-transition: all 0.1s ease-out;
 }
-
 
 
