@@ -3,8 +3,8 @@ $(document).ready(function(){
     var slow = 250;
     var fast = 100;
 
-    preload_pics=["images/speakers/1_arlindo.jpg","images/speakers/3_rosarinho.jpg","images/speakers/7_darchite.jpg","images/speakers/8_zaid.jpg","images/speakers/10_diogo.jpg","images/speakers/11_jans.jpg","images/speakers/12_carmo.jpg","images/speakers/bw/12_carmo.jpg"];
-
+    preload_pics=["./images/speakers/12_carmo.jpg","./images/speakers/bw/12_carmo.jpg","./images/speakers/11_jans.jpg","./images/speakers/bw/11_jans.jpg","./images/speakers/3_rosarinho.jpg","./images/speakers/bw/3_rosarinho.jpg","./images/speakers/7_darchite.jpg","./images/speakers/bw/7_darchite.jpg"];
+    
     var images = [];
     function preload() {
         for (var i = 0; i < arguments.length; i++) {
@@ -96,7 +96,6 @@ $(document).ready(function(){
                 $("#speaker18_"+i).css({"width": size_full});
             }
             size_d=0.9*$(".speakers18_container")[0].getBoundingClientRect().width;
-            console.log(size_d);
         }
 
             for(i=1;i<=10;i++){
@@ -143,12 +142,14 @@ $(document).ready(function(){
     $(".ind_container").hover(function(){
         if($(this).children().css('display')=='none'){
             $("html").css("cursor: url('cursor url with protocol'), auto");
+           /* $( this ).siblings('.overlay_name').css('color', 'red');*/
             $( this ).fadeTo( fast , 0.8, function() {
             // Animation complete.
             });
             };
         }, function(){
-             $( this ).fadeTo( fast , 1, function() {
+            /*$( this ).siblings('.overlay_name').css('color', 'white');*/
+            $( this ).fadeTo( fast , 1, function() {
             // Animation complete.
             });
         });
@@ -184,7 +185,7 @@ $(document).ready(function(){
     });
     $("#ind_container_2").click(function() {
         setTimeout(function() {
-            document.getElementById('ind_container_2').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+            document.getElementById('ind_container_2').style.backgroundImage = 'url(./images/speakers/bw/11_jans.jpg)';
         }, 100);
     });
     $("#ind_container_3").click(function() {
@@ -194,12 +195,12 @@ $(document).ready(function(){
     });
     $("#ind_container_4").click(function() {
         setTimeout(function() {
-            document.getElementById('ind_container_4').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+            document.getElementById('ind_container_4').style.backgroundImage = 'url(./images/speakers/bw/3_rosarinho.jpg)';
         }, 100);
     });
     $("#ind_container_5").click(function() {
         setTimeout(function() {
-            document.getElementById('ind_container_5').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+            document.getElementById('ind_container_5').style.backgroundImage = 'url(./images/speakers/bw/7_darchite.jpg)';
         }, 100);
     });
     $("#ind_container_6").click(function() {
@@ -232,10 +233,10 @@ $(document).ready(function(){
     
     function toggle_color(){
         document.getElementById('ind_container_1').style.backgroundImage = 'url(./images/speakers/12_carmo.jpg)';
-        document.getElementById('ind_container_2').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';
+        document.getElementById('ind_container_2').style.backgroundImage = 'url(./images/speakers/11_jans.jpg)';
         document.getElementById('ind_container_3').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
-        document.getElementById('ind_container_4').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
-        document.getElementById('ind_container_5').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+        document.getElementById('ind_container_4').style.backgroundImage = 'url(./images/speakers/3_rosarinho.jpg)';    
+        document.getElementById('ind_container_5').style.backgroundImage = 'url(./images/speakers/7_darchite.jpg)';    
         document.getElementById('ind_container_6').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
         document.getElementById('ind_container_7').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
         document.getElementById('ind_container_8').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
