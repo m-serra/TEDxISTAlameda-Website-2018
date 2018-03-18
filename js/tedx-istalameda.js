@@ -465,7 +465,9 @@ if (window.mobilecheck == "true") {
 function on() {
     
     var myVideo = document.getElementById("video-background");
-    if (!myVideo.paused)
+    var closed = document.getElementsByClassName("container--close");
+
+    if (!myVideo.paused && closed.length == 4)
         myVideo.pause();
     
     $('.mobile_nav_overlay').removeClass('visible');
@@ -476,7 +478,9 @@ function on() {
 
 function off() {
     var myVideo = document.getElementById("video-background");
-    if (myVideo.paused)
+    var closed = document.getElementsByClassName("container--close");
+    
+    if (myVideo.paused && closed.length == 4)
         myVideo.play();
     
     $('.overlay').toggleClass('open');

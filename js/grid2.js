@@ -364,7 +364,7 @@ var Grid = (function() {
             this.$text = $( '<p></p>' );
             this.$textwrap = $( '<div class="og-textwrap"></div>' ).append(this.$text);
 			this.$description = $( '<div class="og-description"></div>' ).append(this.$textwrap);
-			this.$href = $( '<a href="#">Visit website</a>' );
+			this.$href = $( '<a href="#" target="_blank">Visit website</a> ' );
 
 			this.$details = $( '<div class="og-details"></div>' ).append( /*this.$title ,*/ this.$description, this.$href );
 			this.$loading = $( '<div class="og-loading"></div>' );
@@ -408,7 +408,7 @@ var Grid = (function() {
 				};
 
 			this.$title.html( eldata.title );
-			this.$textwrap.html( eldata.description );
+			this.$text.html( eldata.description );
 			this.$href.attr( 'href', eldata.href );
 
 			var self = this;
@@ -478,14 +478,18 @@ var Grid = (function() {
 
 		},
 		calcHeight : function() {
-
-			var heightPreview = winsize.height - this.$item.data( 'height') - marginExpanded,
+            
+            var textHeight =  $('.og-textwrap p').height();
+            var buttonHeight =  $('.og-details a').height();
+			var heightPreview = 0.7 * winsize.height /*+ textHeight + button*/ - this.$item.data( 'height') - marginExpanded,
 				itemHeight = winsize.height;
-
-		/*	if( heightPreview < settings.minHeight ) {
+            
+            console.log('text height: ' + textHeight);
+            
+			/*if( heightPreview < settings.minHeight ) {
 				heightPreview = settings.minHeight;
 				itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
-			}*/
+			} */
 
 			this.height = heightPreview;
 			this.itemHeight = itemHeight;
