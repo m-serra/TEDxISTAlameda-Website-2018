@@ -7,7 +7,7 @@ $(document).ready(function(){
     
     var images = [];
     function preload() {
-        for (var i = 0; i < arguments.length; i++) {
+        for (var i = 0; i < preload_pics.length; i++) {
             images[i] = new Image();
             images[i].src = preload_pics[i];
         }
