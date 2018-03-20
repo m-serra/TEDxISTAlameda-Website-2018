@@ -269,7 +269,7 @@ alert(
 
 var images = [];
 function preload() {
-    for (var i = 0; i < arguments.length; i++) {
+    for (var i = 0; i < slideshow_pics.length; i++) {
         images[i] = new Image();
         images[i].src = slideshow_pics[i];
     }
