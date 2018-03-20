@@ -481,15 +481,15 @@ var Grid = (function() {
             
             var textHeight =  $('.og-textwrap p').height();
             var buttonHeight =  $('.og-details a').height();
-			var heightPreview = 0.7 * winsize.height /*+ textHeight + button*/ - this.$item.data( 'height') - marginExpanded,
+			var heightPreview = winsize.height /*+ textHeight + button*/ - this.$item.data( 'height') - marginExpanded,
 				itemHeight = winsize.height;
             
             console.log('text height: ' + textHeight);
             
-			/*if( heightPreview < settings.minHeight ) {
+			if( heightPreview < settings.minHeight ) {
 				heightPreview = settings.minHeight;
 				itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
-			} */
+			}
 
 			this.height = heightPreview;
 			this.itemHeight = itemHeight;
