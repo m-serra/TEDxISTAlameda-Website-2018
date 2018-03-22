@@ -3,7 +3,7 @@ $(document).ready(function(){
     var slow = 250;
     var fast = 100;
 
-    preload_pics=["./images/speakers/12_carmo.jpg","./images/speakers/bw/12_carmo.jpg","./images/speakers/11_jans.jpg","./images/speakers/bw/11_jans.jpg","./images/speakers/3_rosarinho.jpg","./images/speakers/bw/3_rosarinho.jpg","./images/speakers/7_darchite.jpg","./images/speakers/bw/7_darchite.jpg","./images/speakers/14_joao.jpg","./images/speakers/bw/14_joao.jpg"];
+    preload_pics=["./images/speakers/12_carmo.jpg","./images/speakers/bw/12_carmo.jpg","./images/speakers/11_jans.jpg","./images/speakers/bw/11_jans.jpg","./images/speakers/3_rosarinho.jpg","./images/speakers/bw/3_rosarinho.jpg","./images/speakers/7_darchite.jpg","./images/speakers/bw/7_darchite.jpg","./images/speakers/14_joao.jpg","./images/speakers/bw/14_joao.jpg","./images/speakers/13_filipa.jpg","./images/speakers/bw/13_filipa.jpg","./images/speakers/8_zaid.jpg","./images/speakers/bw/8_zaid.jpg","./images/speakers/1_arlindo.jpg","./images/speakers/bw/1_arlindo.jpg","./images/speakers/8_luis.jpg","./images/speakers/bw/8_luis.jpg"];
     
     var images = [];
     function preload() {
@@ -200,12 +200,12 @@ $(document).ready(function(){
     });
     $("#ind_container_5").click(function() {
         setTimeout(function() {
-            document.getElementById('ind_container_5').style.backgroundImage = 'url(./images/speakers/bw/7_darchite.jpg)';
+            document.getElementById('ind_container_5').style.backgroundImage = 'url(./images/speakers/bw/13_filipa.jpg)';
         }, 100);
     });
     $("#ind_container_6").click(function() {
         setTimeout(function() {
-            document.getElementById('ind_container_6').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+            document.getElementById('ind_container_6').style.backgroundImage = 'url(./images/speakers/bw/8_zaid.jpg)';
         }, 100);
     });
     $("#ind_container_7").click(function() {
@@ -220,12 +220,12 @@ $(document).ready(function(){
     });
     $("#ind_container_9").click(function() {
         setTimeout(function() {
-            document.getElementById('ind_container_9').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+            document.getElementById('ind_container_9').style.backgroundImage = 'url(./images/speakers/bw/3_rosarinho.jpg)';
         }, 100);
     });
     $("#ind_container_10").click(function() {
         setTimeout(function() {
-            document.getElementById('ind_container_10').style.backgroundImage = 'url(./images/speakers/bw/1_arlindo.jpg)';
+            document.getElementById('ind_container_10').style.backgroundImage = 'url(./images/speakers/bw/8_luis.jpg)';
         }, 100);
     });
 
@@ -236,12 +236,12 @@ $(document).ready(function(){
         document.getElementById('ind_container_2').style.backgroundImage = 'url(./images/speakers/11_jans.jpg)';
         document.getElementById('ind_container_3').style.backgroundImage = 'url(./images/speakers/7_darchite.jpg)';    
         document.getElementById('ind_container_4').style.backgroundImage = 'url(./images/speakers/14_joao.jpg)';    
-        document.getElementById('ind_container_5').style.backgroundImage = 'url(./images/speakers/7_darchite.jpg)';    
-        document.getElementById('ind_container_6').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+        document.getElementById('ind_container_5').style.backgroundImage = 'url(./images/speakers/13_filipa.jpg)';    
+        document.getElementById('ind_container_6').style.backgroundImage = 'url(./images/speakers/8_zaid.jpg)';    
         document.getElementById('ind_container_7').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
         document.getElementById('ind_container_8').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
-        document.getElementById('ind_container_9').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
-        document.getElementById('ind_container_10').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
+        document.getElementById('ind_container_9').style.backgroundImage = 'url(./images/speakers/3_rosarinho.jpg)';    
+        document.getElementById('ind_container_10').style.backgroundImage = 'url(./images/speakers/8_luis.jpg)';    
     }
     
     

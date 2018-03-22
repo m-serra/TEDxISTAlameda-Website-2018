@@ -1521,3 +1521,13 @@ margin-left: 10%}
     z-index: 12;
     margin-bottom: 0;
 }
+
+
+
+#facebook_logo {
+    fill: white;
+}
+
+#facebook_logo:hover {
+    fill: black;
+}
