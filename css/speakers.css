@@ -179,7 +179,7 @@
 }
 
 #ind_container_10 {
-    background: url("../images/speakers/8_luis.jpg.jpg") no-repeat center;
+    background: url("../images/speakers/8_luis.jpg") no-repeat center;
     background-size: cover;
     transition: background-image 0.1s ease-out;
     -moz-transition: background-image 0.1s ease-out; /* Firefox 4 */
@@ -187,7 +187,23 @@
     -o-transition: background-image 0.1s ease-out;
 }
 
+#ind_container_11 {
+    background: url("../images/speakers/10_diogo.png") no-repeat center;
+    background-size: cover;
+    transition: background-image 0.1s ease-out;
+    -moz-transition: background-image 0.1s ease-out; /* Firefox 4 */
+    -webkit-transition: background-image 0.1s ease-out; /* Safari and Chrome */
+    -o-transition: background-image 0.1s ease-out;
+}
 
+#ind_container_12 {
+    background: url("../images/speakers/8_luis.jpg.jpg") no-repeat center;
+    background-size: cover;
+    transition: background-image 0.1s ease-out;
+    -moz-transition: background-image 0.1s ease-out; /* Firefox 4 */
+    -webkit-transition: background-image 0.1s ease-out; /* Safari and Chrome */
+    -o-transition: background-image 0.1s ease-out;
+}
 
 
 

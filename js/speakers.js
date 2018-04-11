@@ -3,7 +3,7 @@ $(document).ready(function(){
     var slow = 250;
     var fast = 100;
 
-    preload_pics=["./images/speakers/12_carmo.jpg","./images/speakers/bw/12_carmo.jpg","./images/speakers/11_jans.jpg","./images/speakers/bw/11_jans.jpg","./images/speakers/3_rosarinho.jpg","./images/speakers/bw/3_rosarinho.jpg","./images/speakers/7_darchite.jpg","./images/speakers/bw/7_darchite.jpg","./images/speakers/14_joao.jpg","./images/speakers/bw/14_joao.jpg","./images/speakers/13_filipa.jpg","./images/speakers/bw/13_filipa.jpg","./images/speakers/8_zaid.jpg","./images/speakers/bw/8_zaid.jpg","./images/speakers/1_arlindo.jpg","./images/speakers/bw/1_arlindo.jpg","./images/speakers/8_luis.jpg","./images/speakers/bw/8_luis.jpg","./images/speakers/2_miguel.jpg","./images/speakers/bw/2_miguel.jpg"];
+    preload_pics=["./images/speakers/12_carmo.jpg","./images/speakers/bw/12_carmo.jpg","./images/speakers/11_jans.jpg","./images/speakers/bw/11_jans.jpg","./images/speakers/3_rosarinho.jpg","./images/speakers/bw/3_rosarinho.jpg","./images/speakers/7_darchite.jpg","./images/speakers/bw/7_darchite.jpg","./images/speakers/14_joao.jpg","./images/speakers/bw/14_joao.jpg","./images/speakers/13_filipa.jpg","./images/speakers/bw/13_filipa.jpg","./images/speakers/8_zaid.jpg","./images/speakers/bw/8_zaid.jpg","./images/speakers/1_arlindo.jpg","./images/speakers/bw/1_arlindo.jpg","./images/speakers/8_luis.jpg","./images/speakers/bw/8_luis.jpg","./images/speakers/2_miguel.jpg","./images/speakers/bw/2_miguel.jpg","./images/speakers/10_diogo.png","./images/speakers/bw/10_diogo.jpg","./images/speakers/4_martim.jpg","./images/speakers/bw/4_martim.jpg"];
     
     var images = [];
     function preload() {
@@ -33,7 +33,7 @@ $(document).ready(function(){
         if($(window).width()>480){
             var altura=$(this).offset().top;
             
-            for(i=1;i<=10;i++){
+            for(i=1;i<=12;i++){
                 
                 if($("#ind_container_"+i).offset().top==altura){
                     $("#speaker18_"+i).css({"width": size_min});
@@ -46,7 +46,7 @@ $(document).ready(function(){
 
             }
         
-        for(i=1;i<=10;i++){
+        for(i=1;i<=12;i++){
                 
                 if($(this)[0]!=$("#ind_container_"+i)[0]){
                     $("#ind_container_"+i).children().fadeOut(100);
@@ -92,13 +92,13 @@ $(document).ready(function(){
 
         if(janela<=480){
             $(".speakers18_container").css({"padding": "0"});
-            for(i=1;i<=10;i++){
+            for(i=1;i<=12;i++){
                 $("#speaker18_"+i).css({"width": size_full});
             }
             size_d=0.9*$(".speakers18_container")[0].getBoundingClientRect().width;
         }
 
-            for(i=1;i<=10;i++){
+            for(i=1;i<=12;i++){
                 if(janela<=480){
                     $("#speaker18_"+i).css({"width": size_full});
                 }else{
@@ -161,12 +161,12 @@ $(document).ready(function(){
     
     function close_speakers(){
         if($(window).width()>480){
-            for(i=1;i<=10;i++){
+            for(i=1;i<=12;i++){
                 $("#speaker18_"+i).css({"width": size_default});
             }
         }
         
-        for(i=1;i<=10;i++){    
+        for(i=1;i<=12;i++){    
             $("#ind_container_"+i).children().fadeOut(100);
             $("#ind_container_"+i).prev().fadeIn(200);
             $("#ind_container_"+i).css({"background-size": "background-size: cover;"});
@@ -228,6 +228,16 @@ $(document).ready(function(){
             document.getElementById('ind_container_10').style.backgroundImage = 'url(./images/speakers/bw/8_luis.jpg)';
         }, 100);
     });
+    $("#ind_container_11").click(function() {
+        setTimeout(function() {
+            document.getElementById('ind_container_11').style.backgroundImage = 'url(./images/speakers/bw/10_diogo.jpg)';
+        }, 100);
+    });
+    $("#ind_container_12").click(function() {
+        setTimeout(function() {
+            document.getElementById('ind_container_12').style.backgroundImage = 'url(./images/speakers/bw/4_martim.jpg)';
+        }, 100);
+    });
 
         
     
@@ -241,7 +251,9 @@ $(document).ready(function(){
         document.getElementById('ind_container_7').style.backgroundImage = 'url(./images/speakers/2_miguel.jpg)';    
         document.getElementById('ind_container_8').style.backgroundImage = 'url(./images/speakers/1_arlindo.jpg)';    
         document.getElementById('ind_container_9').style.backgroundImage = 'url(./images/speakers/3_rosarinho.jpg)';    
-        document.getElementById('ind_container_10').style.backgroundImage = 'url(./images/speakers/8_luis.jpg)';    
+        document.getElementById('ind_container_10').style.backgroundImage = 'url(./images/speakers/8_luis.jpg)';
+        document.getElementById('ind_container_11').style.backgroundImage = 'url(./images/speakers/10_diogo.png)';    
+        document.getElementById('ind_container_12').style.backgroundImage = 'url(./images/speakers/4_martim.jpg)';
     }
     
     

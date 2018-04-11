@@ -490,3 +490,10 @@ function off() {
 
 /* Attend Typeform */
 (function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })()
+
+
+ $(".member-container").hover(function(){
+            $( this ).children().css( "visibility", "visible" );
+        }, function(){
+            $( this ).children().css( "visibility", "hidden" );
+        });
