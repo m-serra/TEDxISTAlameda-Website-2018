@@ -138,7 +138,7 @@ html,body
 
 @media (max-width: 480px) {
   .video-background {
-    background: url('https://scontent.flis2-1.fna.fbcdn.net/v/t31.0-8/18278263_656796467840718_2337298823345642103_o.jpg?oh=80bf60907a15c1f1c23fcf2354e62578&oe=5ABB96C8') center center / cover no-repeat;
+    background: url('https://scontent.flis2-1.fna.fbcdn.net/v/t31.0-8/18278381_656796461174052_1570124178479807777_o.jpg?oh=2370b1cba7b98e2197b9b2db2be86cf6&oe=5AF883BB') center center / cover no-repeat;
 		transition: background-image 1s ease-in-out;
 	}
 
@@ -1522,12 +1522,197 @@ margin-left: 10%}
     margin-bottom: 0;
 }
 
-
-
-#facebook_logo {
-    fill: white;
+.team-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
 }
 
-#facebook_logo:hover {
-    fill: black;
+.member-container {
+    width: 150px;
+    height: 150px;
+    margin: 2px;
+    position: relative;
+}
+
+.member-info {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,0,0,0.65);
+    position: relative;
+    padding: 2px;
+    color: white;
+}
+
+
+.member-name {
+    padding: 30px 0 5px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.member-linkedin {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    text-align: center;
+    margin:auto;
+    bottom: 7px;
+    left: 60.5px;
+}
+
+
+.member-team {
+    padding: 5px 0 10px;
+}
+
+
+#member1 {
+    background: url("../images/team/Afonso_Raposo.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member2 {
+    background: url("../images/team/Ana_Carvalho.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member3 {
+    background: url("../images/team/Andre_Ferreira.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member4 {
+    background: url("../images/team/Augusto.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member5 {
+    background: url("../images/team/Beatriz_Lucas.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member6 {
+    background: url("../images/team/Beatriz_Marques.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member7 {
+    background: url("../images/team/Beatriz_Moreira.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member8 {
+    background: url("../images/team/Carina.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member9 {
+    background: url("../images/team/Carlota_Santos.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member10 {
+    background: url("../images/team/Gil_Belford.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member11 {
+    background: url("../images/team/Ines_Ferreira.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member12 {
+    background: url("../images/team/Ines_Goncalves.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member13 {
+    background: url("../images/team/Ines_Mataloto.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member14 {
+    background: url("../images/team/Joao_Apura.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member25 {
+    background: url("../images/team/Catarina_Allen.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member15 {
+    background: url("../images/team/Manuel_Nunes.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member16 {
+    background: url("../images/team/Maria_Leonor.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member17 {
+    background: url("../images/team/Maria_Roque.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member18 {
+    background: url("../images/team/Mariana_Oliveira.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member19 {
+    background: url("../images/team/Miguel_Rafael.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member20 {
+    background: url("../images/team/Pedro_Perdigao.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member21 {
+    background: url("../images/team/Rafael_Inacio.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member22 {
+    background: url("../images/team/Raquel_Martins.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member23 {
+    background: url("../images/team/Rita_Oliveira.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member24 {
+    background: url("../images/team/Sofia_Grilo.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member25 {
+    background: url("../images/team/Joao_Dias.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member26 {
+    background: url("../images/team/Goncalo_Deus.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member27 {
+    background: url("../images/team/Catarina_Allen.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#xgif {
+    background: url("../images/team/x.gif") no-repeat center;
+    background-size: cover;
 }
