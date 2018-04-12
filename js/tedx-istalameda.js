@@ -454,7 +454,7 @@ if (window.mobilecheck == "true") {
 })();
 
 
-/* Attend Overlay */
+/* Attend Overlay 
 function on() {
     
     var myVideo = document.getElementById("video-background");
@@ -481,8 +481,10 @@ function off() {
     document.getElementById("overlay").style.display = "none";
 }
 
-/* Attend Typeform */
+/* Attend Typeform
 (function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })()
+
+*/
 
 
  $(".member-container").hover(function(){
