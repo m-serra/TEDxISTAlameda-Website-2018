@@ -138,7 +138,7 @@ html,body
 
 @media (max-width: 480px) {
   .video-background {
-    background: url('https://scontent.flis2-1.fna.fbcdn.net/v/t31.0-8/18278263_656796467840718_2337298823345642103_o.jpg?oh=80bf60907a15c1f1c23fcf2354e62578&oe=5ABB96C8') center center / cover no-repeat;
+    background: url('https://scontent.flis2-1.fna.fbcdn.net/v/t31.0-8/18278381_656796461174052_1570124178479807777_o.jpg?oh=2370b1cba7b98e2197b9b2db2be86cf6&oe=5AF883BB') center center / cover no-repeat;
 		transition: background-image 1s ease-in-out;
 	}
 
@@ -1543,9 +1543,10 @@ margin-left: 10%}
     visibility: hidden;
     width: 100%;
     height: 100%;
-    background-color: rgba(255,255,255,0.85);
+    background-color: rgba(255,0,0,0.65);
     position: relative;
     padding: 2px;
+    color: white;
 }
 
 
@@ -1642,7 +1643,7 @@ margin-left: 10%}
 }
 
 #member25 {
-    background: url("../images/team/Joao_Dias.jpg") no-repeat center;
+    background: url("../images/team/Catarina_Allen.jpg") no-repeat center;
     background-size: cover;
 }
 
@@ -1693,6 +1694,21 @@ margin-left: 10%}
 
 #member24 {
     background: url("../images/team/Sofia_Grilo.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member25 {
+    background: url("../images/team/Joao_Dias.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member26 {
+    background: url("../images/team/Goncalo_Deus.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#member27 {
+    background: url("../images/team/Catarina_Allen.jpg") no-repeat center;
     background-size: cover;
 }
 
